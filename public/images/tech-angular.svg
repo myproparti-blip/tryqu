@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="angularGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1000" height="700" fill="url(#angularGrad)"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="200" cy="150" r="80" fill="#a855f7" opacity="0.1"/>
+  <circle cx="800" cy="550" r="120" fill="#ec4899" opacity="0.1"/>
+  
+  <!-- Angular Logo -->
+  <g transform="translate(250, 200)">
+    <polygon points="200,0 250,100 150,100" fill="url(#accentGrad)"/>
+    <rect x="120" y="120" width="160" height="150" fill="none" stroke="#a855f7" stroke-width="3" opacity="0.6"/>
+  </g>
+  
+  <!-- Code/Development Elements -->
+  <g transform="translate(550, 200)" font-family="monospace" font-size="24" fill="#a855f7" opacity="0.8">
+    <text x="0" y="0">&lt;app-component&gt;</text>
+    <text x="20" y="40">@Component()</text>
+    <text x="20" y="80">export class App</text>
+    <text x="0" y="120">&lt;/app-component&gt;</text>
+  </g>
+  
+  <!-- Development Team Silhouettes -->
+  <g transform="translate(100, 450)">
+    <!-- Person 1 -->
+    <circle cx="30" cy="20" r="15" fill="#cbd5e1" opacity="0.6"/>
+    <rect x="15" y="40" width="30" height="40" fill="#cbd5e1" opacity="0.6" rx="3"/>
+    
+    <!-- Person 2 -->
+    <circle cx="100" cy="25" r="12" fill="#94a3b8" opacity="0.5"/>
+    <rect x="90" y="42" width="20" height="35" fill="#94a3b8" opacity="0.5" rx="2"/>
+    
+    <!-- Person 3 -->
+    <circle cx="160" cy="22" r="13" fill="#64748b" opacity="0.4"/>
+    <rect x="150" y="40" width="20" height="38" fill="#64748b" opacity="0.4" rx="2"/>
+  </g>
+  
+  <!-- Enterprise Badge -->
+  <g transform="translate(650, 500)">
+    <rect x="0" y="0" width="250" height="120" fill="rgba(168, 85, 247, 0.1)" stroke="#a855f7" stroke-width="2" rx="8"/>
+    <text x="125" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#a855f7">Enterprise Scale</text>
+    <text x="125" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">TypeScript • RxJS</text>
+    <text x="125" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">Scalable Architecture</text>
+  </g>
+</svg>

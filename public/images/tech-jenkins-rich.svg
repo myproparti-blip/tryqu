@@ -1,0 +1,48 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="jenkinsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d24939;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff5252;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="800" height="500" fill="#0f0f1e"/>
+  
+  <circle cx="150" cy="100" r="100" fill="#d24939" opacity="0.15" filter="url(#glow)"/>
+  <circle cx="700" cy="400" r="130" fill="#ff5252" opacity="0.15" filter="url(#glow)"/>
+  
+  <!-- Jenkins Gears -->
+  <g transform="translate(80, 60)">
+    <!-- Large gear -->
+    <circle cx="120" cy="100" r="65" fill="none" stroke="url(#jenkinsGrad)" stroke-width="12" opacity="0.9"/>
+    <!-- Gear teeth -->
+    <g stroke="url(#jenkinsGrad)" stroke-width="10" opacity="0.85">
+      <line x1="120" y1="20" x2="120" y2="45"/>
+      <line x1="205" y1="45" x2="185" y2="60"/>
+      <line x1="225" y1="100" x2="200" y2="100"/>
+      <line x1="205" y1="155" x2="185" y2="140"/>
+      <line x1="120" y1="180" x2="120" y2="155"/>
+      <line x1="35" y1="155" x2="55" y2="140"/>
+      <line x1="15" y1="100" x2="40" y2="100"/>
+      <line x1="35" y1="45" x2="55" y2="60"/>
+    </g>
+    <!-- Center hub -->
+    <circle cx="120" cy="100" r="30" fill="url(#jenkinsGrad)" opacity="0.95"/>
+    
+    <!-- Small gear -->
+    <circle cx="200" cy="60" r="40" fill="none" stroke="url(#jenkinsGrad)" stroke-width="8" opacity="0.7"/>
+    <circle cx="200" cy="60" r="18" fill="url(#jenkinsGrad)" opacity="0.8"/>
+  </g>
+  
+  <text x="400" y="260" font-size="80" font-weight="900" fill="white" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" letter-spacing="-2">Jenkins</text>
+  <text x="400" y="320" font-size="32" fill="rgba(255,255,255,0.6)" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Enterprise Automation</text>
+  
+  <line x1="150" y1="350" x2="650" y2="350" stroke="url(#jenkinsGrad)" stroke-width="4" opacity="0.5" stroke-linecap="round"/>
+</svg>

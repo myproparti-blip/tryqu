@@ -1,0 +1,21 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a1a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#336791;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4FBDCE;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#grad1)"/>
+  <ellipse cx="200" cy="120" rx="40" ry="50" fill="url(#grad2)" opacity="0.8"/>
+  <rect x="160" y="160" width="80" height="90" fill="none" stroke="url(#grad2)" stroke-width="3" rx="5"/>
+  <circle cx="180" cy="180" r="12" fill="url(#grad2)" opacity="0.6"/>
+  <circle cx="220" cy="180" r="12" fill="url(#grad2)" opacity="0.6"/>
+  <circle cx="180" cy="230" r="12" fill="url(#grad2)" opacity="0.6"/>
+  <circle cx="220" cy="230" r="12" fill="url(#grad2)" opacity="0.6"/>
+  <rect x="160" y="270" width="80" height="30" rx="5" fill="url(#grad2)" opacity="0.4"/>
+  <text x="200" y="360" font-size="18" font-weight="bold" fill="url(#grad2)" text-anchor="middle" font-family="Arial">POSTGRESQL</text>
+</svg>

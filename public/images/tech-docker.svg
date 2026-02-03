@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700">
+  <defs>
+    <linearGradient id="dockerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="dockerAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1000" height="700" fill="url(#dockerGrad)"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="200" cy="150" r="80" fill="#0ea5e9" opacity="0.08"/>
+  <circle cx="800" cy="550" r="100" fill="#a855f7" opacity="0.1"/>
+  
+  <!-- Docker Container Stacks -->
+  <g transform="translate(180, 160)">
+    <!-- Container 1 -->
+    <rect x="0" y="0" width="70" height="50" fill="none" stroke="#0ea5e9" stroke-width="2.5"/>
+    <line x1="0" y1="15" x2="70" y2="15" stroke="#0ea5e9" stroke-width="1" opacity="0.5"/>
+    <text x="35" y="30" text-anchor="middle" font-family="Arial" font-size="12" fill="#0ea5e9" opacity="0.8">App 1</text>
+    
+    <!-- Container 2 -->
+    <rect x="0" y="60" width="70" height="50" fill="none" stroke="#0ea5e9" stroke-width="2.5"/>
+    <line x1="0" y1="75" x2="70" y2="75" stroke="#0ea5e9" stroke-width="1" opacity="0.5"/>
+    <text x="35" y="90" text-anchor="middle" font-family="Arial" font-size="12" fill="#0ea5e9" opacity="0.8">App 2</text>
+    
+    <!-- Container 3 -->
+    <rect x="0" y="120" width="70" height="50" fill="none" stroke="#0ea5e9" stroke-width="2.5"/>
+    <line x1="0" y1="135" x2="70" y2="135" stroke="#0ea5e9" stroke-width="1" opacity="0.5"/>
+    <text x="35" y="150" text-anchor="middle" font-family="Arial" font-size="12" fill="#0ea5e9" opacity="0.8">App 3</text>
+  </g>
+  
+  <!-- Container Technology -->
+  <g transform="translate(530, 180)" font-family="monospace" font-size="20" fill="#0ea5e9" opacity="0.85">
+    <text x="0" y="0">Containerization</text>
+    <text x="0" y="40">Images • Compose</text>
+    <text x="0" y="80">Orchestration</text>
+    <text x="0" y="120">CI/CD Integration</text>
+  </g>
+  
+  <!-- Docker Engine -->
+  <g transform="translate(100, 420)">
+    <rect x="0" y="0" width="200" height="120" fill="none" stroke="#cbd5e1" stroke-width="2" rx="6" opacity="0.6"/>
+    <text x="100" y="30" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#cbd5e1">Docker Engine</text>
+    <line x1="20" y1="50" x2="180" y2="50" stroke="#cbd5e1" stroke-width="1" opacity="0.3"/>
+    <text x="100" y="75" text-anchor="middle" font-family="Arial" font-size="12" fill="#cbd5e1" opacity="0.7">Build • Ship • Run</text>
+    <text x="100" y="100" text-anchor="middle" font-family="Arial" font-size="12" fill="#cbd5e1" opacity="0.7">Consistent Deployments</text>
+  </g>
+  
+  <!-- Container Badge -->
+  <g transform="translate(700, 480)">
+    <rect x="0" y="0" width="240" height="130" fill="rgba(14, 165, 233, 0.1)" stroke="#0ea5e9" stroke-width="2" rx="8"/>
+    <text x="120" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#0ea5e9">DevOps Ready</text>
+    <text x="120" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">Cloud Native</text>
+    <text x="120" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">Kubernetes Ready</text>
+  </g>
+</svg>

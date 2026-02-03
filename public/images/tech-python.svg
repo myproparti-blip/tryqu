@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700">
+  <defs>
+    <linearGradient id="pythonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="pythonAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1000" height="700" fill="url(#pythonGrad)"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="150" cy="200" r="95" fill="#3b82f6" opacity="0.08"/>
+  <circle cx="850" cy="550" r="85" fill="#fbbf24" opacity="0.08"/>
+  
+  <!-- Python Logo -->
+  <g transform="translate(220, 170)">
+    <path d="M 50 30 Q 70 30 75 50 L 75 100 Q 75 120 55 120 L 45 120 Q 25 120 25 100 L 25 50 Q 25 30 45 30" fill="none" stroke="#3b82f6" stroke-width="2.5"/>
+    <circle cx="50" cy="65" r="12" fill="#3b82f6" opacity="0.4"/>
+  </g>
+  
+  <!-- Data & AI Elements -->
+  <g transform="translate(520, 180)" font-family="monospace" font-size="20" fill="#fbbf24" opacity="0.85">
+    <text x="0" y="0">ML • AI • Data</text>
+    <text x="0" y="40">TensorFlow • PyTorch</text>
+    <text x="0" y="80">Django • FastAPI</text>
+    <text x="0" y="120">Analytics Pipeline</text>
+  </g>
+  
+  <!-- Data Flow Visualization -->
+  <g transform="translate(80, 430)">
+    <!-- Data blocks -->
+    <rect x="0" y="0" width="40" height="40" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.6"/>
+    <rect x="50" y="0" width="40" height="40" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.6"/>
+    <rect x="100" y="0" width="40" height="40" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.6"/>
+    
+    <!-- Flow arrows -->
+    <path d="M 40 20 L 50 20" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 90 20 L 100 20" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
+    
+    <!-- Processing -->
+    <rect x="60" y="60" width="60" height="35" fill="rgba(251, 191, 36, 0.2)" stroke="#fbbf24" stroke-width="2" rx="4"/>
+    <text x="90" y="82" text-anchor="middle" font-family="Arial" font-size="12" fill="#fbbf24">Process</text>
+  </g>
+  
+  <!-- Data Science Badge -->
+  <g transform="translate(680, 480)">
+    <rect x="0" y="0" width="240" height="130" fill="rgba(59, 130, 246, 0.1)" stroke="#3b82f6" stroke-width="2" rx="8"/>
+    <text x="120" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#3b82f6">Data Science</text>
+    <text x="120" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">ML Pipelines • AI</text>
+    <text x="120" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">Data Engineering</text>
+  </g>
+</svg>

@@ -1,0 +1,50 @@
+<svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="280" height="160" fill="url(#grad1)"/>
+  
+  <!-- Grid background -->
+  <line x1="0" y1="20" x2="280" y2="20" stroke="#a855f7" stroke-width="1" opacity="0.2"/>
+  <line x1="0" y1="40" x2="280" y2="40" stroke="#a855f7" stroke-width="1" opacity="0.2"/>
+  <line x1="0" y1="60" x2="280" y2="60" stroke="#a855f7" stroke-width="1" opacity="0.2"/>
+  <line x1="0" y1="80" x2="280" y2="80" stroke="#a855f7" stroke-width="1" opacity="0.2"/>
+  <line x1="0" y1="100" x2="280" y2="100" stroke="#a855f7" stroke-width="1" opacity="0.2"/>
+  <line x1="0" y1="120" x2="280" y2="120" stroke="#a855f7" stroke-width="1" opacity="0.2"/>
+  <line x1="0" y1="140" x2="280" y2="140" stroke="#a855f7" stroke-width="1" opacity="0.2"/>
+  
+  <line x1="35" y1="0" x2="35" y2="160" stroke="#84cc16" stroke-width="1" opacity="0.2"/>
+  <line x1="70" y1="0" x2="70" y2="160" stroke="#a855f7" stroke-width="1" opacity="0.2"/>
+  <line x1="105" y1="0" x2="105" y2="160" stroke="#84cc16" stroke-width="1" opacity="0.2"/>
+  <line x1="140" y1="0" x2="140" y2="160" stroke="#a855f7" stroke-width="1" opacity="0.2"/>
+  <line x1="175" y1="0" x2="175" y2="160" stroke="#84cc16" stroke-width="1" opacity="0.2"/>
+  <line x1="210" y1="0" x2="210" y2="160" stroke="#a855f7" stroke-width="1" opacity="0.2"/>
+  <line x1="245" y1="0" x2="245" y2="160" stroke="#84cc16" stroke-width="1" opacity="0.2"/>
+  
+  <!-- Team collaboration visualization -->
+  <circle cx="50" cy="50" r="15" fill="#84cc16" opacity="0.8"/>
+  <circle cx="100" cy="40" r="12" fill="#a855f7" opacity="0.8"/>
+  <circle cx="140" cy="60" r="14" fill="#84cc16" opacity="0.8"/>
+  <circle cx="180" cy="45" r="13" fill="#a855f7" opacity="0.8"/>
+  <circle cx="220" cy="55" r="15" fill="#84cc16" opacity="0.8"/>
+  
+  <!-- Connection lines (collaboration) -->
+  <line x1="65" y1="50" x2="88" y2="40" stroke="#a855f7" stroke-width="1" opacity="0.6"/>
+  <line x1="112" y1="40" x2="126" y2="60" stroke="#84cc16" stroke-width="1" opacity="0.6"/>
+  <line x1="154" y1="60" x2="167" y2="45" stroke="#a855f7" stroke-width="1" opacity="0.6"/>
+  <line x1="193" y1="45" x2="205" y2="55" stroke="#84cc16" stroke-width="1" opacity="0.6"/>
+  
+  <!-- Success metrics -->
+  <text x="50" y="120" font-family="Arial" font-size="24" fill="#84cc16" text-anchor="middle" font-weight="bold">98%</text>
+  <text x="50" y="140" font-family="Arial" font-size="10" fill="#a0aec0" text-anchor="middle">UPTIME</text>
+  
+  <text x="140" y="120" font-family="Arial" font-size="24" fill="#a855f7" text-anchor="middle" font-weight="bold">24/7</text>
+  <text x="140" y="140" font-family="Arial" font-size="10" fill="#a0aec0" text-anchor="middle">SUPPORT</text>
+  
+  <text x="230" y="120" font-family="Arial" font-size="24" fill="#84cc16" text-anchor="middle" font-weight="bold">0ms</text>
+  <text x="230" y="140" font-family="Arial" font-size="10" fill="#a0aec0" text-anchor="middle">LATENCY</text>
+</svg>

@@ -1,0 +1,91 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="archGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="800" height="600" fill="url(#archGrad2)"/>
+  
+  <!-- Cloud deployment architecture -->
+  <text x="400" y="50" font-family="Arial" font-size="20" fill="#84cc16" text-anchor="middle" font-weight="bold">CLOUD DEPLOYMENT ARCHITECTURE</text>
+  
+  <!-- Cloud regions -->
+  <g id="cloud-us">
+    <ellipse cx="250" cy="150" rx="100" ry="70" fill="none" stroke="#a855f7" stroke-width="2"/>
+    <text x="250" y="155" font-family="Arial" font-size="12" fill="#a855f7" text-anchor="middle">US-EAST</text>
+    
+    <!-- Data centers in region -->
+    <circle cx="200" cy="140" r="20" fill="#84cc16" opacity="0.4"/>
+    <circle cx="300" cy="140" r="20" fill="#a855f7" opacity="0.4"/>
+    <circle cx="250" cy="190" r="20" fill="#84cc16" opacity="0.4"/>
+    
+    <text x="250" y="240" font-family="Arial" font-size="11" fill="#a0aec0" text-anchor="middle">Active</text>
+    <text x="250" y="260" font-family="Arial" font-size="11" fill="#84cc16" text-anchor="middle">✓ 3 Nodes</text>
+  </g>
+  
+  <!-- Cloud EU -->
+  <g id="cloud-eu">
+    <ellipse cx="550" cy="150" rx="100" ry="70" fill="none" stroke="#84cc16" stroke-width="2"/>
+    <text x="550" y="155" font-family="Arial" font-size="12" fill="#84cc16" text-anchor="middle">EU-WEST</text>
+    
+    <!-- Data centers in region -->
+    <circle cx="500" cy="140" r="20" fill="#a855f7" opacity="0.4"/>
+    <circle cx="600" cy="140" r="20" fill="#84cc16" opacity="0.4"/>
+    <circle cx="550" cy="190" r="20" fill="#a855f7" opacity="0.4"/>
+    
+    <text x="550" y="240" font-family="Arial" font-size="11" fill="#a0aec0" text-anchor="middle">Standby</text>
+    <text x="550" y="260" font-family="Arial" font-size="11" fill="#84cc16" text-anchor="middle">✓ 3 Nodes</text>
+  </g>
+  
+  <!-- Load balancer -->
+  <circle cx="400" cy="100" r="20" fill="none" stroke="#84cc16" stroke-width="2"/>
+  <text x="400" y="108" font-family="Arial" font-size="10" fill="#84cc16" text-anchor="middle" font-weight="bold">LB</text>
+  
+  <!-- Connections -->
+  <line x1="350" y1="120" x2="280" y2="140" stroke="#a855f7" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="450" y1="120" x2="520" y2="140" stroke="#84cc16" stroke-width="2" marker-end="url(#arrow2)"/>
+  
+  <!-- Database cluster -->
+  <g id="database">
+    <rect x="150" y="340" width="500" height="100" fill="none" stroke="#84cc16" stroke-width="2" rx="8"/>
+    <text x="400" y="370" font-family="Arial" font-size="14" fill="#84cc16" text-anchor="middle" font-weight="bold">DATABASE CLUSTER</text>
+    
+    <!-- Primary -->
+    <rect x="180" y="385" width="100" height="40" fill="#a855f7" opacity="0.3" rx="4" stroke="#a855f7" stroke-width="1"/>
+    <text x="230" y="412" font-family="Arial" font-size="11" fill="#a0aec0" text-anchor="middle">PRIMARY</text>
+    
+    <!-- Replicas -->
+    <rect x="310" y="385" width="80" height="40" fill="#84cc16" opacity="0.2" rx="4" stroke="#84cc16" stroke-width="1"/>
+    <text x="350" y="412" font-family="Arial" font-size="10" fill="#a0aec0" text-anchor="middle">REPLICA-1</text>
+    
+    <rect x="420" y="385" width="80" height="40" fill="#84cc16" opacity="0.2" rx="4" stroke="#84cc16" stroke-width="1"/>
+    <text x="460" y="412" font-family="Arial" font-size="10" fill="#a0aec0" text-anchor="middle">REPLICA-2</text>
+    
+    <rect x="530" y="385" width="80" height="40" fill="#84cc16" opacity="0.2" rx="4" stroke="#84cc16" stroke-width="1"/>
+    <text x="570" y="412" font-family="Arial" font-size="10" fill="#a0aec0" text-anchor="middle">BACKUP</text>
+  </g>
+  
+  <!-- Service connections -->
+  <line x1="250" y1="260" x2="220" y2="340" stroke="#a855f7" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+  <line x1="550" y1="260" x2="580" y2="340" stroke="#84cc16" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+  
+  <!-- Status indicator -->
+  <circle cx="100" cy="520" r="8" fill="#84cc16" opacity="0.9"/>
+  <text x="130" y="527" font-family="Arial" font-size="12" fill="#84cc16">SYSTEM HEALTHY</text>
+  
+  <!-- Statistics -->
+  <text x="100" y="560" font-family="Arial" font-size="11" fill="#a0aec0">Regions: 2  |  Nodes: 6  |  Replication: Active  |  Failover: Automatic</text>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#a855f7" />
+    </marker>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#84cc16" />
+    </marker>
+  </defs>
+</svg>

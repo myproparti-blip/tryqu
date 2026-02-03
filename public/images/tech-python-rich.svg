@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bgPython" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="pythonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glowPython">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="1200" height="800" fill="url(#bgPython)"/>
+  
+  <!-- Grid -->
+  <g opacity="0.05" stroke="#3b82f6">
+    <line x1="0" y1="0" x2="1200" y2="0" stroke-width="1"/>
+    <line x1="0" y1="50" x2="1200" y2="50" stroke-width="1"/>
+    <line x1="0" y1="100" x2="1200" y2="100" stroke-width="1"/>
+    <line x1="0" y1="150" x2="1200" y2="150" stroke-width="1"/>
+  </g>
+  
+  <!-- Floating Elements -->
+  <circle cx="200" cy="150" r="120" fill="#3b82f6" opacity="0.07" filter="url(#glowPython)"/>
+  <circle cx="1000" cy="600" r="150" fill="#fbbf24" opacity="0.06" filter="url(#glowPython)"/>
+  
+  <!-- Data Scientist Left -->
+  <g transform="translate(80, 300)">
+    <circle cx="40" cy="15" r="20" fill="#cbd5e1" opacity="0.85"/>
+    <rect x="28" y="45" width="24" height="40" fill="#94a3b8" opacity="0.8" rx="2"/>
+    <line x1="28" y1="55" x2="12" y2="85" stroke="#cbd5e1" stroke-width="3" opacity="0.8" stroke-linecap="round"/>
+    <line x1="52" y1="55" x2="72" y2="80" stroke="#cbd5e1" stroke-width="3" opacity="0.8" stroke-linecap="round"/>
+    <circle cx="12" cy="85" r="3" fill="#cbd5e1" opacity="0.8"/>
+    <circle cx="72" cy="80" r="3" fill="#cbd5e1" opacity="0.8"/>
+  </g>
+  
+  <!-- Jupyter Notebook / IDE -->
+  <g transform="translate(150, 200)">
+    <!-- Window -->
+    <rect x="0" y="0" width="280" height="280" fill="#1a1a2e" stroke="#3b82f6" stroke-width="2" rx="5"/>
+    <!-- Title bar -->
+    <rect x="0" y="0" width="280" height="25" fill="#16213e" stroke="#3b82f6" stroke-width="2" rx="5"/>
+    <circle cx="15" cy="12" r="3" fill="#f59e0b"/>
+    <circle cx="35" cy="12" r="3" fill="#4ade80"/>
+    <circle cx="55" cy="12" r="3" fill="#ef4444"/>
+    <text x="90" y="16" font-family="Arial" font-size="11" fill="#cbd5e1">ml_model.py</text>
+    
+    <!-- Code -->
+    <text x="15" y="50" font-family="monospace" font-size="10" fill="#fbbf24">import numpy as np</text>
+    <text x="15" y="68" font-family="monospace" font-size="10" fill="#fbbf24">from sklearn import</text>
+    <text x="15" y="86" font-family="monospace" font-size="10" fill="#3b82f6">import tensorflow</text>
+    <text x="15" y="104" font-family="monospace" font-size="10" fill="#4ade80">model = Model()</text>
+    <text x="15" y="122" font-family="monospace" font-size="10" fill="#60a5fa">model.fit(X_train)</text>
+    <text x="15" y="140" font-family="monospace" font-size="10" fill="#f59e0b">accuracy = 0.94</text>
+    <text x="15" y="158" font-family="monospace" font-size="10" fill="#cbd5e1">predictions = model.predict()</text>
+    
+    <!-- Output -->
+    <rect x="10" y="170" width="260" height="100" fill="rgba(59, 130, 246, 0.1)" stroke="#3b82f6" stroke-width="1" rx="3"/>
+    <text x="15" y="190" font-family="monospace" font-size="9" fill="#4ade80">Out[42]: Training Complete</text>
+    <text x="15" y="210" font-family="monospace" font-size="9" fill="#fbbf24">Epoch 100/100 complete</text>
+    <text x="15" y="230" font-family="monospace" font-size="9" fill="#60a5fa">Loss: 0.0234 | Accuracy: 0.94</text>
+    <text x="15" y="250" font-family="monospace" font-size="9" fill="#cbd5e1">Predictions saved to model.pkl</text>
+  </g>
+  
+  <!-- Python Logo Center -->
+  <g transform="translate(520, 100)">
+    <!-- Python snake pattern -->
+    <path d="M 30 30 Q 40 25, 45 35 Q 50 45, 40 50 Q 30 55, 25 45 Z" fill="#3b82f6" opacity="0.9"/>
+    <path d="M 40 50 Q 50 48, 55 60 Q 60 70, 50 72 Q 40 74, 35 65 Z" fill="#fbbf24" opacity="0.9"/>
+  </g>
+  
+  <!-- Data Analysis Dashboard Right -->
+  <g transform="translate(750, 200)">
+    <!-- Monitor -->
+    <rect x="0" y="0" width="280" height="280" fill="#1a1a2e" stroke="#3b82f6" stroke-width="2" rx="5"/>
+    <!-- Title -->
+    <rect x="0" y="0" width="280" height="25" fill="#16213e" stroke="#3b82f6" stroke-width="2" rx="5"/>
+    <circle cx="15" cy="12" r="3" fill="#f59e0b"/>
+    <circle cx="35" cy="12" r="3" fill="#4ade80"/>
+    <circle cx="55" cy="12" r="3" fill="#ef4444"/>
+    <text x="85" y="16" font-family="Arial" font-size="11" fill="#cbd5e1">analytics.py</text>
+    
+    <!-- Metrics cards -->
+    <rect x="15" y="40" width="120" height="50" fill="rgba(59, 130, 246, 0.15)" stroke="#3b82f6" stroke-width="1" rx="3"/>
+    <text x="75" y="60" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#3b82f6">Accuracy</text>
+    <text x="75" y="78" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#4ade80">94.2%</text>
+    
+    <rect x="145" y="40" width="120" height="50" fill="rgba(251, 191, 36, 0.15)" stroke="#fbbf24" stroke-width="1" rx="3"/>
+    <text x="205" y="60" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#fbbf24">Loss</text>
+    <text x="205" y="78" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#fbbf24">0.0234</text>
+    
+    <!-- Performance bars -->
+    <g transform="translate(15, 110)">
+      <text x="0" y="0" font-family="Arial" font-size="10" fill="#cbd5e1">Training:</text>
+      <rect x="0" y="10" width="250" height="6" fill="rgba(255, 255, 255, 0.1)" rx="3"/>
+      <rect x="0" y="10" width="235" height="6" fill="#3b82f6" rx="3"/>
+      <text x="240" y="18" font-family="Arial" font-size="9" fill="#3b82f6">94%</text>
+    </g>
+    
+    <!-- Dataset info -->
+    <rect x="15" y="180" width="250" height="80" fill="rgba(59, 130, 246, 0.1)" stroke="#3b82f6" stroke-width="1" rx="3"/>
+    <text x="25" y="200" font-family="Arial" font-size="10" fill="#cbd5e1">Dataset: MNIST (60K samples)</text>
+    <text x="25" y="220" font-family="Arial" font-size="10" fill="#fbbf24">Model: CNN (2.3M params)</text>
+    <text x="25" y="240" font-family="Arial" font-size="10" fill="#4ade80">Performance: GPU accelerated</text>
+  </g>
+  
+  <!-- Status Badge -->
+  <g transform="translate(200, 50)">
+    <circle cx="0" cy="0" r="8" fill="#4ade80"/>
+    <text x="15" y="5" font-family="Arial" font-size="14" fill="#cbd5e1">ML & Data Science</text>
+  </g>
+  
+  <!-- Tech Stack -->
+  <g transform="translate(850, 50)">
+    <rect x="0" y="0" width="300" height="100" fill="rgba(59, 130, 246, 0.1)" stroke="#3b82f6" stroke-width="1" rx="5"/>
+    <text x="150" y="25" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#3b82f6">TensorFlow • PyTorch</text>
+    <text x="150" y="50" text-anchor="middle" font-family="Arial" font-size="12" fill="#cbd5e1">Data Analysis • Machine Learning</text>
+    <text x="150" y="75" text-anchor="middle" font-family="Arial" font-size="12" fill="#cbd5e1">AI • Deep Learning • NLP</text>
+  </g>
+  
+  <!-- Bottom Bar -->
+  <rect x="0" y="750" width="1200" height="50" fill="url(#pythonGrad)" opacity="0.15"/>
+  <text x="600" y="785" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#3b82f6">AI & Machine Learning Development</text>
+</svg>

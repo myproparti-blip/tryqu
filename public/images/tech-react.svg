@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700">
+  <defs>
+    <linearGradient id="reactGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="reactAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1000" height="700" fill="url(#reactGrad)"/>
+  
+  <!-- Decorative Circles -->
+  <circle cx="150" cy="200" r="100" fill="#61dafb" opacity="0.08"/>
+  <circle cx="850" cy="500" r="80" fill="#a855f7" opacity="0.1"/>
+  
+  <!-- React Atom Logo -->
+  <g transform="translate(250, 200)">
+    <ellipse cx="100" cy="50" rx="60" ry="30" fill="none" stroke="#61dafb" stroke-width="2"/>
+    <ellipse cx="100" cy="50" rx="30" ry="60" fill="none" stroke="#61dafb" stroke-width="2" transform="rotate(45 100 50)"/>
+    <ellipse cx="100" cy="50" rx="30" ry="60" fill="none" stroke="#61dafb" stroke-width="2" transform="rotate(-45 100 50)"/>
+    <circle cx="100" cy="50" r="8" fill="#61dafb"/>
+  </g>
+  
+  <!-- Components -->
+  <g transform="translate(520, 180)" font-family="monospace" font-size="22" fill="#61dafb" opacity="0.8">
+    <text x="0" y="0">&lt;Component /&gt;</text>
+    <text x="20" y="40">State Management</text>
+    <text x="20" y="80">Hooks • Props</text>
+    <text x="0" y="120">React Native</text>
+  </g>
+  
+  <!-- Team Working -->
+  <g transform="translate(120, 450)">
+    <circle cx="25" cy="15" r="12" fill="#cbd5e1" opacity="0.7"/>
+    <rect x="12" y="30" width="26" height="35" fill="#cbd5e1" opacity="0.7" rx="2"/>
+    
+    <circle cx="95" cy="20" r="11" fill="#94a3b8" opacity="0.6"/>
+    <rect x="84" y="35" width="22" height="30" fill="#94a3b8" opacity="0.6" rx="2"/>
+    
+    <circle cx="155" cy="18" r="10" fill="#64748b" opacity="0.5"/>
+    <rect x="146" y="32" width="18" height="28" fill="#64748b" opacity="0.5" rx="2"/>
+  </g>
+  
+  <!-- Modern Web Badge -->
+  <g transform="translate(680, 500)">
+    <rect x="0" y="0" width="240" height="120" fill="rgba(97, 218, 251, 0.1)" stroke="#61dafb" stroke-width="2" rx="8"/>
+    <text x="120" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#61dafb">Modern Web</text>
+    <text x="120" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">Components • Hooks</text>
+    <text x="120" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">Next.js • Performance</text>
+  </g>
+</svg>

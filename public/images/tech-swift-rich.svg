@@ -1,0 +1,39 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="swiftGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fa7343;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff6b6b;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="800" height="500" fill="#0f0f1e"/>
+  
+  <circle cx="150" cy="100" r="100" fill="#fa7343" opacity="0.15" filter="url(#glow)"/>
+  <circle cx="700" cy="400" r="130" fill="#ff6b6b" opacity="0.15" filter="url(#glow)"/>
+  
+  <!-- Swift Bird -->
+  <g transform="translate(110, 70)">
+    <!-- Head -->
+    <circle cx="80" cy="60" r="25" fill="url(#swiftGrad)" opacity="0.95"/>
+    <!-- Body -->
+    <ellipse cx="130" cy="80" rx="45" ry="50" fill="url(#swiftGrad)" opacity="0.9"/>
+    <!-- Wing top -->
+    <path d="M 130 50 Q 180 40 200 70 Q 170 85 130 80" fill="url(#swiftGrad)" opacity="0.8"/>
+    <!-- Wing bottom -->
+    <path d="M 130 110 Q 180 120 200 100 Q 170 95 130 100" fill="url(#swiftGrad)" opacity="0.7"/>
+    <!-- Tail -->
+    <path d="M 175 80 Q 220 50 240 80 Q 220 100 175 80" fill="url(#swiftGrad)" opacity="0.75"/>
+  </g>
+  
+  <text x="400" y="260" font-size="80" font-weight="900" fill="white" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" letter-spacing="-2">Swift</text>
+  <text x="400" y="320" font-size="32" fill="rgba(255,255,255,0.6)" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Native iOS Development</text>
+  
+  <line x1="150" y1="350" x2="650" y2="350" stroke="url(#swiftGrad)" stroke-width="4" opacity="0.5" stroke-linecap="round"/>
+</svg>

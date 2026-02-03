@@ -1,0 +1,26 @@
+{
+  "messages": [
+    {
+      "id": "msg_1769168407916_an80r5094",
+      "content": "hii",
+      "visitorId": "visitor_1769168291281_ly5a5oqbe",
+      "isAdmin": false,
+      "timestamp": "2026-01-23T11:40:07.916Z"
+    },
+    {
+      "id": "msg_1769168663830_79ip8fezg",
+      "content": "hlooo",
+      "visitorId": "visitor_1769168291281_ly5a5oqbe",
+      "isAdmin": false,
+      "timestamp": "2026-01-23T11:44:23.830Z"
+    },
+    {
+      "id": "msg_1769168685590_pfvm3qs5c",
+      "content": "what is redux",
+      "visitorId": "visitor_1769168291281_ly5a5oqbe",
+      "isAdmin": false,
+      "timestamp": "2026-01-23T11:44:45.590Z"
+    }
+  ],
+  "createdAt": "2026-01-23T11:40:07.916Z"
+}
