@@ -17,7 +17,7 @@ export function FloatingWhatsAppButton() {
   const handleWhatsAppClick = () => {
     console.log("[FLOATING] 💬 WhatsApp button clicked")
     console.log(`[FLOATING] Opening WhatsApp for: ${whatsappConfig.country}`)
-    console.log(`[FLOATING] WhatsApp Number: ${whatsappConfig.phone}`)
+    console.log(`[FLOATING] Display Number: ${whatsappConfig.displayPhone}`)
     console.log(`[FLOATING] Full URL: https://wa.me/${whatsappConfig.phone}`)
     window.open(`https://wa.me/${whatsappConfig.phone}`, "_blank")
   }

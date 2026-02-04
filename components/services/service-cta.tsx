@@ -399,7 +399,7 @@ export function ServiceCTA() {
                                         <p className="text-sm font-semibold text-white">+1 (800) TRYQ</p>
                                     </a>
                                     <a
-                                        href="mailto:tryqutech@gmail.com"
+                                        href="mailto:info@tryqu.com"
                                         className="p-3 rounded-lg bg-cyan-500/10 border border-cyan-500/30 hover:border-cyan-400/50 transition-colors text-center"
                                     >
                                         <Mail className="w-4 h-4 text-cyan-400 mx-auto mb-1" />

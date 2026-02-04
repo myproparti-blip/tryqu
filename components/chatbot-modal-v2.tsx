@@ -1,8 +1,9 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import { X, Send, LogOut, Lock, User, MessageCircle, CheckCircle, Trash2, Mail } from "lucide-react"
+import { X, Send, LogOut, Lock, User, MessageCircle, CheckCircle, Trash2, Mail, Zap, TrendingUp, Rocket, Sparkles, Headphones, Plug, Shield } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useGeolocation } from "@/hooks/useGeolocation"
 
 interface Message {
     id: string
@@ -28,6 +29,7 @@ export function ChatbotModalV2({
     onOpenScheduleConsultation,
     onMarkAsRead
 }: ChatbotModalProps) {
+    const { whatsappConfig } = useGeolocation()
     const [messages, setMessages] = useState<Message[]>([])
     const [inputValue, setInputValue] = useState("")
     const [isLoading, setIsLoading] = useState(false)
@@ -54,6 +56,19 @@ export function ChatbotModalV2({
     const [deleteSelectedConfirm, setDeleteSelectedConfirm] = useState(false)
 
     const pollIntervalRef = useRef<NodeJS.Timeout | null>(null)
+    const messagesContainerRef = useRef<HTMLDivElement>(null)
+
+    // Auto-scroll to bottom when messages change
+    useEffect(() => {
+        if (messagesContainerRef.current) {
+            // Use requestAnimationFrame for smooth scroll
+            requestAnimationFrame(() => {
+                if (messagesContainerRef.current) {
+                    messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight
+                }
+            })
+        }
+    }, [messages])
 
     // Mark messages as read
     const markMessagesAsRead = async (isAdminMode: boolean) => {
@@ -328,17 +343,17 @@ export function ChatbotModalV2({
 
             const data = await response.json()
 
-            // Add bot response if user sent message
+            // Add bot response if user sent message and there's a response
             if (!isAdmin && data.botResponse) {
                 setTimeout(() => {
                     const botMessage: Message = {
-                        id: `bot_${Date.now()}`,
+                        id: `bot_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
                         content: data.botResponse,
                         sender: "bot",
                         timestamp: new Date().toISOString(),
                     }
                     setMessages((prev) => [...prev, botMessage])
-                }, 500)
+                }, 300)
             }
         } catch (error) {
             console.error("Failed to send message:", error)
@@ -355,9 +370,9 @@ export function ChatbotModalV2({
         <div className="fixed inset-0 z-50 flex items-center justify-center p-3 md:items-end md:justify-end md:p-6">
             <div className="fixed inset-0 bg-black/30 backdrop-blur-sm" onClick={onClose} />
 
-            <div className="relative bg-gradient-to-b from-slate-950 to-slate-900 border border-slate-700/50 rounded-2xl shadow-2xl w-full max-w-[95vw] sm:max-w-sm md:max-w-5xl h-[90vh] md:h-[680px] flex flex-col overflow-hidden">
-                {/* Header - Rich & Visually Premium */}
-                <div className="bg-gradient-to-r from-lime-600 via-emerald-600 to-teal-600 rounded-t-2xl shadow-2xl border-b border-lime-500/40 relative overflow-hidden">
+            <div className="relative bg-gradient-to-b from-slate-900 to-slate-800 border border-slate-600/40 rounded-2xl shadow-2xl w-full max-w-[95vw] sm:max-w-sm md:max-w-5xl h-[92vh] md:h-[800px] flex flex-col overflow-hidden">
+                {/* Header - TryQu Tech Brand Colors */}
+                <div className="bg-gradient-to-r from-lime-400 via-lime-300 to-lime-400 rounded-t-2xl shadow-lg border-b border-lime-300/50 relative overflow-hidden">
                     {/* Background Pattern */}
                     <div className="absolute inset-0 opacity-10">
                         <div className="absolute inset-0" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%)" }}></div>
@@ -372,12 +387,12 @@ export function ChatbotModalV2({
                                 {isAdmin ? (
                                     <div className="flex items-center gap-4">
                                         <div className="flex items-center gap-3">
-                                            <div className="p-2.5 rounded-xl bg-lime-500/20 backdrop-blur-sm border border-lime-500/40">
-                                                <CheckCircle className="h-5 w-5 text-lime-400" />
+                                            <div className="p-2.5 rounded-xl bg-lime-600/20 backdrop-blur-sm border border-lime-600/40">
+                                                <CheckCircle className="h-5 w-5 text-lime-700" />
                                             </div>
                                             <div>
-                                                <h2 className="text-lg font-bold text-white leading-tight">Admin Dashboard</h2>
-                                                <p className="text-xs text-lime-400 font-medium">Logged in successfully</p>
+                                                <h2 className="text-lg font-bold text-lime-900 leading-tight">Admin Dashboard</h2>
+                                                <p className="text-xs text-lime-700 font-medium">Logged in successfully</p>
                                             </div>
                                         </div>
                                         {/* Logout Button beside Admin Title */}
@@ -392,64 +407,47 @@ export function ChatbotModalV2({
                                     </div>
                                 ) : (
                                     <div className="flex items-center gap-3">
-                                        <div className="p-2.5 rounded-xl bg-white/15 backdrop-blur-sm border border-white/20">
-                                            <User className="h-5 w-5 text-white" />
+                                        <div className="p-2.5 rounded-xl bg-lime-700/20 backdrop-blur-sm border border-lime-700/30">
+                                            <User className="h-5 w-5 text-lime-800" />
                                         </div>
                                         <div>
-                                            <h2 className="text-lg font-bold text-white leading-tight">Chat Support</h2>
-                                            <p className="text-xs text-white/70 font-medium">We're here to help</p>
+                                            <h2 className="text-lg font-bold text-lime-900 leading-tight">Chat Support</h2>
+                                            <p className="text-xs text-lime-800 font-medium">We're here to help</p>
                                         </div>
                                     </div>
                                 )}
                             </div>
 
-                            {/* Middle: Contact Icons with Text (User Only) */}
+                            {/* Middle: Contact Icons with Text and Location (User Only) */}
                             {!isAdmin && (
-                                <div className="flex flex-wrap items-center gap-2 w-full md:w-auto justify-start">
-                                    <a
-                                        href="https://slack.com"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        title="Contact via Slack"
-                                        className="flex items-center gap-1 md:gap-1.5 px-2 md:px-3 py-1 md:py-2 rounded-lg bg-lime-500/15 hover:bg-lime-500/25 border border-lime-400/30 hover:border-lime-400/50 transition-all duration-200 group text-[10px] md:text-xs whitespace-nowrap"
-                                    >
-                                        <svg className="h-3.5 md:h-4 w-3.5 md:w-4 text-lime-300 group-hover:text-lime-100 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.52-2.52 2.527 2.527 0 0 1 2.524 2.52v6.31A2.528 2.528 0 0 1 8.833 24a2.528 2.528 0 0 1-2.52-2.525v-6.31zM8.833 5.042a2.528 2.528 0 0 1-2.52-2.52A2.528 2.528 0 0 1 8.833 0a2.528 2.528 0 0 1 2.524 2.522v2.52H8.833zM8.833 6.313a2.527 2.527 0 0 1 2.524 2.52 2.527 2.527 0 0 1-2.524 2.524H2.524A2.528 2.528 0 0 1 0 8.833a2.528 2.528 0 0 1 2.524-2.52h6.31zM18.958 8.833a2.528 2.528 0 0 1 2.52-2.52A2.528 2.528 0 0 1 24 8.833a2.528 2.528 0 0 1-2.522 2.524h-2.52V8.833zM17.687 8.833a2.527 2.527 0 0 1-2.52 2.524 2.527 2.527 0 0 1-2.524-2.524V2.524A2.528 2.528 0 0 1 15.167 0a2.528 2.528 0 0 1 2.52 2.524v6.31zM15.167 18.958a2.528 2.528 0 0 1 2.52 2.52A2.528 2.528 0 0 1 15.167 24a2.528 2.528 0 0 1-2.524-2.522v-2.52h2.524zM15.167 17.687a2.527 2.527 0 0 1-2.524-2.52 2.527 2.527 0 0 1 2.524-2.524h6.31a2.528 2.528 0 0 1 2.522 2.524 2.528 2.528 0 0 1-2.522 2.52h-6.31z" />
-                                        </svg>
-                                        <span className="hidden sm:inline font-medium text-lime-200 group-hover:text-lime-100">Slack</span>
-                                    </a>
-                                    <a
-                                        href="https://teams.microsoft.com"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        title="Contact via Teams"
-                                        className="flex items-center gap-1 md:gap-1.5 px-2 md:px-3 py-1 md:py-2 rounded-lg bg-lime-500/15 hover:bg-lime-500/25 border border-lime-400/30 hover:border-lime-400/50 transition-all duration-200 group text-[10px] md:text-xs whitespace-nowrap"
-                                    >
-                                        <svg className="h-3.5 md:h-4 w-3.5 md:w-4 text-lime-300 group-hover:text-lime-100 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M19.5 3a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM13.5 3a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM10 7.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm10 0a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm3.5 2.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM4 10a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm4 8.5a1.5 1.5 0 111-3 1.5 1.5 0 01-1 3zm6 0a1.5 1.5 0 111-3 1.5 1.5 0 01-1 3zm8-2.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
-                                        </svg>
-                                        <span className="hidden sm:inline font-medium text-lime-200 group-hover:text-lime-100">Teams</span>
-                                    </a>
-                                    <a
-                                        href="https://wa.me/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        title="Contact via WhatsApp"
-                                        className="flex items-center gap-1 md:gap-1.5 px-2 md:px-3 py-1 md:py-2 rounded-lg bg-lime-500/15 hover:bg-lime-500/25 border border-lime-400/30 hover:border-lime-400/50 transition-all duration-200 group text-[10px] md:text-xs whitespace-nowrap"
-                                    >
-                                        <svg className="h-3.5 md:h-4 w-3.5 md:w-4 text-lime-300 group-hover:text-lime-100 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.982 1.313c-1.557.83-2.982 2.119-4.058 3.724-1.058 1.589-1.648 3.423-1.628 5.318.037 3.924 3.232 7.12 7.158 7.12h.009c1.44 0 2.84-.352 4.116-1.021l5.35 1.401-.001-5.404c.755-1.159 1.171-2.515 1.171-3.907 0-5.34-4.359-9.68-9.73-9.68m8.81 18.108l-.854 2.846c-1.948.881-4.084 1.368-6.312 1.368-6.656 0-12.08-5.424-12.08-12.08 0-2.227.484-4.357 1.357-6.299L2.255.015h2.846c1.948-.881 4.084-1.368 6.312-1.368 6.656 0 12.08 5.424 12.08 12.08 0 2.227-.484 4.357-1.357 6.299l1.127 6.09z" />
-                                        </svg>
-                                        <span className="hidden sm:inline font-medium text-lime-200 group-hover:text-lime-100">WhatsApp</span>
-                                    </a>
-                                    <a
-                                        href="mailto:contact@tryqu.com"
-                                        title="Contact via Email"
-                                        className="flex items-center gap-1 md:gap-1.5 px-2 md:px-3 py-1 md:py-2 rounded-lg bg-lime-500/15 hover:bg-lime-500/25 border border-lime-400/30 hover:border-lime-400/50 transition-all duration-200 group text-[10px] md:text-xs whitespace-nowrap"
-                                    >
-                                        <Mail className="h-3.5 md:h-4 w-3.5 md:w-4 text-lime-300 group-hover:text-lime-100 flex-shrink-0" />
-                                        <span className="hidden sm:inline font-medium text-lime-200 group-hover:text-lime-100">Email</span>
-                                    </a>
+                                <div className="flex flex-col w-full md:w-auto justify-start gap-2 md:gap-1.5">
+                                    {whatsappConfig && (
+                                        <div className="text-[10px] md:text-xs text-lime-800 whitespace-nowrap">
+                                            📍 {whatsappConfig.country} • {whatsappConfig.displayPhone}
+                                        </div>
+                                    )}
+                                    <div className="flex flex-wrap items-center gap-2">
+                                        <a
+                                            href={`https://wa.me/${whatsappConfig?.phone}?text=Hi%20TryQu%20Tech%2C%20I%20would%20like%20to%20get%20more%20information.`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            title="Contact via WhatsApp"
+                                            className="flex items-center gap-1 md:gap-1.5 px-2 md:px-3 py-1 md:py-2 rounded-lg bg-lime-600/20 hover:bg-lime-600/30 border border-lime-600/40 hover:border-lime-600/60 transition-all duration-200 group text-[10px] md:text-xs whitespace-nowrap"
+                                        >
+                                            <svg className="h-3.5 md:h-4 w-3.5 md:w-4 text-lime-700 group-hover:text-lime-800 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.982 1.313c-1.557.83-2.982 2.119-4.058 3.724-1.058 1.589-1.648 3.423-1.628 5.318.037 3.924 3.232 7.12 7.158 7.12h.009c1.44 0 2.84-.352 4.116-1.021l5.35 1.401-.001-5.404c.755-1.159 1.171-2.515 1.171-3.907 0-5.34-4.359-9.68-9.73-9.68m8.81 18.108l-.854 2.846c-1.948.881-4.084 1.368-6.312 1.368-6.656 0-12.08-5.424-12.08-12.08 0-2.227.484-4.357 1.357-6.299L2.255.015h2.846c1.948-.881 4.084-1.368 6.312-1.368 6.656 0 12.08 5.424 12.08 12.08 0 2.227-.484 4.357-1.357 6.299l1.127 6.09z" />
+                                            </svg>
+                                            <span className="hidden sm:inline font-medium text-lime-800 group-hover:text-lime-900">WhatsApp</span>
+                                        </a>
+                                        <a
+                                            href="mailto:info@tryqu.com"
+                                            title="Contact via Email"
+                                            className="flex items-center gap-1 md:gap-1.5 px-2 md:px-3 py-1 md:py-2 rounded-lg bg-lime-600/20 hover:bg-lime-600/30 border border-lime-600/40 hover:border-lime-600/60 transition-all duration-200 group text-[10px] md:text-xs whitespace-nowrap"
+                                        >
+                                            <Mail className="h-3.5 md:h-4 w-3.5 md:w-4 text-lime-700 group-hover:text-lime-800 flex-shrink-0" />
+                                            <span className="hidden sm:inline font-medium text-lime-800 group-hover:text-lime-900">Email</span>
+                                        </a>
+                                    </div>
                                 </div>
                             )}
 
@@ -470,8 +468,8 @@ export function ChatbotModalV2({
                                         }}
                                         title={selectedMessageIds.size > 0 ? "Clear selection" : "Select messages"}
                                         className={`text-xs font-semibold border transition-all duration-200 rounded-lg px-3 py-2 flex items-center gap-2 ${selectedMessageIds.size > 0
-                                            ? "bg-lime-600/30 hover:bg-lime-600/50 text-lime-300 hover:text-lime-200 border-lime-500/30 hover:border-lime-500/60"
-                                            : "bg-slate-600/20 hover:bg-slate-600/40 text-slate-300 hover:text-slate-200 border-slate-500/30 hover:border-slate-500/60"
+                                            ? "bg-lime-600/30 hover:bg-lime-600/50 text-lime-900 hover:text-lime-950 border-lime-600/40 hover:border-lime-600/60"
+                                            : "bg-lime-100/60 hover:bg-lime-200/70 text-lime-900 hover:text-lime-950 border-lime-300/50 hover:border-lime-400/60"
                                             }`}
                                     >
                                         <span className="hidden sm:inline">{selectedMessageIds.size > 0 ? "Clear" : "Select"}</span>
@@ -484,7 +482,7 @@ export function ChatbotModalV2({
                                     <button
                                         onClick={() => setDeleteSelectedConfirm(true)}
                                         title="Delete selected messages"
-                                        className="bg-red-600/20 hover:bg-red-600/40 text-red-300 hover:text-red-200 text-xs font-semibold border border-red-500/30 hover:border-red-500/60 transition-all duration-200 rounded-lg px-3 py-2 flex items-center gap-2"
+                                        className="bg-red-500/30 hover:bg-red-600/40 text-red-900 hover:text-red-950 text-xs font-semibold border border-red-500/50 hover:border-red-600/60 transition-all duration-200 rounded-lg px-3 py-2 flex items-center gap-2"
                                     >
                                         <Trash2 className="h-3.5 w-3.5" />
                                         <span className="hidden sm:inline">Delete</span>
@@ -496,7 +494,7 @@ export function ChatbotModalV2({
                                     <button
                                         onClick={() => setDeleteConfirm(isAdmin ? selectedConversation : visitorId)}
                                         title="Delete this chat"
-                                        className="bg-red-600/20 hover:bg-red-600/40 text-red-300 hover:text-red-200 text-xs font-semibold border border-red-500/30 hover:border-red-500/60 transition-all duration-200 rounded-lg px-3 py-2 flex items-center gap-2"
+                                        className="bg-red-500/30 hover:bg-red-600/40 text-red-900 hover:text-red-950 text-xs font-semibold border border-red-500/50 hover:border-red-600/60 transition-all duration-200 rounded-lg px-3 py-2 flex items-center gap-2"
                                     >
                                         <Trash2 className="h-3.5 w-3.5" />
                                         <span className="hidden sm:inline">Delete All</span>
@@ -508,7 +506,7 @@ export function ChatbotModalV2({
                                     <Button
                                         onClick={() => setShowAdminLogin(!showAdminLogin)}
                                         size="sm"
-                                        className="bg-white/15 backdrop-blur-sm text-white hover:bg-white/25 text-xs font-semibold border border-white/30 transition-all duration-200 rounded-lg px-3 py-2"
+                                        className="bg-lime-100/60 backdrop-blur-sm text-lime-900 hover:bg-lime-200/70 text-xs font-semibold border border-lime-300/50 hover:border-lime-400 transition-all duration-200 rounded-lg px-3 py-2"
                                     >
                                         <Lock className="h-3.5 w-3.5 mr-1.5" />
                                         Admin
@@ -518,7 +516,7 @@ export function ChatbotModalV2({
                                 {/* Close Button */}
                                 <button
                                     onClick={onClose}
-                                    className="text-white/60 hover:text-white transition-all duration-200 p-2 hover:bg-white/15 rounded-lg flex-shrink-0"
+                                    className="text-lime-900/60 hover:text-lime-950 transition-all duration-200 p-2 hover:bg-lime-500/20 rounded-lg flex-shrink-0"
                                 >
                                     <X className="h-5 w-5" />
                                 </button>
@@ -664,117 +662,136 @@ export function ChatbotModalV2({
                         ) : (
                             <>
                                 {/* Messages */}
-                                <div className="flex-1 overflow-y-auto p-5 space-y-3 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+                                <div
+                                    ref={messagesContainerRef}
+                                    className="flex-1 overflow-y-auto p-5 space-y-3 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900"
+                                >
                                     {messages.length === 0 ? (
                                         <div className="h-full flex flex-col items-center justify-center p-4">
                                             {!isAdmin ? (
                                                 <div className="w-full">
-                                                    <p className="text-center text-gray-400 text-sm mb-4 font-semibold">How can we help you today?</p>
-                                                    <p className="text-center text-gray-500 text-xs mb-6">Select a question or type your own</p>
+                                                    <p className="text-center text-gray-400 text-sm mb-2 font-semibold">👋 Hi! Welcome to TryQu Tech.</p>
+                                                    <p className="text-center text-gray-300 text-xs mb-6">How can we help you today — cloud solutions, DevOps, pricing, or something else?</p>
                                                     <div className="grid grid-cols-1 gap-2">
                                                         <button
                                                             onClick={() => {
+                                                                const questionText = "What solutions does TryQu offer?"
                                                                 const msg = "🎯 TryQu Solutions:\n\n✅ 3D Product Rendering\n   High-quality 3D visualization & product design\n\n✅ 3D Architecture Visualization\n   Professional ArchViz & building visualizations\n\n✅ IT Training & Certification\n   Comprehensive training courses & certifications\n\n✅ Technical Consulting\n   Expert guidance for your projects\n\nNeed more details? Just ask!"
-                                                                setInputValue(msg)
+                                                                setInputValue(questionText)
                                                                 setTimeout(() => {
                                                                     const form = document.querySelector('form')
                                                                     if (form) form.dispatchEvent(new Event('submit', { bubbles: true }))
                                                                 }, 100)
                                                             }}
-                                                            className="text-left px-3 py-2 rounded-lg bg-slate-700/50 hover:bg-slate-700 border border-slate-600 hover:border-lime-400 text-slate-300 text-xs transition-all hover:text-lime-300 cursor-pointer"
+                                                            className="flex items-center gap-3 text-left px-4 py-3 rounded-lg bg-lime-500/20 hover:bg-lime-500/30 border border-lime-500/40 hover:border-lime-400 text-lime-100 text-xs transition-all hover:text-lime-50 cursor-pointer font-medium shadow-sm hover:shadow-lime-500/20 hover:shadow-md"
                                                         >
-                                                            What solutions does TryQu offer?
+                                                            <Zap className="h-4 w-4 flex-shrink-0" />
+                                                            <span>What solutions does TryQu offer?</span>
                                                         </button>
                                                         <button
                                                             onClick={() => {
+                                                                const questionText = "How can TryQu help my business grow?"
                                                                 const msg = "📈 How TryQu Helps Your Business:\n\n💡 Enhanced Visuals\n   Stunning 3D renders increase product appeal & conversions\n\n📊 Professional Presence\n   Architecture visualization builds client confidence\n\n🎓 Skilled Team\n   IT training creates competent workforce\n\n🚀 Technical Excellence\n   Expert consulting solves complex challenges\n\n💰 ROI Growth\n   Quality solutions lead to better business outcomes\n\nLet's grow together! 🌟"
-                                                                setInputValue(msg)
+                                                                setInputValue(questionText)
                                                                 setTimeout(() => {
                                                                     const form = document.querySelector('form')
                                                                     if (form) form.dispatchEvent(new Event('submit', { bubbles: true }))
                                                                 }, 100)
                                                             }}
-                                                            className="text-left px-3 py-2 rounded-lg bg-slate-700/50 hover:bg-slate-700 border border-slate-600 hover:border-lime-400 text-slate-300 text-xs transition-all hover:text-lime-300 cursor-pointer"
+                                                            className="flex items-center gap-3 text-left px-4 py-3 rounded-lg bg-lime-500/20 hover:bg-lime-500/30 border border-lime-500/40 hover:border-lime-400 text-lime-100 text-xs transition-all hover:text-lime-50 cursor-pointer font-medium shadow-sm hover:shadow-lime-500/20 hover:shadow-md"
                                                         >
-                                                            How can TryQu help my business grow?
+                                                            <TrendingUp className="h-4 w-4 flex-shrink-0" />
+                                                            <span>How can TryQu help my business grow?</span>
                                                         </button>
                                                         <button
                                                             onClick={() => {
+                                                                const questionText = "What are TryQu's pricing plans?"
                                                                 const msg = "💰 TryQu Pricing Tiers:\n\n🎨 3D RENDERING PACKAGES\n📦 Basic 3D - $500-1,500\n   Single product visualization\n📦 Pro 3D - $2,000-5,000\n   Complex product renderings\n📦 Enterprise 3D - Custom pricing\n   Full product line visualization\n\n🏗️ ARCHITECTURE VISUALIZATION\n📦 Standard ArchViz - $1,500-3,000\n📦 Premium ArchViz - $3,500-8,000\n📦 Complete Project - Custom quote\n\n🎓 IT TRAINING\n📦 Individual Courses - $200-500\n📦 Certification Programs - $1,000-3,000\n📦 Corporate Training - Custom pricing\n\nClick calendar to book consultation! 📅"
-                                                                setInputValue(msg)
+                                                                setInputValue(questionText)
                                                                 setTimeout(() => {
                                                                     const form = document.querySelector('form')
                                                                     if (form) form.dispatchEvent(new Event('submit', { bubbles: true }))
                                                                 }, 100)
                                                             }}
-                                                            className="text-left px-3 py-2 rounded-lg bg-slate-700/50 hover:bg-slate-700 border border-slate-600 hover:border-lime-400 text-slate-300 text-xs transition-all hover:text-lime-300 cursor-pointer"
+                                                            className="flex items-center gap-3 text-left px-4 py-3 rounded-lg bg-lime-500/20 hover:bg-lime-500/30 border border-lime-500/40 hover:border-lime-400 text-lime-100 text-xs transition-all hover:text-lime-50 cursor-pointer font-medium shadow-sm hover:shadow-lime-500/20 hover:shadow-md"
                                                         >
-                                                            What are TryQu's pricing plans?
+                                                            <Zap className="h-4 w-4 flex-shrink-0" />
+                                                            <span>What are TryQu's pricing plans?</span>
                                                         </button>
                                                         <button
                                                             onClick={() => {
+                                                                const questionText = "How do I get started with TryQu?"
                                                                 const msg = "🚀 Getting Started with TryQu:\n\n📋 SIMPLE 3-STEP PROCESS\n\n1️⃣ CONSULTATION\n   Discuss your project needs & goals\n   Use chat or book meeting above\n\n2️⃣ PROPOSAL\n   Receive detailed quote & timeline\n   50% upfront, 50% on completion\n\n3️⃣ DELIVERY\n   Professional execution & revisions\n   Fast turnaround guaranteed\n\n✨ Ready to start?\n   👉 Book Consultation (Calendar button)\n   👉 Chat with us (message now)\n   👉 Email: tryq@gmail.com\n\nLet's bring your vision to life! 🎯"
-                                                                setInputValue(msg)
+                                                                setInputValue(questionText)
                                                                 setTimeout(() => {
                                                                     const form = document.querySelector('form')
                                                                     if (form) form.dispatchEvent(new Event('submit', { bubbles: true }))
                                                                 }, 100)
                                                             }}
-                                                            className="text-left px-3 py-2 rounded-lg bg-slate-700/50 hover:bg-slate-700 border border-slate-600 hover:border-lime-400 text-slate-300 text-xs transition-all hover:text-lime-300 cursor-pointer"
+                                                            className="flex items-center gap-3 text-left px-4 py-3 rounded-lg bg-lime-500/20 hover:bg-lime-500/30 border border-lime-500/40 hover:border-lime-400 text-lime-100 text-xs transition-all hover:text-lime-50 cursor-pointer font-medium shadow-sm hover:shadow-lime-500/20 hover:shadow-md"
                                                         >
-                                                            How do I get started with TryQu?
+                                                            <Rocket className="h-4 w-4 flex-shrink-0" />
+                                                            <span>How do I get started with TryQu?</span>
                                                         </button>
                                                         <button
                                                             onClick={() => {
+                                                                const questionText = "What features are included in TryQu?"
                                                                 const msg = "✨ TryQu Features:\n\n🎨 3D RENDERING\n   ✓ Photorealistic product visualization\n   ✓ Multiple angle renderings\n   ✓ Custom lighting & materials\n   ✓ Quick revisions & iterations\n\n🏗️ ARCHITECTURE VISUALIZATION\n   ✓ Building design visualization\n   ✓ Interior space planning\n   ✓ Landscape integration\n   ✓ Client presentations\n\n🎓 IT TRAINING\n   ✓ Certified instructors\n   ✓ Hands-on learning\n   ✓ Industry-standard courses\n   ✓ Job placement support\n\n💼 CONSULTING\n   ✓ Technical expertise\n   ✓ Project guidance\n   ✓ Problem solving\n   ✓ Strategy planning\n\nAll backed by quality & support! 🌟"
-                                                                setInputValue(msg)
+                                                                setInputValue(questionText)
                                                                 setTimeout(() => {
                                                                     const form = document.querySelector('form')
                                                                     if (form) form.dispatchEvent(new Event('submit', { bubbles: true }))
                                                                 }, 100)
                                                             }}
-                                                            className="text-left px-3 py-2 rounded-lg bg-slate-700/50 hover:bg-slate-700 border border-slate-600 hover:border-lime-400 text-slate-300 text-xs transition-all hover:text-lime-300 cursor-pointer"
+                                                            className="flex items-center gap-3 text-left px-4 py-3 rounded-lg bg-lime-500/20 hover:bg-lime-500/30 border border-lime-500/40 hover:border-lime-400 text-lime-100 text-xs transition-all hover:text-lime-50 cursor-pointer font-medium shadow-sm hover:shadow-lime-500/20 hover:shadow-md"
                                                         >
-                                                            What features are included in TryQu?
+                                                            <Sparkles className="h-4 w-4 flex-shrink-0" />
+                                                            <span>What features are included in TryQu?</span>
                                                         </button>
                                                         <button
                                                             onClick={() => {
+                                                                const questionText = "Does TryQu offer customer support?"
                                                                 const msg = "🤝 TryQu Customer Support:\n\n📞 SUPPORT CHANNELS\n   ✓ Live Chat Support (this window)\n   ✓ WhatsApp Messaging\n   ✓ Email: tryq@gmail.com\n   ✓ Scheduled Consultations\n\n🕐 SUPPORT HOURS\n   Monday - Friday: 9 AM - 6 PM IST\n   Weekend: Limited support available\n   Urgent requests: Available on demand\n\n✅ WHAT WE OFFER\n   ✓ Quick response times\n   ✓ Project updates & progress\n   ✓ Technical assistance\n   ✓ Unlimited revisions\n   ✓ Post-delivery support\n\n🌟 YOUR SUCCESS IS OUR PRIORITY\n   We're here to help every step of the way!\n\nAny questions? Ask away! 💬"
-                                                                setInputValue(msg)
+                                                                setInputValue(questionText)
                                                                 setTimeout(() => {
                                                                     const form = document.querySelector('form')
                                                                     if (form) form.dispatchEvent(new Event('submit', { bubbles: true }))
                                                                 }, 100)
                                                             }}
-                                                            className="text-left px-3 py-2 rounded-lg bg-slate-700/50 hover:bg-slate-700 border border-slate-600 hover:border-lime-400 text-slate-300 text-xs transition-all hover:text-lime-300 cursor-pointer"
+                                                            className="flex items-center gap-3 text-left px-4 py-3 rounded-lg bg-lime-500/20 hover:bg-lime-500/30 border border-lime-500/40 hover:border-lime-400 text-lime-100 text-xs transition-all hover:text-lime-50 cursor-pointer font-medium shadow-sm hover:shadow-lime-500/20 hover:shadow-md"
                                                         >
-                                                            Does TryQu offer customer support?
+                                                            <Headphones className="h-4 w-4 flex-shrink-0" />
+                                                            <span>Does TryQu offer customer support?</span>
                                                         </button>
                                                         <button
                                                             onClick={() => {
+                                                                const questionText = "Can I integrate TryQu with my existing tools?"
                                                                 const msg = "🔗 TryQu Integration Capabilities:\n\n✅ COMPATIBLE WITH\n   ✓ Major design software (Adobe, AutoCAD)\n   ✓ Project management tools\n   ✓ CRM systems\n   ✓ Email & collaboration platforms\n   ✓ Cloud storage services\n   ✓ Custom API integrations\n\n🔄 WORKFLOW INTEGRATION\n   ✓ Seamless file transfers\n   ✓ Automated reporting\n   ✓ Real-time project updates\n   ✓ Team collaboration features\n\n💡 FLEXIBLE SOLUTIONS\n   ✓ Custom integration setup\n   ✓ Technical support included\n   ✓ Smooth transition process\n   ✓ Minimal workflow disruption\n\n📋 NEED CUSTOM INTEGRATION?\n   Contact us for technical consultation\n   👉 Book a meeting above or chat now\n\nWe work with YOUR tools! 🎯"
-                                                                setInputValue(msg)
+                                                                setInputValue(questionText)
                                                                 setTimeout(() => {
                                                                     const form = document.querySelector('form')
                                                                     if (form) form.dispatchEvent(new Event('submit', { bubbles: true }))
                                                                 }, 100)
                                                             }}
-                                                            className="text-left px-3 py-2 rounded-lg bg-slate-700/50 hover:bg-slate-700 border border-slate-600 hover:border-lime-400 text-slate-300 text-xs transition-all hover:text-lime-300 cursor-pointer"
+                                                            className="flex items-center gap-3 text-left px-4 py-3 rounded-lg bg-lime-500/20 hover:bg-lime-500/30 border border-lime-500/40 hover:border-lime-400 text-lime-100 text-xs transition-all hover:text-lime-50 cursor-pointer font-medium shadow-sm hover:shadow-lime-500/20 hover:shadow-md"
                                                         >
-                                                            Can I integrate TryQu with my existing tools?
+                                                            <Plug className="h-4 w-4 flex-shrink-0" />
+                                                            <span>Can I integrate TryQu with my existing tools?</span>
                                                         </button>
                                                         <button
                                                             onClick={() => {
+                                                                const questionText = "How secure is TryQu?"
                                                                 const msg = "🔒 TryQu Security & Protection:\n\n🛡️ DATA SECURITY\n   ✓ End-to-end encryption\n   ✓ Secure file transfers\n   ✓ Regular security audits\n   ✓ Compliance with industry standards\n\n🔐 PRIVACY PROTECTION\n   ✓ Data privacy policy\n   ✓ No unauthorized access\n   ✓ Secure storage systems\n   ✓ GDPR & legal compliance\n\n✅ PROFESSIONAL STANDARDS\n   ✓ NDA agreements available\n   ✓ Confidentiality guaranteed\n   ✓ Secure communication channels\n   ✓ Professional conduct\n\n💼 BUSINESS SECURITY\n   ✓ Reliable infrastructure\n   ✓ Backup & recovery systems\n   ✓ Uptime guarantee\n   ✓ Enterprise-grade security\n\nYour trust is our foundation! 🌟\nQuestions about security? Ask us!"
-                                                                setInputValue(msg)
+                                                                setInputValue(questionText)
                                                                 setTimeout(() => {
                                                                     const form = document.querySelector('form')
                                                                     if (form) form.dispatchEvent(new Event('submit', { bubbles: true }))
                                                                 }, 100)
                                                             }}
-                                                            className="text-left px-3 py-2 rounded-lg bg-slate-700/50 hover:bg-slate-700 border border-slate-600 hover:border-lime-400 text-slate-300 text-xs transition-all hover:text-lime-300 cursor-pointer"
+                                                            className="flex items-center gap-3 text-left px-4 py-3 rounded-lg bg-lime-500/20 hover:bg-lime-500/30 border border-lime-500/40 hover:border-lime-400 text-lime-100 text-xs transition-all hover:text-lime-50 cursor-pointer font-medium shadow-sm hover:shadow-lime-500/20 hover:shadow-md"
                                                         >
-                                                            How secure is TryQu?
+                                                            <Shield className="h-4 w-4 flex-shrink-0" />
+                                                            <span>How secure is TryQu?</span>
                                                         </button>
                                                     </div>
                                                 </div>
@@ -833,70 +850,70 @@ export function ChatbotModalV2({
 
                                 {/* Quick Service Chips (User Only) */}
                                 {!isAdmin && (
-                                    <div className="border-t border-slate-700 px-3 md:px-5 py-3 md:py-4 bg-gradient-to-b from-slate-800/50 to-slate-800/30 backdrop-blur overflow-y-auto max-h-[100px]">
+                                    <div className="border-t border-slate-600/40 px-3 md:px-5 py-3 md:py-4 bg-gradient-to-b from-slate-750/50 to-slate-750/30 backdrop-blur overflow-y-auto max-h-[100px]">
                                         <div className="flex flex-wrap gap-1.5 md:gap-2">
                                             <button
                                                 onClick={() => {
-                                                    const serviceMsg = "🎯 TryQ Services:\n\n✅ 3D Product Rendering\n   High-quality 3D visualization & product design\n\n✅ 3D Architecture Visualization\n   Professional ArchViz & building visualizations\n\n✅ IT Training & Certification\n   Comprehensive training courses & certifications\n\n✅ Technical Consulting\n   Expert guidance for your projects\n\nClick 'Book Consultation' to get started!"
+                                                    const serviceMsg = "Services"
                                                     setInputValue(serviceMsg)
                                                     setTimeout(() => {
                                                         const form = document.querySelector('form')
                                                         if (form) form.dispatchEvent(new Event('submit', { bubbles: true }))
                                                     }, 100)
                                                 }}
-                                                className="px-2 md:px-3 py-1 md:py-1.5 rounded-full text-[10px] md:text-xs font-medium bg-gradient-to-r from-lime-500/30 to-emerald-500/30 text-lime-200 border border-lime-500/40 hover:from-lime-500/50 hover:to-emerald-500/50 hover:border-lime-500/70 transition-all duration-200 whitespace-nowrap"
+                                                className="px-2 md:px-3 py-1 md:py-1.5 rounded-full text-[10px] md:text-xs font-medium bg-lime-500/20 text-lime-200 border border-lime-500/40 hover:bg-lime-500/35 hover:border-lime-500/70 transition-all duration-200 whitespace-nowrap"
                                             >
                                                 🎯 Services
                                             </button>
                                             <button
                                                 onClick={() => {
-                                                    const aboutMsg = "ℹ️ About TryQ Tech:\n\n🌟 Premium Solutions Platform\n💡 Next-generation Technology\n🔒 Industry Expert Team\n⚡ Fast Turnaround\n📱 Modern & Responsive\n🌐 Worldwide Reach\n\n📊 Specializations:\n• 3D Visualization & Rendering\n• Architecture & Design\n• IT Training Programs\n• Technical Solutions\n\nYour trusted partner for digital excellence!"
+                                                    const aboutMsg = "About"
                                                     setInputValue(aboutMsg)
                                                     setTimeout(() => {
                                                         const form = document.querySelector('form')
                                                         if (form) form.dispatchEvent(new Event('submit', { bubbles: true }))
                                                     }, 100)
                                                 }}
-                                                className="px-2 md:px-3 py-1 md:py-1.5 rounded-full text-[10px] md:text-xs font-medium bg-gradient-to-r from-cyan-500/30 to-blue-500/30 text-cyan-200 border border-cyan-500/40 hover:from-cyan-500/50 hover:to-blue-500/50 hover:border-cyan-500/70 transition-all duration-200 whitespace-nowrap"
+                                                className="px-2 md:px-3 py-1 md:py-1.5 rounded-full text-[10px] md:text-xs font-medium bg-lime-500/20 text-lime-200 border border-lime-500/40 hover:bg-lime-500/35 hover:border-lime-500/70 transition-all duration-200 whitespace-nowrap"
                                             >
                                                 ℹ️ About
                                             </button>
                                             <button
                                                 onClick={() => {
-                                                    const faqMsg = "❓ Frequently Asked:\n\nQ: What's the typical project timeline?\nA: 2-4 weeks depending on complexity\n\nQ: Do you provide revisions?\nA: Yes, unlimited revisions for quality\n\nQ: What's the process to start?\nA: Chat with us → Book Consultation → Project kickoff\n\nQ: Payment terms?\nA: 50% upfront, 50% on completion\n\nQ: Can you handle rush projects?\nA: Yes! Contact us for rush pricing\n\nQ: Available worldwide?\nA: Yes, we serve global clients!\n\nNeed more details? Ask away!"
+                                                    const faqMsg = "FAQ"
                                                     setInputValue(faqMsg)
                                                     setTimeout(() => {
                                                         const form = document.querySelector('form')
                                                         if (form) form.dispatchEvent(new Event('submit', { bubbles: true }))
                                                     }, 100)
                                                 }}
-                                                className="px-2 md:px-3 py-1 md:py-1.5 rounded-full text-[10px] md:text-xs font-medium bg-gradient-to-r from-amber-500/30 to-orange-500/30 text-amber-200 border border-amber-500/40 hover:from-amber-500/50 hover:to-orange-500/50 hover:border-amber-500/70 transition-all duration-200 whitespace-nowrap"
+                                                className="px-2 md:px-3 py-1 md:py-1.5 rounded-full text-[10px] md:text-xs font-medium bg-lime-500/20 text-lime-200 border border-lime-500/40 hover:bg-lime-500/35 hover:border-lime-500/70 transition-all duration-200 whitespace-nowrap"
                                             >
                                                 ❓ FAQ
                                             </button>
                                             <button
                                                 onClick={() => {
-                                                    const pricingMsg = "💰 TryQ Pricing Tiers:\n\n🎨 3D RENDERING PACKAGES\n📦 Basic 3D - $500-1500\n  Single product visualization\n📦 Pro 3D - $2000-5000\n  Complex product renderings\n📦 Enterprise 3D - Custom pricing\n  Full product line visualization\n\n🏗️ ARCHITECTURE VISUALIZATION\n📦 Standard ArchViz - $1500-3000\n📦 Premium ArchViz - $3500-8000\n📦 Complete Project - Custom quote\n\n🎓 IT TRAINING\n📦 Individual Courses - $200-500\n📦 Certification Programs - $1000-3000\n📦 Corporate Training - Custom pricing\n\nGet a personalized quote - click calendar! 📅"
+                                                    const pricingMsg = "Pricing"
                                                     setInputValue(pricingMsg)
                                                     setTimeout(() => {
                                                         const form = document.querySelector('form')
                                                         if (form) form.dispatchEvent(new Event('submit', { bubbles: true }))
                                                     }, 100)
                                                 }}
-                                                className="px-2 md:px-3 py-1 md:py-1.5 rounded-full text-[10px] md:text-xs font-medium bg-gradient-to-r from-rose-500/30 to-pink-500/30 text-rose-200 border border-rose-500/40 hover:from-rose-500/50 hover:to-pink-500/50 hover:border-rose-500/70 transition-all duration-200 whitespace-nowrap"
+                                                className="px-2 md:px-3 py-1 md:py-1.5 rounded-full text-[10px] md:text-xs font-medium bg-lime-500/20 text-lime-200 border border-lime-500/40 hover:bg-lime-500/35 hover:border-lime-500/70 transition-all duration-200 whitespace-nowrap"
                                             >
                                                 💰 Pricing
                                             </button>
                                             <button
                                                 onClick={() => {
-                                                    const contactMsg = "📞 Contact TryQ Tech:\n\n📧 Email: tryq@gmail.com\n💬 WhatsApp: Available (click icon above)\n📱 Direct Chat: You're using it now!\n📅 Book Meeting: Click calendar icon\n\n🕐 SUPPORT HOURS\nMonday - Friday: 9 AM - 6 PM IST\nWeekend: Limited support\nUrgent: Available on request\n\n🌍 LOCATION\nBased: Pakistan\nServing: Worldwide\n\n💼 SERVICES\n✓ 3D Rendering & ArchViz\n✓ IT Training Programs\n✓ Technical Consulting\n✓ Custom Solutions\n\nLet's build something amazing together! 🚀"
+                                                    const contactMsg = "Contact"
                                                     setInputValue(contactMsg)
                                                     setTimeout(() => {
                                                         const form = document.querySelector('form')
                                                         if (form) form.dispatchEvent(new Event('submit', { bubbles: true }))
                                                     }, 100)
                                                 }}
-                                                className="px-2 md:px-3 py-1 md:py-1.5 rounded-full text-[10px] md:text-xs font-medium bg-gradient-to-r from-indigo-500/30 to-purple-500/30 text-indigo-200 border border-indigo-500/40 hover:from-indigo-500/50 hover:to-purple-500/50 hover:border-indigo-500/70 transition-all duration-200 whitespace-nowrap"
+                                                className="px-2 md:px-3 py-1 md:py-1.5 rounded-full text-[10px] md:text-xs font-medium bg-lime-500/20 text-lime-200 border border-lime-500/40 hover:bg-lime-500/35 hover:border-lime-500/70 transition-all duration-200 whitespace-nowrap"
                                             >
                                                 📞 Contact
                                             </button>
@@ -907,7 +924,7 @@ export function ChatbotModalV2({
                                 {/* Input */}
                                 <form
                                     onSubmit={handleSendMessage}
-                                    className="border-t border-slate-700 p-3 md:p-5 bg-gradient-to-t from-slate-900 to-slate-800/80 backdrop-blur flex gap-2 md:gap-3"
+                                    className="border-t border-slate-600/40 p-3 md:p-5 bg-gradient-to-t from-slate-800 to-slate-750/80 backdrop-blur flex gap-2 md:gap-3"
                                 >
                                     <input
                                         type="text"
@@ -915,12 +932,12 @@ export function ChatbotModalV2({
                                         onChange={(e) => setInputValue(e.target.value)}
                                         placeholder={isAdmin ? "Type response..." : "Ask us anything..."}
                                         disabled={isLoading}
-                                        className="flex-1 px-3 md:px-4 py-2 md:py-3 rounded-lg bg-slate-700/50 border border-slate-600 text-white text-sm placeholder-slate-400 focus:outline-none focus:border-lime-500 focus:ring-1 focus:ring-lime-500/50 disabled:opacity-50 transition-all"
+                                        className="flex-1 px-3 md:px-4 py-2 md:py-3 rounded-lg bg-slate-700/40 border border-slate-600/60 text-white text-sm placeholder-slate-400 focus:outline-none focus:border-lime-500 focus:ring-1 focus:ring-lime-500/50 disabled:opacity-50 transition-all"
                                     />
                                     <Button
                                         type="submit"
                                         disabled={isLoading || !inputValue.trim()}
-                                        className="bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:from-lime-600 hover:to-emerald-600 disabled:from-slate-600 disabled:to-slate-700 px-3 md:px-5 py-2 md:py-3 rounded-lg font-medium shadow-lg transition-all disabled:shadow-none flex-shrink-0"
+                                        className="bg-gradient-to-r from-lime-500 to-lime-600 text-white hover:from-lime-600 hover:to-lime-700 disabled:from-slate-600 disabled:to-slate-700 px-3 md:px-5 py-2 md:py-3 rounded-lg font-medium shadow-lg transition-all disabled:shadow-none flex-shrink-0"
                                     >
                                         <Send className="h-4 md:h-5 w-4 md:w-5" />
                                     </Button>

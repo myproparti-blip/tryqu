@@ -1,13 +1,14 @@
 import mongoose from "mongoose"
-// Import models to ensure they're registered
-import { Message } from "./models/Message"
-import { Chat } from "./models/Chat"
 
 const MONGODB_URI = process.env.MONGO_URI
 
 if (!MONGODB_URI) {
   throw new Error("Please define the MONGO_URI environment variable")
 }
+
+// Import models to ensure they're registered AFTER mongoose is configured
+import "./models/Message"
+import "./models/Chat"
 
 let cached = global as any
 

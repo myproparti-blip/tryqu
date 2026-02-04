@@ -133,61 +133,75 @@ export function AppverseFooter() {
               </div>
               <ul className="space-y-4">
                 <li>
-                  <a
-                    href="https://twitter.com/trqtech"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-sm text-neutral-400 hover:text-lime-300 transition-all duration-300 group"
-                    aria-label="Follow TryQu Tech on Twitter"
-                  >
-                    <div className="p-2 rounded-lg bg-neutral-800/50 group-hover:bg-lime-400/15 group-hover:border-lime-400/30 border border-neutral-700 transition-all duration-300">
-                      <Twitter className="h-4 w-4" />
-                    </div>
-                    <span>X/Twitter</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.youtube.com/@trqtech"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-sm text-neutral-400 hover:text-lime-300 transition-all duration-300 group"
-                    aria-label="Subscribe to TryQu Tech on YouTube"
-                  >
-                    <div className="p-2 rounded-lg bg-neutral-800/50 group-hover:bg-lime-400/15 group-hover:border-lime-400/30 border border-neutral-700 transition-all duration-300">
-                      <Youtube className="h-4 w-4" />
-                    </div>
-                    <span>YouTube</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://instagram.com/trqtech"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-sm text-neutral-400 hover:text-lime-300 transition-all duration-300 group"
-                    aria-label="Follow TryQu Tech on Instagram"
-                  >
-                    <div className="p-2 rounded-lg bg-neutral-800/50 group-hover:bg-lime-400/15 group-hover:border-lime-400/30 border border-neutral-700 transition-all duration-300">
-                      <Instagram className="h-4 w-4" />
-                    </div>
-                    <span>Instagram</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://threads.com/trqtech"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-sm text-neutral-400 hover:text-lime-300 transition-all duration-300 group"
-                    aria-label="Follow TryQu Tech on Threads"
-                  >
-                    <div className="p-2 rounded-lg bg-neutral-800/50 group-hover:bg-lime-400/15 group-hover:border-lime-400/30 border border-neutral-700 transition-all duration-300">
-                      <MessageCircle className="h-4 w-4" />
-                    </div>
-                    <span>Threads</span>
-                  </a>
-                </li>
+                   <a
+                     href="https://x.com/tryqutech"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     className="flex items-center gap-3 text-sm text-neutral-400 hover:text-lime-300 transition-all duration-300 group"
+                     aria-label="Follow TryQu Tech on X"
+                   >
+                     <div className="p-2 rounded-lg bg-neutral-800/50 group-hover:bg-lime-400/15 group-hover:border-lime-400/30 border border-neutral-700 transition-all duration-300">
+                       <Twitter className="h-4 w-4" />
+                     </div>
+                     <span>X</span>
+                   </a>
+                 </li>
+                 <li>
+                   <a
+                     href="https://www.youtube.com/@Tryqutech"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     className="flex items-center gap-3 text-sm text-neutral-400 hover:text-lime-300 transition-all duration-300 group"
+                     aria-label="Subscribe to TryQu Tech on YouTube"
+                   >
+                     <div className="p-2 rounded-lg bg-neutral-800/50 group-hover:bg-lime-400/15 group-hover:border-lime-400/30 border border-neutral-700 transition-all duration-300">
+                       <Youtube className="h-4 w-4" />
+                     </div>
+                     <span>YouTube</span>
+                   </a>
+                 </li>
+                 <li>
+                   <a
+                     href="https://www.instagram.com/tryqutech/"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     className="flex items-center gap-3 text-sm text-neutral-400 hover:text-lime-300 transition-all duration-300 group"
+                     aria-label="Follow TryQu Tech on Instagram"
+                   >
+                     <div className="p-2 rounded-lg bg-neutral-800/50 group-hover:bg-lime-400/15 group-hover:border-lime-400/30 border border-neutral-700 transition-all duration-300">
+                       <Instagram className="h-4 w-4" />
+                     </div>
+                     <span>Instagram</span>
+                   </a>
+                 </li>
+                 <li>
+                   <a
+                     href="https://www.facebook.com/profile.php?id=615874997653303"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     className="flex items-center gap-3 text-sm text-neutral-400 hover:text-lime-300 transition-all duration-300 group"
+                     aria-label="Follow TryQu Tech on Facebook"
+                   >
+                     <div className="p-2 rounded-lg bg-neutral-800/50 group-hover:bg-lime-400/15 group-hover:border-lime-400/30 border border-neutral-700 transition-all duration-300">
+                       <Twitter className="h-4 w-4" />
+                     </div>
+                     <span>Facebook</span>
+                   </a>
+                 </li>
+                 <li>
+                   <a
+                     href="https://www.linkedin.com/in/tryqu-tech-9262883aa"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     className="flex items-center gap-3 text-sm text-neutral-400 hover:text-lime-300 transition-all duration-300 group"
+                     aria-label="Follow TryQu Tech on LinkedIn"
+                   >
+                     <div className="p-2 rounded-lg bg-neutral-800/50 group-hover:bg-lime-400/15 group-hover:border-lime-400/30 border border-neutral-700 transition-all duration-300">
+                       <MessageCircle className="h-4 w-4" />
+                     </div>
+                     <span>LinkedIn</span>
+                   </a>
+                 </li>
               </ul>
             </div>
 
@@ -219,7 +233,7 @@ export function AppverseFooter() {
               </div>
               <ul className="space-y-3">
                 <li>
-                  <Link href="/about" className="text-sm text-neutral-400 hover:text-lime-300 transition-all duration-300 inline-flex items-center gap-2 group">
+                  <Link href="/About" className="text-sm text-neutral-400 hover:text-lime-300 transition-all duration-300 inline-flex items-center gap-2 group">
                     <span className="w-0 group-hover:w-2 h-0.5 bg-lime-400 transition-all duration-300" />
                     <span>About Us</span>
                   </Link>
@@ -262,10 +276,10 @@ export function AppverseFooter() {
               <div className="space-y-3 group">
                 <p className="text-xs text-neutral-500 uppercase tracking-widest font-semibold">Email</p>
                 <a 
-                  href="mailto:tryqutech@gmail.com" 
+                  href="mailto:info@tryqu.com" 
                   className="text-sm text-neutral-300 hover:text-lime-300 transition-colors break-all font-medium group-hover:translate-x-1 duration-300"
                 >
-                  tryqutech@gmail.com
+                  info@tryqu.com
                 </a>
               </div>
               <div className="space-y-3 group">

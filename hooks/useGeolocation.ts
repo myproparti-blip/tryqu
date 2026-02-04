@@ -6,6 +6,7 @@ export interface WhatsAppConfig {
   country: string
   phone: string
   countryCode: string
+  displayPhone: string
 }
 
 export const LOCATION_WHATSAPP_MAP: Record<string, WhatsAppConfig> = {
@@ -13,26 +14,43 @@ export const LOCATION_WHATSAPP_MAP: Record<string, WhatsAppConfig> = {
     country: "United States",
     phone: "15483332844",
     countryCode: "US",
+    displayPhone: "+1 (548) 333-2844",
   },
   CA: {
     country: "Canada",
     phone: "15483332844",
     countryCode: "CA",
+    displayPhone: "+1 (548) 333-2844",
   },
   GB: {
     country: "United Kingdom",
     phone: "447999960900",
     countryCode: "GB",
+    displayPhone: "+44 7999 960900",
   },
   IN: {
     country: "India",
-    phone: "9033452895",
+    phone: "919033452895",
     countryCode: "IN",
+    displayPhone: "+91 90334-52895",
+  },
+  AU: {
+    country: "Australia",
+    phone: "61XXXXXXXXX",
+    countryCode: "AU",
+    displayPhone: "+61 X XXXX XXXX",
+  },
+  MX: {
+    country: "Mexico",
+    phone: "52XXXXXXXXX",
+    countryCode: "MX",
+    displayPhone: "+52 XXXX-XXXX",
   },
   default: {
     country: "India",
     phone: "918238177000",
     countryCode: "IN",
+    displayPhone: "+91 8238-177000",
   },
 }
 
@@ -63,20 +81,21 @@ export function useGeolocation() {
     
     let config = LOCATION_WHATSAPP_MAP.default
     
-    if (userCountry) {
+    if (userCountry && LOCATION_WHATSAPP_MAP[userCountry]) {
       // Use the detected country from middleware
       console.log(`[HOOK] ✅ Found country in cookie: ${userCountry}`)
-      config = LOCATION_WHATSAPP_MAP[userCountry] || LOCATION_WHATSAPP_MAP.default
-      console.log(`[HOOK] 📍 WhatsApp Config:`)
+      config = LOCATION_WHATSAPP_MAP[userCountry]
+      console.log(`[HOOK] 📍 Region-Specific WhatsApp Config:`)
       console.log(`      Country: ${config.country}`)
-      console.log(`      Number: ${config.phone}`)
+      console.log(`      Display: ${config.displayPhone}`)
       console.log(`      Code: ${config.countryCode}`)
     } else {
-      // Fallback to default
-      console.log(`[HOOK] ⚠️ Cookie not found, using default (India)`)
+      // Fallback to default if country not found or not in mapping
+      console.log(`[HOOK] ⚠️ Country '${userCountry}' not mapped or cookie not found, using default (India)`)
       console.log(`[HOOK] 📍 WhatsApp Config (Default):`)
       console.log(`      Country: ${LOCATION_WHATSAPP_MAP.default.country}`)
-      console.log(`      Number: ${LOCATION_WHATSAPP_MAP.default.phone}`)
+      console.log(`      Display: ${LOCATION_WHATSAPP_MAP.default.displayPhone}`)
+      console.log(`      Code: ${LOCATION_WHATSAPP_MAP.default.countryCode}`)
     }
     
     setWhatsappConfig(config)

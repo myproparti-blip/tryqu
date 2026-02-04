@@ -143,7 +143,7 @@ export function SupportSection() {
                 Send us an email and we'll respond within 24 hours
               </p>
               <a
-                href="mailto:support@tryqu.com"
+                href="mailto:info@tryqu.com"
                 className="text-lime-300 hover:text-lime-400 font-medium text-sm inline-flex items-center gap-2 transition-colors"
               >
                 support@tryqu.com

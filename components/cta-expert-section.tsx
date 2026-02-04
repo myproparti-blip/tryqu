@@ -141,6 +141,11 @@ export function CTAExpertSection() {
                             <p className="text-lg md:text-xl text-white/70 leading-relaxed">
                                 Connect with our expert team to discuss your enterprise IT needs and discover how TryQu Tech can drive innovation and growth for your organization.
                             </p>
+                            {whatsappConfig && (
+                                <p className="text-sm text-white/50 pt-2">
+                                    📍 {whatsappConfig.country} • WhatsApp: {whatsappConfig.displayPhone}
+                                </p>
+                            )}
                         </div>
 
                         {/* CTA Buttons */}

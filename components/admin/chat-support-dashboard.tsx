@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { MessageCircle, LogOut, Trash2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useGeolocation } from "@/hooks/useGeolocation"
 
 interface ChatMessage {
     id: string
@@ -21,14 +22,15 @@ interface Visitor {
 }
 
 export function ChatSupportDashboard() {
-    const [visitors, setVisitors] = useState<Visitor[]>([])
-    const [selectedVisitor, setSelectedVisitor] = useState<Visitor | null>(null)
-    const [replyText, setReplyText] = useState("")
-    const [loading, setLoading] = useState(true)
-    const [isSending, setIsSending] = useState(false)
-    const [lastUpdate, setLastUpdate] = useState<Date>(new Date())
-    const [deleteConfirm, setDeleteConfirm] = useState<string | null>(null)
-    const [deleting, setDeleting] = useState(false)
+     const { whatsappConfig } = useGeolocation()
+     const [visitors, setVisitors] = useState<Visitor[]>([])
+     const [selectedVisitor, setSelectedVisitor] = useState<Visitor | null>(null)
+     const [replyText, setReplyText] = useState("")
+     const [loading, setLoading] = useState(true)
+     const [isSending, setIsSending] = useState(false)
+     const [lastUpdate, setLastUpdate] = useState<Date>(new Date())
+     const [deleteConfirm, setDeleteConfirm] = useState<string | null>(null)
+     const [deleting, setDeleting] = useState(false)
 
     // Calculate total unread messages (like WhatsApp - only show unread count)
     const totalUnreadMessages = visitors.reduce((sum, v) => sum + (v.unread || 0), 0)
@@ -215,6 +217,9 @@ export function ChatSupportDashboard() {
                                     <h3 className="font-bold text-white text-base">
                                         Visitor: {selectedVisitor.visitorId.substring(0, 30)}
                                     </h3>
+                                    {whatsappConfig && (
+                                        <p className="text-xs text-gray-400 mt-1">📍 {whatsappConfig.country} • WhatsApp: {whatsappConfig.displayPhone}</p>
+                                    )}
                                 </div>
                                 <button
                                     onClick={() => setDeleteConfirm(selectedVisitor.visitorId)}

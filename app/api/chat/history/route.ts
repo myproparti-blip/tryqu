@@ -47,7 +47,9 @@ export async function GET(request: NextRequest) {
       messages,
     })
   } catch (error) {
-    console.error("Chat history fetch error:", error)
-    return NextResponse.json({ error: "Failed to fetch history" }, { status: 500 })
+    const errorMsg = error instanceof Error ? error.message : String(error)
+    console.error("Chat history fetch error:", errorMsg)
+    console.error("Full error:", error)
+    return NextResponse.json({ error: "Failed to fetch history", details: errorMsg }, { status: 500 })
   }
 }

@@ -138,6 +138,11 @@ export function ConsultationCtaCard() {
                         <p className="text-base text-slate-300 leading-relaxed mb-8">
                             Connect with our expert team to discuss your enterprise IT needs and discover how TryQ Tech can drive innovation and growth for your organization.
                         </p>
+                        {whatsappConfig && (
+                            <p className="text-sm text-slate-400 mb-4">
+                                📍 {whatsappConfig.country} • WhatsApp: {whatsappConfig.displayPhone}
+                            </p>
+                        )}
                     </div>
 
                     {/* CTA Buttons */}
