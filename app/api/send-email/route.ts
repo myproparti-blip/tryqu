@@ -29,10 +29,10 @@ export async function POST(request: NextRequest) {
         const emailSubject = `New Consultation Request from ${name}`
 
         // Send email to admin
-        const adminEmailResult = await resend.emails.send({
-            from: 'Consultation <onboarding@resend.dev>',
-            to: 'maste1432ra@gmail.com',
-            subject: emailSubject,
+         const adminEmailResult = await resend.emails.send({
+             from: 'Consultation <onboarding@resend.dev>',
+             to: 'info@tryqu.com',
+             subject: emailSubject,
             html: `
                   <h2>New Consultation Request</h2>
                   <p><strong>Name:</strong> ${name}</p>
