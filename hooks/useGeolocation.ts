@@ -12,15 +12,15 @@ export interface WhatsAppConfig {
 export const LOCATION_WHATSAPP_MAP: Record<string, WhatsAppConfig> = {
   US: {
     country: "United States",
-    phone: "15483332844",
+    phone: "15512608302",
     countryCode: "US",
-    displayPhone: "+1 (548) 333-2844",
+    displayPhone: "+1 (551) 260-8302",
   },
   CA: {
     country: "Canada",
-    phone: "15483332844",
+    phone: "14313063070",
     countryCode: "CA",
-    displayPhone: "+1 (548) 333-2844",
+    displayPhone: "+1 (431) 306-3070",
   },
   GB: {
     country: "United Kingdom",
@@ -28,11 +28,17 @@ export const LOCATION_WHATSAPP_MAP: Record<string, WhatsAppConfig> = {
     countryCode: "GB",
     displayPhone: "+44 7999 960900",
   },
+  DE: {
+    country: "Germany",
+    phone: "49157582282855",
+    countryCode: "DE",
+    displayPhone: "+49 1575 8228-2855",
+  },
   IN: {
     country: "India",
-    phone: "919033452895",
+    phone: "919327361477",
     countryCode: "IN",
-    displayPhone: "+91 90334-52895",
+    displayPhone: "+91 9327-361477",
   },
   AU: {
     country: "Australia",
@@ -48,9 +54,9 @@ export const LOCATION_WHATSAPP_MAP: Record<string, WhatsAppConfig> = {
   },
   default: {
     country: "India",
-    phone: "918238177000",
+    phone: "919327361477",
     countryCode: "IN",
-    displayPhone: "+91 8238-177000",
+    displayPhone: "+91 9327-361477",
   },
 }
 
