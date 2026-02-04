@@ -285,12 +285,13 @@ export function AppverseFooter() {
               <div className="space-y-3 group">
                 <p className="text-xs text-neutral-500 uppercase tracking-widest font-semibold">WhatsApp</p>
                 <a 
-                  href="https://wa.me/919033452895" 
+                  href={`https://wa.me/${whatsappConfig?.phone}?text=Hi%20TryQu%20Tech%2C%20I%20would%20like%20to%20get%20more%20information.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-neutral-300 hover:text-lime-300 transition-colors font-medium group-hover:translate-x-1 duration-300"
+                  className="text-sm text-neutral-300 hover:text-lime-300 transition-colors font-medium group-hover:translate-x-1 duration-300 inline-flex items-center gap-2"
                 >
-                  +91 9033452895
+                  <MessageCircle className="h-4 w-4" />
+                  <span>Chat With Us</span>
                 </a>
               </div>
               <div className="space-y-3 group">
