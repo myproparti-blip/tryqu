@@ -39,7 +39,7 @@ const pillars: PillarCard[] = [
     color: "from-amber-400 to-orange-500",
     bgGradient: "from-amber-500/5 to-orange-500/5",
     borderColor: "border-amber-500/30 hover:border-amber-400/60",
-    href: "/services/development",
+    href: "/services#development",
   },
   {
     id: "testing",
@@ -54,7 +54,7 @@ const pillars: PillarCard[] = [
     color: "from-yellow-300 to-amber-400",
     bgGradient: "from-yellow-400/5 to-amber-400/5",
     borderColor: "border-yellow-400/30 hover:border-yellow-300/60",
-    href: "/services/testing",
+    href: "/services#testing",
   },
   {
     id: "devops",
@@ -69,7 +69,7 @@ const pillars: PillarCard[] = [
     color: "from-emerald-400 to-teal-500",
     bgGradient: "from-emerald-500/5 to-teal-500/5",
     borderColor: "border-emerald-500/30 hover:border-emerald-400/60",
-    href: "/services/devops",
+    href: "/services#devops",
   },
   {
     id: "performance",
@@ -84,7 +84,7 @@ const pillars: PillarCard[] = [
     color: "from-cyan-400 to-blue-500",
     bgGradient: "from-cyan-500/5 to-blue-500/5",
     borderColor: "border-cyan-500/30 hover:border-cyan-400/60",
-    href: "/services/performance",
+    href: "/services#performance",
   },
 ]
 

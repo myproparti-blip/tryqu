@@ -78,7 +78,15 @@ export default function ServicesPage() {
         <ServicesHero />
         <ServiceSlider />
         <ServicePillars />
-        <ServiceGrid />
+        <section id="development" className="scroll-mt-20">
+          <div id="testing" className="scroll-mt-20">
+            <div id="devops" className="scroll-mt-20">
+              <div id="performance" className="scroll-mt-20">
+                <ServiceGrid />
+              </div>
+            </div>
+          </div>
+        </section>
         <ServiceBenefits />
         <RelatedTechnologies 
           technologies={relatedTechnologies}
