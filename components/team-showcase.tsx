@@ -18,7 +18,7 @@ export function TeamShowcase() {
         {
             id: 2,
             name: "Abhishek",
-            role: "Chief Executive Officer - Americas",
+            role: "Chief Executive Officer - America",
             icon: Users,
             description: "Strategic leadership for North American market. Expertise in enterprise architecture and digital modernization.",
             image: "/images/teammembe.jpeg",
