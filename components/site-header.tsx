@@ -177,9 +177,6 @@ export function SiteHeader() {
                              <DropdownMenuContent align="end" className="w-auto bg-black/98 border border-lime-400/40 backdrop-blur-xl p-4">
                                  <div className="mb-4">
                                      <h3 className="text-sm font-bold text-lime-400">Get in Touch</h3>
-                                     {whatsappConfig && (
-                                         <p className="text-xs text-gray-400 mt-1">📍 {whatsappConfig.country} • {whatsappConfig.displayPhone}</p>
-                                     )}
                                  </div>
                                  <div className="space-y-2">
                                      <a href={`https://wa.me/${whatsappConfig?.phone}?text=Hi%20TryQu%20Tech%2C%20I%20would%20like%20to%20get%20more%20information.`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-3 py-2.5 cursor-pointer rounded-lg hover:bg-lime-400/20 transition-all text-white text-sm font-medium">
@@ -283,11 +280,6 @@ export function SiteHeader() {
                                                  <ChevronDown className="h-4 w-4 ml-auto transition-transform group-open:rotate-180" />
                                              </summary>
                                              <div className="bg-neutral-950/60 border-l-2 border-neutral-700 ml-6 mt-0.5">
-                                                 {whatsappConfig && (
-                                                     <div className="px-4 py-2 text-xs text-neutral-500">
-                                                         📍 {whatsappConfig.country} • {whatsappConfig.displayPhone}
-                                                     </div>
-                                                 )}
                                                  <a href={`https://wa.me/${whatsappConfig?.phone}?text=Hi%20TryQu%20Tech%2C%20I%20would%20like%20to%20get%20more%20information.`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-4 py-2.5 text-neutral-400 hover:text-lime-300 hover:bg-neutral-900/50 transition-colors">
                                                      <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
                                                          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.982 1.313c-1.557.83-2.982 2.119-4.058 3.724-1.058 1.589-1.648 3.423-1.628 5.318.037 3.924 3.232 7.12 7.158 7.12h.009c1.44 0 2.84-.352 4.116-1.021l5.35 1.401-.001-5.404c.755-1.159 1.171-2.515 1.171-3.907 0-5.34-4.359-9.68-9.73-9.68m8.81 18.108l-.854 2.846c-1.948.881-4.084 1.368-6.312 1.368-6.656 0-12.08-5.424-12.08-12.08 0-2.227.484-4.357 1.357-6.299L2.255.015h2.846c1.948-.881 4.084-1.368 6.312-1.368 6.656 0 12.08 5.424 12.08 12.08 0 2.227-.484 4.357-1.357 6.299l1.127 6.09z" />

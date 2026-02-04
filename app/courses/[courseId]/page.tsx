@@ -547,61 +547,63 @@ export default function CourseDetailsPage({ params }: CourseDetailsPageProps) {
                             {/* Sidebar - Course Info Card */}
                             <div className="lg:col-span-1">
                                 <div className="sticky top-24 p-8 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 backdrop-blur-xl">
-                                    {/* CTA Button */}
-                                    <button className="w-full py-3 px-4 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold mb-6 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/30 hover:scale-105">
-                                        Get Started
-                                    </button>
+                                    {/* Free Chip Badge */}
+                                    <div className="mb-8 flex justify-center">
+                                        <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-bold">
+                                            💚 100% FREE
+                                        </div>
+                                    </div>
 
                                     {/* Course Info Section */}
                                     <div className="space-y-4">
-                                        <div className="flex items-center gap-3">
-                                            <Award className="w-5 h-5 text-cyan-400" />
-                                            <div>
-                                                <p className="text-xs text-slate-400">Level</p>
-                                                <p className="text-white font-semibold">{course.level}</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex items-center gap-3">
-                                            <Clock className="w-5 h-5 text-cyan-400" />
-                                            <div>
-                                                <p className="text-xs text-slate-400">Duration</p>
-                                                <p className="text-white font-semibold">{course.duration}</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex items-center gap-3">
-                                            <BookOpen className="w-5 h-5 text-cyan-400" />
-                                            <div>
-                                                <p className="text-xs text-slate-400">Modules</p>
-                                                <p className="text-white font-semibold">{course.stats.modules}</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex items-center gap-3">
-                                            <FileText className="w-5 h-5 text-cyan-400" />
-                                            <div>
-                                                <p className="text-xs text-slate-400">Certificate</p>
-                                                <p className="text-white font-semibold">Included</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex items-center gap-3">
-                                            <Users className="w-5 h-5 text-cyan-400" />
-                                            <div>
-                                                <p className="text-xs text-slate-400">Students</p>
-                                                <p className="text-white font-semibold">{(course.stats.students / 1000).toFixed(1)}k+</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                         <div className="flex items-center gap-3">
+                                             <Award className="w-5 h-5 text-cyan-400" />
+                                             <div>
+                                                 <p className="text-xs text-slate-400">Level</p>
+                                                 <p className="text-white font-semibold">{course.level}</p>
+                                             </div>
+                                         </div>
+                                         <div className="flex items-center gap-3">
+                                             <Clock className="w-5 h-5 text-cyan-400" />
+                                             <div>
+                                                 <p className="text-xs text-slate-400">Duration</p>
+                                                 <p className="text-white font-semibold">{course.duration}</p>
+                                             </div>
+                                         </div>
+                                         <div className="flex items-center gap-3">
+                                             <BookOpen className="w-5 h-5 text-cyan-400" />
+                                             <div>
+                                                 <p className="text-xs text-slate-400">Modules</p>
+                                                 <p className="text-white font-semibold">{course.stats.modules}</p>
+                                             </div>
+                                         </div>
+                                         <div className="flex items-center gap-3">
+                                             <FileText className="w-5 h-5 text-cyan-400" />
+                                             <div>
+                                                 <p className="text-xs text-slate-400">Certificate</p>
+                                                 <p className="text-white font-semibold">Included</p>
+                                             </div>
+                                         </div>
+                                         <div className="flex items-center gap-3">
+                                             <Users className="w-5 h-5 text-cyan-400" />
+                                             <div>
+                                                 <p className="text-xs text-slate-400">Students</p>
+                                                 <p className="text-white font-semibold">{(course.stats.students / 1000).toFixed(1)}k+</p>
+                                             </div>
+                                         </div>
+                                     </div>
 
                                     {/* Divider */}
                                     <div className="my-6 border-t border-white/10"></div>
 
                                     {/* Rating */}
                                     <div className="flex items-center gap-2 p-3 rounded-lg bg-white/5 border border-white/10">
-                                        <Star className="w-5 h-5 text-yellow-400" />
-                                        <div>
-                                            <p className="text-sm text-white font-semibold">{course.stats.rating}/5</p>
-                                            <p className="text-xs text-slate-400">Course Rating</p>
-                                        </div>
-                                    </div>
+                                         <Star className="w-5 h-5 text-yellow-400" />
+                                         <div>
+                                             <p className="text-sm text-white font-semibold">{course.stats.rating}/5</p>
+                                             <p className="text-xs text-slate-400">Course Rating</p>
+                                         </div>
+                                     </div>
                                 </div>
                             </div>
                         </div>
@@ -702,20 +704,15 @@ export default function CourseDetailsPage({ params }: CourseDetailsPageProps) {
                     </div>
                 </section>
 
-                {/* CTA Section */}
+                {/* Info Section */}
                 <section className="py-16 px-4 sm:px-6 lg:px-8">
                     <div className="max-w-4xl mx-auto text-center">
                         <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Master {course.title}?</h3>
-                        <p className="text-xl text-slate-400 mb-8">
-                            Start your learning journey today and join {(course.stats.students / 1000).toFixed(1)}k+ satisfied students
+                        <p className="text-lg text-slate-300 mb-8">
+                            This course is completely free and available to all learners. Start your journey today with {(course.stats.students / 1000).toFixed(1)}k+ satisfied students.
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <button className="px-8 py-4 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/30 hover:scale-105">
-                                Get Started Now
-                            </button>
-                            <button className="px-8 py-4 rounded-lg bg-white/10 text-white font-bold border border-white/20 hover:bg-white/20 transition-all duration-300">
-                                View Free Preview
-                            </button>
+                        <div className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold text-base">
+                            💚 100% FREE - No Cost, Full Access
                         </div>
                     </div>
                 </section>

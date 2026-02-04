@@ -418,14 +418,9 @@ export function ChatbotModalV2({
                                 )}
                             </div>
 
-                            {/* Middle: Contact Icons with Text and Location (User Only) */}
+                            {/* Middle: Contact Icons (User Only) */}
                             {!isAdmin && (
                                 <div className="flex flex-col w-full md:w-auto justify-start gap-2 md:gap-1.5">
-                                    {whatsappConfig && (
-                                        <div className="text-[10px] md:text-xs text-lime-800 whitespace-nowrap">
-                                            📍 {whatsappConfig.country} • {whatsappConfig.displayPhone}
-                                        </div>
-                                    )}
                                     <div className="flex flex-wrap items-center gap-2">
                                         <a
                                             href={`https://wa.me/${whatsappConfig?.phone}?text=Hi%20TryQu%20Tech%2C%20I%20would%20like%20to%20get%20more%20information.`}

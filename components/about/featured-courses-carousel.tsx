@@ -183,8 +183,9 @@ export function FeaturedCoursesCarousel() {
                     className="flex gap-6 overflow-x-auto scrollbar-hide pb-4"
                 >
                     {featuredCourses.map((course, idx) => (
-                        <div
+                        <Link
                             key={course.id}
+                            href={`/courses/${course.id}`}
                             className="flex-shrink-0 w-80 group cursor-pointer"
                         >
                             {/* Card Container */}
@@ -224,8 +225,15 @@ export function FeaturedCoursesCarousel() {
                                         {course.description}
                                     </p>
 
+                                    {/* Free Chip Badge */}
+                                    <div className="mb-4">
+                                       <div className="inline-block px-3 py-1.5 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold">
+                                           💚 FREE
+                                       </div>
+                                    </div>
+
                                     {/* Stats */}
-                                    <div className="flex items-center gap-4 mb-4 pt-4 border-t border-white/10">
+                                    <div className="flex items-center gap-4 pt-4 border-t border-white/10">
                                         <div className="flex items-center gap-1">
                                             <span className="text-yellow-400 text-sm">⭐</span>
                                             <span className="text-white font-bold text-sm">{course.stats.rating}</span>
@@ -237,19 +245,11 @@ export function FeaturedCoursesCarousel() {
                                             {course.stats.modules} modules
                                         </div>
                                     </div>
-
-                                    {/* CTA Button */}
-                                    <Link
-                                        href={`/courses/${course.id}`}
-                                        className="block w-full py-2.5 px-4 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold text-sm transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/30 group-hover:scale-105 text-center"
-                                    >
-                                        View Course →
+                                    </div>
+                                    </div>
                                     </Link>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                                    ))}
+                                    </div>
 
                 {/* Progress Indicator */}
                 <div className="mt-8 flex gap-2 justify-center">
