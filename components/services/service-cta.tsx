@@ -320,12 +320,12 @@ export function ServiceCTA() {
                         {/* Modal Content */}
                         <div className="p-8">
                             {/* Confirmation Message */}
-                            <div className="mb-8 p-6 rounded-lg bg-green-500/5 border border-green-500/20">
-                                <p className="text-green-400 font-semibold mb-2">✓ Request Received</p>
-                                <p className="text-gray-300">
-                                    Your consultation request has been received and confirmation emails have been sent to both you and our team.
-                                </p>
-                            </div>
+                             <div className="mb-8 p-6 rounded-lg bg-green-500/5 border border-green-500/20">
+                                 <p className="text-green-400 font-semibold mb-2">✓ Request Received</p>
+                                 <p className="text-gray-300">
+                                     Your consultation request has been received and confirmation emails have been sent to both you and our team at <a href="mailto:info@tryqu.com" className="text-cyan-400 hover:text-cyan-300 underline">info@tryqu.com</a>.
+                                 </p>
+                             </div>
 
                             {/* Submitted Data Display */}
                             <h3 className="text-lg font-semibold text-white mb-4">Submission Details</h3>

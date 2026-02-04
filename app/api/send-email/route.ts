@@ -72,7 +72,7 @@ export async function POST(request: NextRequest) {
         return NextResponse.json(
             {
                 success: true,
-                message: 'Consultation request received. Check your email for confirmation.',
+                message: 'Consultation request received. Check your email for confirmation from info@tryqu.com.',
                 data: { name, email, company, service, preferredDay, preferredDate, preferredTime },
             },
             { status: 200 }
