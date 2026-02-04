@@ -678,7 +678,7 @@ export function ChatbotModalV2({
                                                                     if (form) form.dispatchEvent(new Event('submit', { bubbles: true }))
                                                                 }, 100)
                                                             }}
-                                                            className="flex items-center gap-3 text-left px-4 py-3 rounded-lg bg-lime-500/20 hover:bg-lime-500/30 border border-lime-500/40 hover:border-lime-400 text-lime-100 text-xs transition-all hover:text-lime-50 cursor-pointer font-medium shadow-sm hover:shadow-lime-500/20 hover:shadow-md"
+                                                            className="flex items-center gap-3 text-left px-4 py-3 rounded-lg bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 hover:border-neutral-600 text-neutral-200 text-xs transition-all hover:text-white cursor-pointer font-medium shadow-sm hover:shadow-md"
                                                         >
                                                             <Zap className="h-4 w-4 flex-shrink-0" />
                                                             <span>What solutions does TryQu offer?</span>
@@ -693,7 +693,7 @@ export function ChatbotModalV2({
                                                                     if (form) form.dispatchEvent(new Event('submit', { bubbles: true }))
                                                                 }, 100)
                                                             }}
-                                                            className="flex items-center gap-3 text-left px-4 py-3 rounded-lg bg-lime-500/20 hover:bg-lime-500/30 border border-lime-500/40 hover:border-lime-400 text-lime-100 text-xs transition-all hover:text-lime-50 cursor-pointer font-medium shadow-sm hover:shadow-lime-500/20 hover:shadow-md"
+                                                            className="flex items-center gap-3 text-left px-4 py-3 rounded-lg bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 hover:border-neutral-600 text-neutral-200 text-xs transition-all hover:text-white cursor-pointer font-medium shadow-sm hover:shadow-md"
                                                         >
                                                             <TrendingUp className="h-4 w-4 flex-shrink-0" />
                                                             <span>How can TryQu help my business grow?</span>
@@ -708,7 +708,7 @@ export function ChatbotModalV2({
                                                                     if (form) form.dispatchEvent(new Event('submit', { bubbles: true }))
                                                                 }, 100)
                                                             }}
-                                                            className="flex items-center gap-3 text-left px-4 py-3 rounded-lg bg-lime-500/20 hover:bg-lime-500/30 border border-lime-500/40 hover:border-lime-400 text-lime-100 text-xs transition-all hover:text-lime-50 cursor-pointer font-medium shadow-sm hover:shadow-lime-500/20 hover:shadow-md"
+                                                            className="flex items-center gap-3 text-left px-4 py-3 rounded-lg bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 hover:border-neutral-600 text-neutral-200 text-xs transition-all hover:text-white cursor-pointer font-medium shadow-sm hover:shadow-md"
                                                         >
                                                             <Zap className="h-4 w-4 flex-shrink-0" />
                                                             <span>What are TryQu's pricing plans?</span>
@@ -723,7 +723,7 @@ export function ChatbotModalV2({
                                                                     if (form) form.dispatchEvent(new Event('submit', { bubbles: true }))
                                                                 }, 100)
                                                             }}
-                                                            className="flex items-center gap-3 text-left px-4 py-3 rounded-lg bg-lime-500/20 hover:bg-lime-500/30 border border-lime-500/40 hover:border-lime-400 text-lime-100 text-xs transition-all hover:text-lime-50 cursor-pointer font-medium shadow-sm hover:shadow-lime-500/20 hover:shadow-md"
+                                                            className="flex items-center gap-3 text-left px-4 py-3 rounded-lg bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 hover:border-neutral-600 text-neutral-200 text-xs transition-all hover:text-white cursor-pointer font-medium shadow-sm hover:shadow-md"
                                                         >
                                                             <Rocket className="h-4 w-4 flex-shrink-0" />
                                                             <span>How do I get started with TryQu?</span>
@@ -738,7 +738,7 @@ export function ChatbotModalV2({
                                                                     if (form) form.dispatchEvent(new Event('submit', { bubbles: true }))
                                                                 }, 100)
                                                             }}
-                                                            className="flex items-center gap-3 text-left px-4 py-3 rounded-lg bg-lime-500/20 hover:bg-lime-500/30 border border-lime-500/40 hover:border-lime-400 text-lime-100 text-xs transition-all hover:text-lime-50 cursor-pointer font-medium shadow-sm hover:shadow-lime-500/20 hover:shadow-md"
+                                                            className="flex items-center gap-3 text-left px-4 py-3 rounded-lg bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 hover:border-neutral-600 text-neutral-200 text-xs transition-all hover:text-white cursor-pointer font-medium shadow-sm hover:shadow-md"
                                                         >
                                                             <Sparkles className="h-4 w-4 flex-shrink-0" />
                                                             <span>What features are included in TryQu?</span>
@@ -753,7 +753,7 @@ export function ChatbotModalV2({
                                                                     if (form) form.dispatchEvent(new Event('submit', { bubbles: true }))
                                                                 }, 100)
                                                             }}
-                                                            className="flex items-center gap-3 text-left px-4 py-3 rounded-lg bg-lime-500/20 hover:bg-lime-500/30 border border-lime-500/40 hover:border-lime-400 text-lime-100 text-xs transition-all hover:text-lime-50 cursor-pointer font-medium shadow-sm hover:shadow-lime-500/20 hover:shadow-md"
+                                                            className="flex items-center gap-3 text-left px-4 py-3 rounded-lg bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 hover:border-neutral-600 text-neutral-200 text-xs transition-all hover:text-white cursor-pointer font-medium shadow-sm hover:shadow-md"
                                                         >
                                                             <Headphones className="h-4 w-4 flex-shrink-0" />
                                                             <span>Does TryQu offer customer support?</span>
@@ -768,7 +768,7 @@ export function ChatbotModalV2({
                                                                     if (form) form.dispatchEvent(new Event('submit', { bubbles: true }))
                                                                 }, 100)
                                                             }}
-                                                            className="flex items-center gap-3 text-left px-4 py-3 rounded-lg bg-lime-500/20 hover:bg-lime-500/30 border border-lime-500/40 hover:border-lime-400 text-lime-100 text-xs transition-all hover:text-lime-50 cursor-pointer font-medium shadow-sm hover:shadow-lime-500/20 hover:shadow-md"
+                                                            className="flex items-center gap-3 text-left px-4 py-3 rounded-lg bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 hover:border-neutral-600 text-neutral-200 text-xs transition-all hover:text-white cursor-pointer font-medium shadow-sm hover:shadow-md"
                                                         >
                                                             <Plug className="h-4 w-4 flex-shrink-0" />
                                                             <span>Can I integrate TryQu with my existing tools?</span>
@@ -783,7 +783,7 @@ export function ChatbotModalV2({
                                                                     if (form) form.dispatchEvent(new Event('submit', { bubbles: true }))
                                                                 }, 100)
                                                             }}
-                                                            className="flex items-center gap-3 text-left px-4 py-3 rounded-lg bg-lime-500/20 hover:bg-lime-500/30 border border-lime-500/40 hover:border-lime-400 text-lime-100 text-xs transition-all hover:text-lime-50 cursor-pointer font-medium shadow-sm hover:shadow-lime-500/20 hover:shadow-md"
+                                                            className="flex items-center gap-3 text-left px-4 py-3 rounded-lg bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 hover:border-neutral-600 text-neutral-200 text-xs transition-all hover:text-white cursor-pointer font-medium shadow-sm hover:shadow-md"
                                                         >
                                                             <Shield className="h-4 w-4 flex-shrink-0" />
                                                             <span>How secure is TryQu?</span>
