@@ -359,15 +359,15 @@ export default function OutsourcingPage() {
                             <h2 className="text-4xl font-bold mb-6">Why Enterprises Choose Outsourced Development</h2>
 
                             <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-8 mb-8">
-                                <h3 className="text-2xl font-bold mb-4 text-purple-400">Enterprise-Grade Delivery with Proven Accountability</h3>
+                                <h3 className="text-2xl font-bold mb-4 text-lime-400">Enterprise-Grade Delivery with Proven Accountability</h3>
                                 <p className="text-lg text-gray-300 leading-relaxed">
                                     Enterprise outsourcing means partnering with specialized engineering teams to accelerate your product roadmap while your internal teams focus on strategic initiatives. Benefit from proven expertise, SLA-backed accountability, and delivery ownership. Scale your capacity on demand with predictable costs and minimal operational overhead.
                                 </p>
                             </div>
 
                             <div className="space-y-8 mb-8">
-                                <div className="bg-gradient-to-r from-purple-500/5 to-pink-500/5 border border-purple-500/20 rounded-xl p-8">
-                                    <h3 className="text-xl font-bold mb-4 text-purple-300">The Evolution of Outsourcing</h3>
+                                <div className="bg-gradient-to-r from-lime-500/5 to-green-500/5 border border-lime-500/20 rounded-xl p-8">
+                                    <h3 className="text-xl font-bold mb-4 text-lime-300">The Evolution of Outsourcing</h3>
                                     <p className="text-gray-300 leading-relaxed mb-4">
                                         Modern outsourcing has evolved dramatically over the past two decades. In the early 2000s, outsourcing was primarily about cost arbitrage—hiring cheaper labor in offshore locations like India, Philippines, or Eastern Europe. While cost savings remain important, today's outsourcing represents a fundamentally different value proposition.
                                     </p>
@@ -375,17 +375,17 @@ export default function OutsourcingPage() {
                                         Today's outsourcing partners function as strategic technology consultants—not just code factories. They provide:
                                     </p>
                                     <ul className="space-y-2 text-gray-300 ml-4">
-                                        <li><span className="text-purple-400">✓ Architectural guidance</span> - Design decisions, system design reviews, scalability planning</li>
-                                        <li><span className="text-purple-400">✓ Technical leadership</span> - Senior engineers mentoring, code quality standards, best practices</li>
-                                        <li><span className="text-purple-400">✓ Quality assurance expertise</span> - Comprehensive testing strategies, automation frameworks, quality metrics</li>
-                                        <li><span className="text-purple-400">✓ Security & compliance</span> - HIPAA, GDPR, SOC 2, PCI DSS implementation and maintenance</li>
-                                        <li><span className="text-purple-400">✓ Infrastructure management</span> - Cloud platform selection, DevOps implementation, monitoring and optimization</li>
-                                        <li><span className="text-purple-400">✓ Defined accountability</span> - Service Level Agreements, measurable metrics, transparent reporting</li>
+                                        <li><span className="text-lime-400">✓ Architectural guidance</span> - Design decisions, system design reviews, scalability planning</li>
+                                         <li><span className="text-lime-400">✓ Technical leadership</span> - Senior engineers mentoring, code quality standards, best practices</li>
+                                         <li><span className="text-lime-400">✓ Quality assurance expertise</span> - Comprehensive testing strategies, automation frameworks, quality metrics</li>
+                                         <li><span className="text-lime-400">✓ Security & compliance</span> - HIPAA, GDPR, SOC 2, PCI DSS implementation and maintenance</li>
+                                         <li><span className="text-lime-400">✓ Infrastructure management</span> - Cloud platform selection, DevOps implementation, monitoring and optimization</li>
+                                         <li><span className="text-lime-400">✓ Defined accountability</span> - Service Level Agreements, measurable metrics, transparent reporting</li>
                                     </ul>
                                 </div>
 
-                                <div className="bg-gradient-to-r from-blue-500/5 to-cyan-500/5 border border-blue-500/20 rounded-xl p-8">
-                                    <h3 className="text-xl font-bold mb-4 text-blue-300">Why Companies Choose Strategic Outsourcing</h3>
+                                <div className="bg-gradient-to-r from-lime-500/5 to-green-500/5 border border-lime-500/20 rounded-xl p-8">
+                                    <h3 className="text-xl font-bold mb-4 text-lime-300">Why Companies Choose Strategic Outsourcing</h3>
                                     <p className="text-gray-300 leading-relaxed mb-4">
                                         Organizations globally—from ambitious startups to Fortune 500 enterprises—use outsourcing as a strategic lever to:
                                     </p>
@@ -428,9 +428,9 @@ export default function OutsourcingPage() {
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-16">
                             <div className="inline-block mb-4">
-                                <span className="text-xs font-semibold text-purple-400 uppercase tracking-widest bg-purple-500/10 px-4 py-1.5 rounded-full border border-purple-500/20">Enterprise Benefits</span>
+                                <span className="text-xs font-semibold text-lime-400 uppercase tracking-widest bg-lime-500/10 px-4 py-1.5 rounded-full border border-lime-500/20">Enterprise Benefits</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent">Why Enterprises Partner with TryQu</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Why Enterprises Partner with TryQu</h2>
                             <p className="text-gray-400 text-lg">Delivery accountability, scalability, and strategic partnership for enterprise organizations</p>
                         </div>
 
@@ -528,13 +528,13 @@ export default function OutsourcingPage() {
                     </div>
                     <div className="container mx-auto max-w-5xl">
                         <div className="text-center mb-16">
-                            <div className="inline-block mb-4 bg-blue-500/10 px-4 py-2 rounded-full border border-blue-500/30">
-                                <span className="text-xs font-semibold text-blue-400 uppercase tracking-widest flex items-center gap-2">
+                            <div className="inline-block mb-4 bg-lime-500/10 px-4 py-2 rounded-full border border-lime-500/30">
+                                <span className="text-xs font-semibold text-lime-400 uppercase tracking-widest flex items-center gap-2">
                                     <Shield className="w-4 h-4" />
                                     Enterprise Ready
                                 </span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-blue-200 to-white bg-clip-text text-transparent">What Makes Us Enterprise-Grade Partners</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">What Makes Us Enterprise-Grade Partners</h2>
                             <p className="text-gray-400 text-lg">Bank-level security, compliance, and reliability standards</p>
                         </div>
 
@@ -625,13 +625,13 @@ export default function OutsourcingPage() {
 
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-16">
-                            <div className="inline-block mb-4 bg-blue-500/10 px-4 py-2 rounded-full border border-blue-500/30">
-                                <span className="text-xs font-semibold text-blue-400 uppercase tracking-widest flex items-center gap-2">
+                            <div className="inline-block mb-4 bg-lime-500/10 px-4 py-2 rounded-full border border-lime-500/30">
+                                <span className="text-xs font-semibold text-lime-400 uppercase tracking-widest flex items-center gap-2">
                                     <Briefcase className="w-4 h-4" />
                                     Flexible Models
                                 </span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-blue-200 to-white bg-clip-text text-transparent">Choose Your Engagement Model</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Choose Your Engagement Model</h2>
                             <p className="text-gray-400 text-lg">Select the perfect engagement style for your project needs. Full control, flexibility, or turnkey solution.</p>
                         </div>
 
@@ -667,32 +667,32 @@ export default function OutsourcingPage() {
                                 }
                                 return (
                                     <div key={i}>
-                                        <div className="bg-gradient-to-br from-gray-900/80 to-gray-950/80 border border-gray-800 rounded-2xl overflow-hidden hover:border-purple-500/50 transition-all shadow-xl hover:shadow-2xl hover:shadow-purple-500/10">
+                                        <div className="bg-gradient-to-br from-gray-900/80 to-gray-950/80 border border-gray-800 rounded-2xl overflow-hidden hover:border-lime-500/50 transition-all shadow-xl hover:shadow-2xl hover:shadow-lime-500/10">
                                             {/* Emoji Header */}
-                                            <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 h-24 flex items-center justify-center hover:from-purple-600/40 hover:to-pink-600/40 transition-all">
+                                            <div className="bg-gradient-to-r from-lime-600/20 to-green-600/20 h-24 flex items-center justify-center hover:from-lime-600/40 hover:to-green-600/40 transition-all">
                                                 <div className="text-7xl">{emoji}</div>
                                             </div>
 
                                             <div className="p-8 lg:p-10">
                                                 <div>
                                                     <div className="inline-flex items-center gap-3 mb-4">
-                                                        <div className="p-3 bg-gradient-to-br from-purple-500/30 to-pink-500/30 rounded-lg border border-purple-500/50">
-                                                            <Icon className="w-6 h-6 text-purple-400" />
+                                                        <div className="p-3 bg-gradient-to-br from-lime-500/30 to-green-500/30 rounded-lg border border-lime-500/50">
+                                                            <Icon className="w-6 h-6 text-lime-400" />
                                                         </div>
-                                                        <span className="text-xs font-bold text-purple-400 uppercase tracking-widest">Model {i + 1}</span>
+                                                        <span className="text-xs font-bold text-lime-400 uppercase tracking-widest">Model {i + 1}</span>
                                                     </div>
-                                                    <h3 className="text-3xl lg:text-4xl font-bold mb-3 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">{model.title}</h3>
+                                                    <h3 className="text-3xl lg:text-4xl font-bold mb-3 bg-gradient-to-r from-white to-lime-200 bg-clip-text text-transparent">{model.title}</h3>
                                                     <p className="text-gray-300 text-lg mb-8 leading-relaxed">{model.description}</p>
                                                 </div>
 
                                                 <div className="space-y-6">
                                                     <div>
-                                                        <p className="text-xs text-purple-400 mb-4 font-bold uppercase tracking-wider">Key Benefits</p>
+                                                        <p className="text-xs text-lime-400 mb-4 font-bold uppercase tracking-wider">Key Benefits</p>
                                                         <ul className="space-y-3">
                                                             {model.benefits.map((benefit, j) => (
                                                                 <li key={j} className="flex items-start gap-3 text-gray-300 group">
-                                                                    <div className="p-1 bg-purple-500/20 rounded group-hover:bg-purple-500/40 transition-colors flex-shrink-0 mt-1">
-                                                                        <CheckCircle className="w-4 h-4 text-purple-300" />
+                                                                    <div className="p-1 bg-lime-500/20 rounded group-hover:bg-lime-500/40 transition-colors flex-shrink-0 mt-1">
+                                                                        <CheckCircle className="w-4 h-4 text-lime-300" />
                                                                     </div>
                                                                     <span className="text-sm group-hover:text-white transition-colors">{benefit}</span>
                                                                 </li>
@@ -700,8 +700,8 @@ export default function OutsourcingPage() {
                                                         </ul>
                                                     </div>
 
-                                                    <div className="bg-gradient-to-br from-blue-500/5 to-cyan-500/5 border border-blue-500/20 rounded-xl p-4 hover:border-blue-500/50 transition-colors">
-                                                        <p className="text-xs text-blue-400 font-bold mb-2 uppercase tracking-wider">Key Benefit</p>
+                                                    <div className="bg-gradient-to-br from-lime-500/5 to-green-500/5 border border-lime-500/20 rounded-xl p-4 hover:border-lime-500/50 transition-colors">
+                                                        <p className="text-xs text-lime-400 font-bold mb-2 uppercase tracking-wider">Key Benefit</p>
                                                         <p className="text-gray-300 text-sm leading-relaxed">{(model as any).keyBenefit}</p>
                                                     </div>
 
@@ -713,16 +713,16 @@ export default function OutsourcingPage() {
                                             </div>
 
                                             {/* Expanded Scenarios */}
-                                            <div className="border-t border-gray-800/50 bg-gradient-to-r from-purple-500/5 to-pink-500/5 px-8 lg:px-10 py-8">
-                                                <p className="text-xs text-purple-400 mb-5 font-bold uppercase tracking-wider flex items-center gap-2">
+                                            <div className="border-t border-gray-800/50 bg-gradient-to-r from-lime-500/5 to-green-500/5 px-8 lg:px-10 py-8">
+                                                <p className="text-xs text-lime-400 mb-5 font-bold uppercase tracking-wider flex items-center gap-2">
                                                     <Sparkles className="w-4 h-4" />
                                                     Real-World Scenarios
                                                 </p>
                                                 <div className="grid sm:grid-cols-3 gap-6">
                                                     {detailedExplanations[i]?.scenarios.map((scenario, j) => (
-                                                        <div key={j} className="bg-gray-900/50 border border-gray-700 rounded-lg p-5 hover:border-purple-500/50 hover:bg-gray-900/80 transition-all group">
+                                                        <div key={j} className="bg-gray-900/50 border border-gray-700 rounded-lg p-5 hover:border-lime-500/50 hover:bg-gray-900/80 transition-all group">
                                                             <div className="flex gap-3 items-start">
-                                                                <div className="text-purple-400 font-bold text-lg mt-0.5 group-hover:scale-125 transition-transform">→</div>
+                                                                <div className="text-lime-400 font-bold text-lg mt-0.5 group-hover:scale-125 transition-transform">→</div>
                                                                 <p className="text-sm text-gray-300 group-hover:text-white transition-colors leading-relaxed">{scenario}</p>
                                                             </div>
                                                         </div>
@@ -740,64 +740,64 @@ export default function OutsourcingPage() {
                 {/* Enterprise-Ready Delivery Section */}
                 <section className="py-20 px-4 border-t border-gray-800 relative">
                     <div className="absolute inset-0 -z-10">
-                        <div className="absolute top-0 right-0 -mr-40 w-80 h-80 rounded-full bg-purple-500/10 blur-3xl"></div>
-                        <div className="absolute bottom-0 left-0 -ml-40 w-80 h-80 rounded-full bg-pink-500/10 blur-3xl"></div>
+                        <div className="absolute top-0 right-0 -mr-40 w-80 h-80 rounded-full bg-lime-500/10 blur-3xl"></div>
+                        <div className="absolute bottom-0 left-0 -ml-40 w-80 h-80 rounded-full bg-green-500/10 blur-3xl"></div>
                     </div>
                     <div className="container mx-auto max-w-5xl">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent">Why Enterprises Choose Outsourced Development</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Why Enterprises Choose Outsourced Development</h2>
                         
                         <div className="grid md:grid-cols-2 gap-8">
                             {/* Card 1 */}
-                            <div className="group bg-gradient-to-br from-purple-500/15 to-pink-500/15 border border-purple-500/30 rounded-2xl p-8 hover:border-purple-500/60 transition-all">
+                            <div className="group bg-gradient-to-br from-lime-500/15 to-green-500/15 border border-lime-500/30 rounded-2xl p-8 hover:border-lime-500/60 transition-all">
                                 <div className="mb-4 text-5xl">⭐</div>
-                                <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent mb-4">Enterprise-Grade Delivery with Proven Accountability</h3>
+                                <h3 className="text-2xl font-bold bg-gradient-to-r from-lime-300 to-green-300 bg-clip-text text-transparent mb-4">Enterprise-Grade Delivery with Proven Accountability</h3>
                                 <p className="text-gray-300 leading-relaxed">Enterprise outsourcing means partnering with specialized engineering teams to accelerate your product roadmap while your internal teams focus on strategic initiatives. Benefit from proven expertise, SLA-backed accountability, and delivery ownership. Scale your capacity on demand with predictable costs and minimal operational overhead.</p>
                             </div>
 
                             {/* Card 2 */}
-                            <div className="group bg-gradient-to-br from-pink-500/15 to-red-500/15 border border-pink-500/30 rounded-2xl p-8 hover:border-pink-500/60 transition-all">
+                            <div className="group bg-gradient-to-br from-green-500/15 to-emerald-500/15 border border-green-500/30 rounded-2xl p-8 hover:border-green-500/60 transition-all">
                                 <div className="mb-4 text-5xl">📈</div>
-                                <h3 className="text-2xl font-bold bg-gradient-to-r from-pink-300 to-red-300 bg-clip-text text-transparent mb-4">The Evolution of Outsourcing</h3>
+                                <h3 className="text-2xl font-bold bg-gradient-to-r from-green-300 to-emerald-300 bg-clip-text text-transparent mb-4">The Evolution of Outsourcing</h3>
                                 <p className="text-gray-300 leading-relaxed mb-6">Modern outsourcing has evolved dramatically over the past two decades. In the early 2000s, outsourcing was primarily about cost arbitrage—hiring cheaper labor in offshore locations. While cost savings remain important, today's outsourcing represents a fundamentally different value proposition.</p>
                                 <p className="text-gray-400 text-sm">Today's outsourcing partners function as strategic technology consultants—not just code factories. They provide:</p>
                             </div>
                         </div>
 
                         {/* Extended content */}
-                        <div className="mt-8 bg-gradient-to-br from-pink-500/10 to-purple-500/10 border border-pink-500/30 rounded-2xl p-8">
+                        <div className="mt-8 bg-gradient-to-br from-lime-500/10 to-green-500/10 border border-lime-500/30 rounded-2xl p-8">
                             <ul className="space-y-4">
                                 <li className="flex items-start gap-3">
-                                    <span className="text-pink-400 font-bold text-lg flex-shrink-0 mt-0.5">✓</span>
+                                    <span className="text-lime-400 font-bold text-lg flex-shrink-0 mt-0.5">✓</span>
                                     <div>
-                                        <span className="text-pink-300 font-semibold">Architectural guidance</span>
+                                        <span className="text-lime-300 font-semibold">Architectural guidance</span>
                                         <span className="text-gray-400"> - Design decisions, system design reviews, scalability planning</span>
                                     </div>
                                 </li>
                                 <li className="flex items-start gap-3">
-                                    <span className="text-pink-400 font-bold text-lg flex-shrink-0 mt-0.5">✓</span>
+                                    <span className="text-lime-400 font-bold text-lg flex-shrink-0 mt-0.5">✓</span>
                                     <div>
-                                        <span className="text-pink-300 font-semibold">Technical leadership</span>
+                                        <span className="text-lime-300 font-semibold">Technical leadership</span>
                                         <span className="text-gray-400"> - Senior engineers mentoring, code quality standards, best practices</span>
                                     </div>
                                 </li>
                                 <li className="flex items-start gap-3">
-                                    <span className="text-pink-400 font-bold text-lg flex-shrink-0 mt-0.5">✓</span>
+                                    <span className="text-lime-400 font-bold text-lg flex-shrink-0 mt-0.5">✓</span>
                                     <div>
-                                        <span className="text-pink-300 font-semibold">Quality assurance expertise</span>
+                                        <span className="text-lime-300 font-semibold">Quality assurance expertise</span>
                                         <span className="text-gray-400"> - Comprehensive testing strategies, automation frameworks, quality metrics</span>
                                     </div>
                                 </li>
                                 <li className="flex items-start gap-3">
-                                    <span className="text-pink-400 font-bold text-lg flex-shrink-0 mt-0.5">✓</span>
+                                    <span className="text-lime-400 font-bold text-lg flex-shrink-0 mt-0.5">✓</span>
                                     <div>
-                                        <span className="text-pink-300 font-semibold">Security & compliance</span>
+                                        <span className="text-lime-300 font-semibold">Security & compliance</span>
                                         <span className="text-gray-400"> - HIPAA, GDPR, SOC 2, PCI DSS implementation and maintenance</span>
                                     </div>
                                 </li>
                                 <li className="flex items-start gap-3">
-                                    <span className="text-pink-400 font-bold text-lg flex-shrink-0 mt-0.5">✓</span>
+                                    <span className="text-lime-400 font-bold text-lg flex-shrink-0 mt-0.5">✓</span>
                                     <div>
-                                        <span className="text-pink-300 font-semibold">Infrastructure management</span>
+                                        <span className="text-lime-300 font-semibold">Infrastructure management</span>
                                         <span className="text-gray-400"> - Cloud platform selection, DevOps implementation, monitoring and optimization</span>
                                     </div>
                                 </li>
@@ -809,10 +809,10 @@ export default function OutsourcingPage() {
                 {/* Industries We Support */}
                 <section className="py-20 px-4 border-t border-gray-800 relative">
                     <div className="absolute inset-0 -z-10">
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -mt-40 w-96 h-96 rounded-full bg-blue-500/10 blur-3xl"></div>
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -mt-40 w-96 h-96 rounded-full bg-lime-500/10 blur-3xl"></div>
                     </div>
                     <div className="container mx-auto max-w-5xl">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white via-blue-200 to-white bg-clip-text text-transparent">Industries We Support</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Industries We Support</h2>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                             {[
                                 { icon: "🏢", label: "SaaS & Technology Platforms" },
@@ -841,7 +841,7 @@ export default function OutsourcingPage() {
                         <div className="absolute bottom-0 left-0 -ml-40 w-80 h-80 rounded-full bg-emerald-500/10 blur-3xl"></div>
                     </div>
                     <div className="container mx-auto max-w-5xl">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white via-green-200 to-white bg-clip-text text-transparent">Technology Expertise</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Technology Expertise</h2>
                         <p className="text-gray-300 mb-12 text-lg">Our outsourced teams work across modern technology stacks, including:</p>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                             {[
@@ -870,7 +870,7 @@ export default function OutsourcingPage() {
                         <div className="absolute bottom-0 right-0 -mr-40 w-80 h-80 rounded-full bg-amber-500/10 blur-3xl"></div>
                     </div>
                     <div className="container mx-auto max-w-5xl">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white via-orange-200 to-white bg-clip-text text-transparent">How We Work</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">How We Work</h2>
                         <div className="space-y-6">
                             {[
                                 { num: "1", icon: "📋", title: "Requirement & Scope Alignment", desc: "Understanding your project needs and defining clear objectives" },
@@ -879,15 +879,15 @@ export default function OutsourcingPage() {
                                 { num: "4", icon: "🚀", title: "Delivery Execution with Reporting", desc: "Building your product with transparent progress updates" },
                                 { num: "5", icon: "✨", title: "Continuous Optimization & Support", desc: "Iterating and improving based on feedback and metrics" }
                             ].map((step, i) => (
-                                <div key={i} className="group bg-gradient-to-r from-orange-500/10 to-amber-500/10 border border-orange-500/30 rounded-xl p-6 hover:border-orange-500/60 transition-all">
+                                <div key={i} className="group bg-gradient-to-r from-lime-500/10 to-green-500/10 border border-lime-500/30 rounded-xl p-6 hover:border-lime-500/60 transition-all">
                                     <div className="flex items-start gap-4">
                                         <div className="flex-shrink-0">
-                                            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-orange-500/20 border border-orange-500/40">
+                                            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-lime-500/20 border border-lime-500/40">
                                                 <span className="text-xl">{step.icon}</span>
                                             </div>
                                         </div>
                                         <div className="flex-1">
-                                            <h3 className="text-lg font-semibold text-orange-300 mb-1">
+                                            <h3 className="text-lg font-semibold text-lime-300 mb-1">
                                                 {step.num}. {step.title}
                                             </h3>
                                             <p className="text-gray-400">{step.desc}</p>
@@ -905,13 +905,13 @@ export default function OutsourcingPage() {
                 {/* Let's Build Together Section */}
                 <section className="py-20 px-4 border-t border-gray-800 relative">
                     <div className="absolute inset-0 -z-10">
-                        <div className="absolute top-0 right-0 -mr-40 w-80 h-80 rounded-full bg-pink-500/10 blur-3xl"></div>
-                        <div className="absolute bottom-0 left-0 -ml-40 w-80 h-80 rounded-full bg-purple-500/10 blur-3xl"></div>
+                        <div className="absolute top-0 right-0 -mr-40 w-80 h-80 rounded-full bg-lime-500/10 blur-3xl"></div>
+                        <div className="absolute bottom-0 left-0 -ml-40 w-80 h-80 rounded-full bg-green-500/10 blur-3xl"></div>
                     </div>
                     <div className="container mx-auto max-w-5xl">
-                        <div className="bg-gradient-to-br from-pink-500/15 to-purple-500/15 border border-pink-500/30 rounded-2xl p-12 text-center">
+                        <div className="bg-gradient-to-br from-lime-500/15 to-green-500/15 border border-lime-500/30 rounded-2xl p-12 text-center">
                             <div className="text-6xl mb-6">🚀</div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-pink-300 via-purple-300 to-pink-300 bg-clip-text text-transparent">Let's Build Together</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-lime-300 via-green-300 to-lime-300 bg-clip-text text-transparent">Let's Build Together</h2>
                             <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
                                 Whether you need to scale your team, accelerate delivery, or outsource complete projects, <span className="text-white font-semibold">TryQu is your trusted outsourcing partner.</span>
                             </p>
