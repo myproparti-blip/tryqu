@@ -311,7 +311,7 @@ export default function OutsourcingPage() {
                             </div>
                             <h1 className="mt-3 text-center text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
                                 <span className="block text-white">Enterprise-Grade IT</span>
-                                <span className="block text-cyan-300 drop-shadow-[0_0_20px_rgba(132,204,22,0.35)]">Outsourcing Services</span>
+                                <span className="block text-lime-300 drop-shadow-[0_0_20px_rgba(132,204,22,0.35)]">Outsourcing Services</span>
                             </h1>
                             <p className="mt-6 text-center text-xl text-gray-300 max-w-3xl leading-relaxed">
                                 TryQu provides enterprise-grade IT outsourcing services designed to extend your internal capabilities while maintaining control, security, and delivery accountability. We partner with organizations to deliver scalable, secure, and outcome-driven solutions through proven outsourcing models.
@@ -430,7 +430,7 @@ export default function OutsourcingPage() {
                             <div className="inline-block mb-4">
                                 <span className="text-xs font-semibold text-cyan-400 uppercase tracking-widest bg-cyan-500/10 px-4 py-1.5 rounded-full border border-cyan-500/20">Enterprise Benefits</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent">Why Enterprises Partner with TryQu</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Why Enterprises Partner with TryQu</h2>
                             <p className="text-gray-400 text-lg">Delivery accountability, scalability, and strategic partnership for enterprise organizations</p>
                         </div>
 
@@ -534,7 +534,7 @@ export default function OutsourcingPage() {
                                     Enterprise Ready
                                 </span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent">What Makes Us Enterprise-Grade Partners</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">What Makes Us Enterprise-Grade Partners</h2>
                             <p className="text-gray-400 text-lg">Bank-level security, compliance, and reliability standards</p>
                         </div>
 
@@ -631,7 +631,7 @@ export default function OutsourcingPage() {
                                     Flexible Models
                                 </span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent">Choose Your Engagement Model</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Choose Your Engagement Model</h2>
                             <p className="text-gray-400 text-lg">Select the perfect engagement style for your project needs. Full control, flexibility, or turnkey solution.</p>
                         </div>
 
@@ -744,7 +744,7 @@ export default function OutsourcingPage() {
                         <div className="absolute bottom-0 left-0 -ml-40 w-80 h-80 rounded-full bg-cyan-500/10 blur-3xl"></div>
                     </div>
                     <div className="container mx-auto max-w-5xl">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent">Why Enterprises Choose Outsourced Development</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Why Enterprises Choose Outsourced Development</h2>
                         
                         <div className="grid md:grid-cols-2 gap-8">
                             {/* Card 1 */}
@@ -812,7 +812,7 @@ export default function OutsourcingPage() {
                         <div className="absolute top-0 left-1/2 -translate-x-1/2 -mt-40 w-96 h-96 rounded-full bg-cyan-500/10 blur-3xl"></div>
                     </div>
                     <div className="container mx-auto max-w-5xl">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent">Industries We Support</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Industries We Support</h2>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                             {[
                                 { icon: "🏢", label: "SaaS & Technology Platforms" },
@@ -841,7 +841,7 @@ export default function OutsourcingPage() {
                         <div className="absolute bottom-0 left-0 -ml-40 w-80 h-80 rounded-full bg-cyan-500/10 blur-3xl"></div>
                     </div>
                     <div className="container mx-auto max-w-5xl">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent">Technology Expertise</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Technology Expertise</h2>
                         <p className="text-gray-300 mb-12 text-lg">Our outsourced teams work across modern technology stacks, including:</p>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                             {[
@@ -870,7 +870,7 @@ export default function OutsourcingPage() {
                         <div className="absolute bottom-0 right-0 -mr-40 w-80 h-80 rounded-full bg-cyan-500/10 blur-3xl"></div>
                     </div>
                     <div className="container mx-auto max-w-5xl">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent">How We Work</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">How We Work</h2>
                         <div className="space-y-6">
                             {[
                                 { num: "1", icon: "📋", title: "Requirement & Scope Alignment", desc: "Understanding your project needs and defining clear objectives" },
@@ -938,7 +938,7 @@ export default function OutsourcingPage() {
                             <div className="inline-block mb-4">
                                 <span className="text-xs font-semibold text-cyan-400 uppercase tracking-widest bg-cyan-500/10 px-4 py-1.5 rounded-full border border-cyan-500/20">Smart Comparison</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent">In-House vs. Outsourced Development</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">In-House vs. Outsourced Development</h2>
                             <p className="text-gray-400 text-lg">See exactly how outsourcing stacks up against traditional hiring</p>
                         </div>
 
@@ -978,7 +978,7 @@ export default function OutsourcingPage() {
                             <div className="inline-block mb-4">
                                 <span className="text-xs font-semibold text-cyan-400 uppercase tracking-widest bg-cyan-500/10 px-4 py-1.5 rounded-full border border-cyan-500/20">Tech Stack</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent">Technologies & Tools We Master</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Technologies & Tools We Master</h2>
                             <p className="text-gray-400 text-lg">Expert-level proficiency across modern development stacks</p>
                         </div>
 
@@ -1029,7 +1029,7 @@ export default function OutsourcingPage() {
                                     Industry Expertise
                                 </span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent">Industries We Serve</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Industries We Serve</h2>
                             <p className="text-gray-400 text-lg">Deep expertise across vertical markets, domain specializations, and emerging sectors</p>
                         </div>
 
@@ -1089,7 +1089,7 @@ export default function OutsourcingPage() {
                                     Success Stories
                                 </span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent">Trusted by Industry Leaders</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Trusted by Industry Leaders</h2>
                             <p className="text-gray-400 text-lg">100+ global companies and funded startups leverage our development expertise</p>
                         </div>
 
@@ -1130,7 +1130,7 @@ export default function OutsourcingPage() {
                                     Explore More
                                 </span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent">Discover Complementary Services</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Discover Complementary Services</h2>
                             <p className="text-gray-400 text-lg">Expand your partnership with specialized expertise across multiple domains</p>
                         </div>
 
@@ -1213,7 +1213,7 @@ export default function OutsourcingPage() {
                                     Common Questions
                                 </span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent">Frequently Asked Questions</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Frequently Asked Questions</h2>
                             <p className="text-gray-400 text-lg">Get clear answers to common concerns, requirements, and processes</p>
                         </div>
 
