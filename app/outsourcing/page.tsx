@@ -307,16 +307,16 @@ export default function OutsourcingPage() {
                         <div className="flex flex-col items-center justify-center py-14 sm:py-20">
                             <div className="mb-5 flex items-center gap-2">
                                 <Image src="/icons/skitbit-white.svg" alt="TryQu Tech logo" width={32} height={32} priority className="h-8 w-8" />
-                                <p className="text-sm uppercase tracking-[0.25em] text-lime-300/80">tryqu tech</p>
+                                <p className="text-sm uppercase tracking-[0.25em] text-cyan-300/80">tryqu tech</p>
                             </div>
                             <h1 className="mt-3 text-center text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
                                 <span className="block text-white">Enterprise-Grade IT</span>
-                                <span className="block text-lime-300 drop-shadow-[0_0_20px_rgba(132,204,22,0.35)]">Outsourcing Services</span>
+                                <span className="block text-cyan-300 drop-shadow-[0_0_20px_rgba(132,204,22,0.35)]">Outsourcing Services</span>
                             </h1>
                             <p className="mt-6 text-center text-xl text-gray-300 max-w-3xl leading-relaxed">
                                 TryQu provides enterprise-grade IT outsourcing services designed to extend your internal capabilities while maintaining control, security, and delivery accountability. We partner with organizations to deliver scalable, secure, and outcome-driven solutions through proven outsourcing models.
                             </p>
-                            <p className="mt-4 text-center text-lg text-lime-300/90 max-w-2xl font-semibold">Scale your engineering capacity with dedicated teams, proven expertise, and SLA-backed accountability.</p>
+                            <p className="mt-4 text-center text-lg text-cyan-300/90 max-w-2xl font-semibold">Scale your engineering capacity with dedicated teams, proven expertise, and SLA-backed accountability.</p>
 
                             {/* Service Icons Grid */}
                             <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4 w-full max-w-3xl">
@@ -332,7 +332,7 @@ export default function OutsourcingPage() {
                                             animationDelay: `${i * 100}ms`,
                                         }}
                                     >
-                                        <service.icon className="w-6 h-6 text-lime-300 mb-2 group-hover:scale-110 transition-transform" />
+                                        <service.icon className="w-6 h-6 text-cyan-300 mb-2 group-hover:scale-110 transition-transform" />
                                         <p className="text-sm font-semibold text-white">{service.label}</p>
                                         <p className="text-xs text-gray-400">{service.desc}</p>
                                     </div>
@@ -342,7 +342,7 @@ export default function OutsourcingPage() {
                             <div className="mt-8">
                                 <button
                                     onClick={handleChatWithUs}
-                                    className="group px-8 py-3 rounded-lg bg-gradient-to-r from-lime-400 to-lime-500 text-black font-semibold hover:shadow-lg hover:shadow-lime-400/50 transition-all duration-300 flex items-center justify-center gap-2"
+                                    className="group px-8 py-3 rounded-lg bg-gradient-to-r from-cyan-400 to-cyan-500 text-black font-semibold hover:shadow-lg hover:shadow-cyan-400/50 transition-all duration-300 flex items-center justify-center gap-2"
                                 >
                                     <MessageCircle className="w-5 h-5 group-hover:animate-pulse" />
                                     Chat With Us
@@ -359,15 +359,15 @@ export default function OutsourcingPage() {
                             <h2 className="text-4xl font-bold mb-6">Why Enterprises Choose Outsourced Development</h2>
 
                             <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-8 mb-8">
-                                <h3 className="text-2xl font-bold mb-4 text-lime-400">Enterprise-Grade Delivery with Proven Accountability</h3>
+                                <h3 className="text-2xl font-bold mb-4 text-cyan-400">Enterprise-Grade Delivery with Proven Accountability</h3>
                                 <p className="text-lg text-gray-300 leading-relaxed">
                                     Enterprise outsourcing means partnering with specialized engineering teams to accelerate your product roadmap while your internal teams focus on strategic initiatives. Benefit from proven expertise, SLA-backed accountability, and delivery ownership. Scale your capacity on demand with predictable costs and minimal operational overhead.
                                 </p>
                             </div>
 
                             <div className="space-y-8 mb-8">
-                                <div className="bg-gradient-to-r from-lime-500/5 to-green-500/5 border border-lime-500/20 rounded-xl p-8">
-                                    <h3 className="text-xl font-bold mb-4 text-lime-300">The Evolution of Outsourcing</h3>
+                                <div className="bg-gradient-to-r from-cyan-500/5 to-cyan-500/5 border border-cyan-500/20 rounded-xl p-8">
+                                    <h3 className="text-xl font-bold mb-4 text-cyan-300">The Evolution of Outsourcing</h3>
                                     <p className="text-gray-300 leading-relaxed mb-4">
                                         Modern outsourcing has evolved dramatically over the past two decades. In the early 2000s, outsourcing was primarily about cost arbitrage—hiring cheaper labor in offshore locations like India, Philippines, or Eastern Europe. While cost savings remain important, today's outsourcing represents a fundamentally different value proposition.
                                     </p>
@@ -375,17 +375,17 @@ export default function OutsourcingPage() {
                                         Today's outsourcing partners function as strategic technology consultants—not just code factories. They provide:
                                     </p>
                                     <ul className="space-y-2 text-gray-300 ml-4">
-                                        <li><span className="text-lime-400">✓ Architectural guidance</span> - Design decisions, system design reviews, scalability planning</li>
-                                         <li><span className="text-lime-400">✓ Technical leadership</span> - Senior engineers mentoring, code quality standards, best practices</li>
-                                         <li><span className="text-lime-400">✓ Quality assurance expertise</span> - Comprehensive testing strategies, automation frameworks, quality metrics</li>
-                                         <li><span className="text-lime-400">✓ Security & compliance</span> - HIPAA, GDPR, SOC 2, PCI DSS implementation and maintenance</li>
-                                         <li><span className="text-lime-400">✓ Infrastructure management</span> - Cloud platform selection, DevOps implementation, monitoring and optimization</li>
-                                         <li><span className="text-lime-400">✓ Defined accountability</span> - Service Level Agreements, measurable metrics, transparent reporting</li>
+                                        <li><span className="text-cyan-400">✓ Architectural guidance</span> - Design decisions, system design reviews, scalability planning</li>
+                                         <li><span className="text-cyan-400">✓ Technical leadership</span> - Senior engineers mentoring, code quality standards, best practices</li>
+                                         <li><span className="text-cyan-400">✓ Quality assurance expertise</span> - Comprehensive testing strategies, automation frameworks, quality metrics</li>
+                                         <li><span className="text-cyan-400">✓ Security & compliance</span> - HIPAA, GDPR, SOC 2, PCI DSS implementation and maintenance</li>
+                                         <li><span className="text-cyan-400">✓ Infrastructure management</span> - Cloud platform selection, DevOps implementation, monitoring and optimization</li>
+                                         <li><span className="text-cyan-400">✓ Defined accountability</span> - Service Level Agreements, measurable metrics, transparent reporting</li>
                                     </ul>
                                 </div>
 
-                                <div className="bg-gradient-to-r from-lime-500/5 to-green-500/5 border border-lime-500/20 rounded-xl p-8">
-                                    <h3 className="text-xl font-bold mb-4 text-lime-300">Why Companies Choose Strategic Outsourcing</h3>
+                                <div className="bg-gradient-to-r from-cyan-500/5 to-cyan-500/5 border border-cyan-500/20 rounded-xl p-8">
+                                    <h3 className="text-xl font-bold mb-4 text-cyan-300">Why Companies Choose Strategic Outsourcing</h3>
                                     <p className="text-gray-300 leading-relaxed mb-4">
                                         Organizations globally—from ambitious startups to Fortune 500 enterprises—use outsourcing as a strategic lever to:
                                     </p>
@@ -397,8 +397,8 @@ export default function OutsourcingPage() {
                                     </ul>
                                 </div>
 
-                                <div className="bg-gradient-to-r from-green-500/5 to-emerald-500/5 border border-green-500/20 rounded-xl p-8">
-                                    <h3 className="text-xl font-bold mb-4 text-green-300">How Outsourcing Differs from Traditional Models</h3>
+                                <div className="bg-gradient-to-r from-cyan-500/5 to-cyan-500/5 border border-cyan-500/20 rounded-xl p-8">
+                                    <h3 className="text-xl font-bold mb-4 text-teal-300">How Outsourcing Differs from Traditional Models</h3>
                                     <div className="space-y-4 text-gray-300">
                                         <div>
                                             <p className="font-semibold text-white mb-2">Traditional Hiring (In-House Team)</p>
@@ -422,15 +422,15 @@ export default function OutsourcingPage() {
                 {/* Benefits Section */}
                 <section className="py-20 px-4 border-t border-gray-800 relative">
                     <div className="absolute inset-0 -z-10">
-                        <div className="absolute top-1/2 right-0 -mr-60 w-96 h-96 rounded-full bg-purple-500/5 blur-3xl"></div>
+                        <div className="absolute top-1/2 right-0 -mr-60 w-96 h-96 rounded-full bg-cyan-500/5 blur-3xl"></div>
                     </div>
 
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-16">
                             <div className="inline-block mb-4">
-                                <span className="text-xs font-semibold text-lime-400 uppercase tracking-widest bg-lime-500/10 px-4 py-1.5 rounded-full border border-lime-500/20">Enterprise Benefits</span>
+                                <span className="text-xs font-semibold text-cyan-400 uppercase tracking-widest bg-cyan-500/10 px-4 py-1.5 rounded-full border border-cyan-500/20">Enterprise Benefits</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Why Enterprises Partner with TryQu</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent">Why Enterprises Partner with TryQu</h2>
                             <p className="text-gray-400 text-lg">Delivery accountability, scalability, and strategic partnership for enterprise organizations</p>
                         </div>
 
@@ -482,30 +482,30 @@ export default function OutsourcingPage() {
                                 }
                                 return (
                                     <div key={i} className="group relative">
-                                        <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600/20 via-purple-600/10 to-pink-600/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-1000"></div>
-                                        <div className="relative bg-gradient-to-br from-gray-900/60 to-gray-950/60 border border-gray-800/50 rounded-2xl overflow-hidden hover:border-purple-500/50 transition-all h-full">
+                                        <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-600/20 via-cyan-600/10 to-cyan-600/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-1000"></div>
+                                        <div className="relative bg-gradient-to-br from-gray-900/60 to-gray-950/60 border border-gray-800/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all h-full">
                                             {/* Emoji Header */}
-                                            <div className="relative h-32 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center overflow-hidden group-hover:from-purple-500/40 group-hover:to-pink-500/40 transition-all">
+                                            <div className="relative h-32 bg-gradient-to-br from-cyan-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden group-hover:from-cyan-500/40 group-hover:to-cyan-500/40 transition-all">
                                                 <div className="text-6xl group-hover:scale-125 transition-transform duration-300">{emoji}</div>
                                                 <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent opacity-50"></div>
                                             </div>
 
                                             <div className="p-6">
                                                 <div className="flex items-start gap-3 mb-5">
-                                                    <div className="p-2.5 bg-gradient-to-br from-purple-500/40 to-pink-500/30 rounded-lg group-hover:scale-110 transition-transform flex-shrink-0">
-                                                        <Icon className="w-5 h-5 text-purple-300" />
+                                                    <div className="p-2.5 bg-gradient-to-br from-cyan-500/40 to-cyan-500/30 rounded-lg group-hover:scale-110 transition-transform flex-shrink-0">
+                                                        <Icon className="w-5 h-5 text-cyan-300" />
                                                     </div>
-                                                    <h3 className="text-xl font-bold text-white group-hover:text-purple-300 transition-colors">{benefit.title}</h3>
+                                                    <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">{benefit.title}</h3>
                                                 </div>
 
                                                 <p className="text-sm text-gray-300 leading-relaxed mb-5">{benefit.description}</p>
 
-                                                <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/5 p-4 rounded-lg border border-purple-500/20 space-y-2">
-                                                    <p className="text-xs font-bold text-purple-400 uppercase tracking-wider">In Practice:</p>
+                                                <div className="bg-gradient-to-r from-cyan-500/10 to-cyan-500/5 p-4 rounded-lg border border-cyan-500/20 space-y-2">
+                                                    <p className="text-xs font-bold text-cyan-400 uppercase tracking-wider">In Practice:</p>
                                                     <ul className="space-y-2">
                                                         {detailedBenefits[i]?.slice(0, 3).map((point, j) => (
                                                             <li key={j} className="text-xs text-gray-300 flex items-start gap-2">
-                                                                <span className="text-purple-400 font-bold mt-0.5">✓</span>
+                                                                <span className="text-cyan-400 font-bold mt-0.5">✓</span>
                                                                 <span>{point}</span>
                                                             </li>
                                                         ))}
@@ -523,85 +523,85 @@ export default function OutsourcingPage() {
                 {/* Enterprise Trust Signals - Enhanced */}
                 <section className="py-20 px-4 border-t border-gray-800 relative">
                     <div className="absolute inset-0 -z-10">
-                        <div className="absolute top-0 left-0 -ml-40 w-80 h-80 rounded-full bg-blue-500/10 blur-3xl"></div>
-                        <div className="absolute bottom-0 right-0 -mr-40 w-80 h-80 rounded-full bg-green-500/10 blur-3xl"></div>
+                        <div className="absolute top-0 left-0 -ml-40 w-80 h-80 rounded-full bg-cyan-500/10 blur-3xl"></div>
+                        <div className="absolute bottom-0 right-0 -mr-40 w-80 h-80 rounded-full bg-cyan-500/10 blur-3xl"></div>
                     </div>
                     <div className="container mx-auto max-w-5xl">
                         <div className="text-center mb-16">
-                            <div className="inline-block mb-4 bg-lime-500/10 px-4 py-2 rounded-full border border-lime-500/30">
-                                <span className="text-xs font-semibold text-lime-400 uppercase tracking-widest flex items-center gap-2">
+                            <div className="inline-block mb-4 bg-cyan-500/10 px-4 py-2 rounded-full border border-cyan-500/30">
+                                <span className="text-xs font-semibold text-cyan-400 uppercase tracking-widest flex items-center gap-2">
                                     <Shield className="w-4 h-4" />
                                     Enterprise Ready
                                 </span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">What Makes Us Enterprise-Grade Partners</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent">What Makes Us Enterprise-Grade Partners</h2>
                             <p className="text-gray-400 text-lg">Bank-level security, compliance, and reliability standards</p>
                         </div>
 
                         <div className="grid md:grid-cols-2 gap-8">
-                            <div className="group bg-gradient-to-br from-purple-500/15 to-pink-500/15 border border-purple-500/30 rounded-xl p-8 hover:border-purple-500/60 transition-all transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
+                            <div className="group bg-gradient-to-br from-cyan-500/15 to-cyan-500/15 border border-cyan-500/30 rounded-xl p-8 hover:border-cyan-500/60 transition-all transform hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20">
                                 <div className="flex items-start gap-4 mb-4">
-                                    <div className="p-2 bg-purple-500/20 rounded-lg group-hover:bg-purple-500/40 transition-colors">
-                                        <Shield className="w-6 h-6 text-purple-400 flex-shrink-0" />
+                                    <div className="p-2 bg-cyan-500/20 rounded-lg group-hover:bg-cyan-500/40 transition-colors">
+                                        <Shield className="w-6 h-6 text-cyan-400 flex-shrink-0" />
                                     </div>
                                     <div className="flex-1">
-                                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-200 transition-colors">🔒 Secure Development Practices</h3>
+                                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-200 transition-colors">🔒 Secure Development Practices</h3>
                                         <ul className="space-y-2 text-sm text-gray-300 group-hover:text-gray-200 transition-colors">
-                                            <li className="flex items-center gap-2"><span className="text-purple-400">✦</span> OWASP Top 10 compliance standards</li>
-                                            <li className="flex items-center gap-2"><span className="text-purple-400">✦</span> Secure code review processes</li>
-                                            <li className="flex items-center gap-2"><span className="text-purple-400">✦</span> Encryption at rest and in transit</li>
-                                            <li className="flex items-center gap-2"><span className="text-purple-400">✦</span> Regular penetration testing</li>
+                                            <li className="flex items-center gap-2"><span className="text-cyan-400">✦</span> OWASP Top 10 compliance standards</li>
+                                            <li className="flex items-center gap-2"><span className="text-cyan-400">✦</span> Secure code review processes</li>
+                                            <li className="flex items-center gap-2"><span className="text-cyan-400">✦</span> Encryption at rest and in transit</li>
+                                            <li className="flex items-center gap-2"><span className="text-cyan-400">✦</span> Regular penetration testing</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="group bg-gradient-to-br from-blue-500/15 to-cyan-500/15 border border-blue-500/30 rounded-xl p-8 hover:border-blue-500/60 transition-all transform hover:scale-105 hover:shadow-xl hover:shadow-blue-500/20">
+                            <div className="group bg-gradient-to-br from-cyan-500/15 to-cyan-500/15 border border-cyan-500/30 rounded-xl p-8 hover:border-cyan-500/60 transition-all transform hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20">
                                 <div className="flex items-start gap-4 mb-4">
-                                    <div className="p-2 bg-blue-500/20 rounded-lg group-hover:bg-blue-500/40 transition-colors">
-                                        <CheckCircle className="w-6 h-6 text-blue-400 flex-shrink-0" />
+                                    <div className="p-2 bg-cyan-500/20 rounded-lg group-hover:bg-cyan-500/40 transition-colors">
+                                        <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0" />
                                     </div>
                                     <div className="flex-1">
-                                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-200 transition-colors">✅ Compliance-Ready Processes</h3>
+                                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-200 transition-colors">✅ Compliance-Ready Processes</h3>
                                         <ul className="space-y-2 text-sm text-gray-300 group-hover:text-gray-200 transition-colors">
-                                            <li className="flex items-center gap-2"><span className="text-blue-400">✦</span> ISO 27001:2013 certified</li>
-                                            <li className="flex items-center gap-2"><span className="text-blue-400">✦</span> SOC 2 Type II audited</li>
-                                            <li className="flex items-center gap-2"><span className="text-blue-400">✦</span> GDPR & HIPAA eligible</li>
-                                            <li className="flex items-center gap-2"><span className="text-blue-400">✦</span> PCI DSS implementation support</li>
+                                            <li className="flex items-center gap-2"><span className="text-cyan-400">✦</span> ISO 27001:2013 certified</li>
+                                            <li className="flex items-center gap-2"><span className="text-cyan-400">✦</span> SOC 2 Type II audited</li>
+                                            <li className="flex items-center gap-2"><span className="text-cyan-400">✦</span> GDPR & HIPAA eligible</li>
+                                            <li className="flex items-center gap-2"><span className="text-cyan-400">✦</span> PCI DSS implementation support</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="group bg-gradient-to-br from-green-500/15 to-emerald-500/15 border border-green-500/30 rounded-xl p-8 hover:border-green-500/60 transition-all transform hover:scale-105 hover:shadow-xl hover:shadow-green-500/20">
+                            <div className="group bg-gradient-to-br from-cyan-500/15 to-cyan-500/15 border border-cyan-500/30 rounded-xl p-8 hover:border-cyan-500/60 transition-all transform hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20">
                                 <div className="flex items-start gap-4 mb-4">
-                                    <div className="p-2 bg-green-500/20 rounded-lg group-hover:bg-green-500/40 transition-colors">
-                                        <Users className="w-6 h-6 text-green-400 flex-shrink-0" />
+                                    <div className="p-2 bg-cyan-500/20 rounded-lg group-hover:bg-cyan-500/40 transition-colors">
+                                        <Users className="w-6 h-6 text-cyan-400 flex-shrink-0" />
                                     </div>
                                     <div className="flex-1">
                                         <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-200 transition-colors">👥 Scalable Team Models</h3>
                                         <ul className="space-y-2 text-sm text-gray-300 group-hover:text-gray-200 transition-colors">
-                                            <li className="flex items-center gap-2"><span className="text-green-400">✦</span> Flexible team composition</li>
-                                            <li className="flex items-center gap-2"><span className="text-green-400">✦</span> Dedicated engineering managers</li>
-                                            <li className="flex items-center gap-2"><span className="text-green-400">✦</span> Backup resources on-call</li>
-                                            <li className="flex items-center gap-2"><span className="text-green-400">✦</span> 48-hour replacement guarantee</li>
+                                            <li className="flex items-center gap-2"><span className="text-cyan-400">✦</span> Flexible team composition</li>
+                                            <li className="flex items-center gap-2"><span className="text-cyan-400">✦</span> Dedicated engineering managers</li>
+                                            <li className="flex items-center gap-2"><span className="text-cyan-400">✦</span> Backup resources on-call</li>
+                                            <li className="flex items-center gap-2"><span className="text-cyan-400">✦</span> 48-hour replacement guarantee</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="group bg-gradient-to-br from-orange-500/15 to-red-500/15 border border-orange-500/30 rounded-xl p-8 hover:border-orange-500/60 transition-all transform hover:scale-105 hover:shadow-xl hover:shadow-orange-500/20">
+                            <div className="group bg-gradient-to-br from-cyan-500/15 to-red-500/15 border border-cyan-500/30 rounded-xl p-8 hover:border-cyan-500/60 transition-all transform hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20">
                                 <div className="flex items-start gap-4 mb-4">
-                                    <div className="p-2 bg-orange-500/20 rounded-lg group-hover:bg-orange-500/40 transition-colors">
-                                        <Award className="w-6 h-6 text-orange-400 flex-shrink-0" />
+                                    <div className="p-2 bg-cyan-500/20 rounded-lg group-hover:bg-cyan-500/40 transition-colors">
+                                        <Award className="w-6 h-6 text-cyan-400 flex-shrink-0" />
                                     </div>
                                     <div className="flex-1">
-                                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-orange-200 transition-colors">🎯 Quality Assurance & Monitoring</h3>
+                                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-200 transition-colors">🎯 Quality Assurance & Monitoring</h3>
                                         <ul className="space-y-2 text-sm text-gray-300 group-hover:text-gray-200 transition-colors">
-                                            <li className="flex items-center gap-2"><span className="text-orange-400">✦</span> Minimum 80% code test coverage</li>
-                                            <li className="flex items-center gap-2"><span className="text-orange-400">✦</span> Automated CI/CD pipelines</li>
-                                            <li className="flex items-center gap-2"><span className="text-orange-400">✦</span> Performance monitoring & optimization</li>
-                                            <li className="flex items-center gap-2"><span className="text-orange-400">✦</span> 99.5%+ uptime commitments</li>
+                                            <li className="flex items-center gap-2"><span className="text-cyan-400">✦</span> Minimum 80% code test coverage</li>
+                                            <li className="flex items-center gap-2"><span className="text-cyan-400">✦</span> Automated CI/CD pipelines</li>
+                                            <li className="flex items-center gap-2"><span className="text-cyan-400">✦</span> Performance monitoring & optimization</li>
+                                            <li className="flex items-center gap-2"><span className="text-cyan-400">✦</span> 99.5%+ uptime commitments</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -619,19 +619,19 @@ export default function OutsourcingPage() {
                 {/* Engagement Models - Enhanced */}
                 <section className="py-20 px-4 border-t border-gray-800 relative" id="services">
                     <div className="absolute inset-0 -z-10">
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -mt-40 w-96 h-96 rounded-full bg-blue-500/15 blur-3xl animate-pulse"></div>
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -mt-40 w-96 h-96 rounded-full bg-cyan-500/15 blur-3xl animate-pulse"></div>
                         <div className="absolute bottom-0 left-0 -ml-40 w-80 h-80 rounded-full bg-cyan-500/10 blur-3xl"></div>
                     </div>
 
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-16">
-                            <div className="inline-block mb-4 bg-lime-500/10 px-4 py-2 rounded-full border border-lime-500/30">
-                                <span className="text-xs font-semibold text-lime-400 uppercase tracking-widest flex items-center gap-2">
+                            <div className="inline-block mb-4 bg-cyan-500/10 px-4 py-2 rounded-full border border-cyan-500/30">
+                                <span className="text-xs font-semibold text-cyan-400 uppercase tracking-widest flex items-center gap-2">
                                     <Briefcase className="w-4 h-4" />
                                     Flexible Models
                                 </span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Choose Your Engagement Model</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent">Choose Your Engagement Model</h2>
                             <p className="text-gray-400 text-lg">Select the perfect engagement style for your project needs. Full control, flexibility, or turnkey solution.</p>
                         </div>
 
@@ -667,19 +667,19 @@ export default function OutsourcingPage() {
                                 }
                                 return (
                                     <div key={i}>
-                                        <div className="bg-gradient-to-br from-gray-900/80 to-gray-950/80 border border-gray-800 rounded-2xl overflow-hidden hover:border-lime-500/50 transition-all shadow-xl hover:shadow-2xl hover:shadow-lime-500/10">
+                                        <div className="bg-gradient-to-br from-gray-900/80 to-gray-950/80 border border-gray-800 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all shadow-xl hover:shadow-2xl hover:shadow-cyan-500/10">
                                             {/* Emoji Header */}
-                                            <div className="bg-gradient-to-r from-lime-600/20 to-green-600/20 h-24 flex items-center justify-center hover:from-lime-600/40 hover:to-green-600/40 transition-all">
+                                            <div className="bg-gradient-to-r from-cyan-600/20 to-cyan-600/20 h-24 flex items-center justify-center hover:from-cyan-600/40 hover:to-cyan-600/40 transition-all">
                                                 <div className="text-7xl">{emoji}</div>
                                             </div>
 
                                             <div className="p-8 lg:p-10">
                                                 <div>
                                                     <div className="inline-flex items-center gap-3 mb-4">
-                                                        <div className="p-3 bg-gradient-to-br from-lime-500/30 to-green-500/30 rounded-lg border border-lime-500/50">
-                                                            <Icon className="w-6 h-6 text-lime-400" />
+                                                        <div className="p-3 bg-gradient-to-br from-cyan-500/30 to-cyan-500/30 rounded-lg border border-cyan-500/50">
+                                                            <Icon className="w-6 h-6 text-cyan-400" />
                                                         </div>
-                                                        <span className="text-xs font-bold text-lime-400 uppercase tracking-widest">Model {i + 1}</span>
+                                                        <span className="text-xs font-bold text-cyan-400 uppercase tracking-widest">Model {i + 1}</span>
                                                     </div>
                                                     <h3 className="text-3xl lg:text-4xl font-bold mb-3 bg-gradient-to-r from-white to-lime-200 bg-clip-text text-transparent">{model.title}</h3>
                                                     <p className="text-gray-300 text-lg mb-8 leading-relaxed">{model.description}</p>
@@ -687,12 +687,12 @@ export default function OutsourcingPage() {
 
                                                 <div className="space-y-6">
                                                     <div>
-                                                        <p className="text-xs text-lime-400 mb-4 font-bold uppercase tracking-wider">Key Benefits</p>
+                                                        <p className="text-xs text-cyan-400 mb-4 font-bold uppercase tracking-wider">Key Benefits</p>
                                                         <ul className="space-y-3">
                                                             {model.benefits.map((benefit, j) => (
                                                                 <li key={j} className="flex items-start gap-3 text-gray-300 group">
-                                                                    <div className="p-1 bg-lime-500/20 rounded group-hover:bg-lime-500/40 transition-colors flex-shrink-0 mt-1">
-                                                                        <CheckCircle className="w-4 h-4 text-lime-300" />
+                                                                    <div className="p-1 bg-cyan-500/20 rounded group-hover:bg-cyan-500/40 transition-colors flex-shrink-0 mt-1">
+                                                                        <CheckCircle className="w-4 h-4 text-cyan-300" />
                                                                     </div>
                                                                     <span className="text-sm group-hover:text-white transition-colors">{benefit}</span>
                                                                 </li>
@@ -700,29 +700,29 @@ export default function OutsourcingPage() {
                                                         </ul>
                                                     </div>
 
-                                                    <div className="bg-gradient-to-br from-lime-500/5 to-green-500/5 border border-lime-500/20 rounded-xl p-4 hover:border-lime-500/50 transition-colors">
-                                                        <p className="text-xs text-lime-400 font-bold mb-2 uppercase tracking-wider">Key Benefit</p>
+                                                    <div className="bg-gradient-to-br from-cyan-500/5 to-cyan-500/5 border border-cyan-500/20 rounded-xl p-4 hover:border-cyan-500/50 transition-colors">
+                                                        <p className="text-xs text-cyan-400 font-bold mb-2 uppercase tracking-wider">Key Benefit</p>
                                                         <p className="text-gray-300 text-sm leading-relaxed">{(model as any).keyBenefit}</p>
                                                     </div>
 
-                                                    <div className="bg-gradient-to-br from-green-500/5 to-emerald-500/5 border border-green-500/20 rounded-xl p-4 hover:border-green-500/50 transition-colors">
-                                                        <p className="text-xs text-green-400 font-bold mb-2 uppercase tracking-wider">Use Case</p>
+                                                    <div className="bg-gradient-to-br from-cyan-500/5 to-cyan-500/5 border border-cyan-500/20 rounded-xl p-4 hover:border-cyan-500/50 transition-colors">
+                                                        <p className="text-xs text-cyan-400 font-bold mb-2 uppercase tracking-wider">Use Case</p>
                                                         <p className="text-gray-300 text-sm leading-relaxed">{model.useCase}</p>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             {/* Expanded Scenarios */}
-                                            <div className="border-t border-gray-800/50 bg-gradient-to-r from-lime-500/5 to-green-500/5 px-8 lg:px-10 py-8">
-                                                <p className="text-xs text-lime-400 mb-5 font-bold uppercase tracking-wider flex items-center gap-2">
+                                            <div className="border-t border-gray-800/50 bg-gradient-to-r from-cyan-500/5 to-cyan-500/5 px-8 lg:px-10 py-8">
+                                                <p className="text-xs text-cyan-400 mb-5 font-bold uppercase tracking-wider flex items-center gap-2">
                                                     <Sparkles className="w-4 h-4" />
                                                     Real-World Scenarios
                                                 </p>
                                                 <div className="grid sm:grid-cols-3 gap-6">
                                                     {detailedExplanations[i]?.scenarios.map((scenario, j) => (
-                                                        <div key={j} className="bg-gray-900/50 border border-gray-700 rounded-lg p-5 hover:border-lime-500/50 hover:bg-gray-900/80 transition-all group">
+                                                        <div key={j} className="bg-gray-900/50 border border-gray-700 rounded-lg p-5 hover:border-cyan-500/50 hover:bg-gray-900/80 transition-all group">
                                                             <div className="flex gap-3 items-start">
-                                                                <div className="text-lime-400 font-bold text-lg mt-0.5 group-hover:scale-125 transition-transform">→</div>
+                                                                <div className="text-cyan-400 font-bold text-lg mt-0.5 group-hover:scale-125 transition-transform">→</div>
                                                                 <p className="text-sm text-gray-300 group-hover:text-white transition-colors leading-relaxed">{scenario}</p>
                                                             </div>
                                                         </div>
@@ -740,64 +740,64 @@ export default function OutsourcingPage() {
                 {/* Enterprise-Ready Delivery Section */}
                 <section className="py-20 px-4 border-t border-gray-800 relative">
                     <div className="absolute inset-0 -z-10">
-                        <div className="absolute top-0 right-0 -mr-40 w-80 h-80 rounded-full bg-lime-500/10 blur-3xl"></div>
-                        <div className="absolute bottom-0 left-0 -ml-40 w-80 h-80 rounded-full bg-green-500/10 blur-3xl"></div>
+                        <div className="absolute top-0 right-0 -mr-40 w-80 h-80 rounded-full bg-cyan-500/10 blur-3xl"></div>
+                        <div className="absolute bottom-0 left-0 -ml-40 w-80 h-80 rounded-full bg-cyan-500/10 blur-3xl"></div>
                     </div>
                     <div className="container mx-auto max-w-5xl">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Why Enterprises Choose Outsourced Development</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent">Why Enterprises Choose Outsourced Development</h2>
                         
                         <div className="grid md:grid-cols-2 gap-8">
                             {/* Card 1 */}
-                            <div className="group bg-gradient-to-br from-lime-500/15 to-green-500/15 border border-lime-500/30 rounded-2xl p-8 hover:border-lime-500/60 transition-all">
+                            <div className="group bg-gradient-to-br from-cyan-500/15 to-cyan-500/15 border border-cyan-500/30 rounded-2xl p-8 hover:border-cyan-500/60 transition-all">
                                 <div className="mb-4 text-5xl">⭐</div>
-                                <h3 className="text-2xl font-bold bg-gradient-to-r from-lime-300 to-green-300 bg-clip-text text-transparent mb-4">Enterprise-Grade Delivery with Proven Accountability</h3>
+                                <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-300 to-teal-300 bg-clip-text text-transparent mb-4">Enterprise-Grade Delivery with Proven Accountability</h3>
                                 <p className="text-gray-300 leading-relaxed">Enterprise outsourcing means partnering with specialized engineering teams to accelerate your product roadmap while your internal teams focus on strategic initiatives. Benefit from proven expertise, SLA-backed accountability, and delivery ownership. Scale your capacity on demand with predictable costs and minimal operational overhead.</p>
                             </div>
 
                             {/* Card 2 */}
-                            <div className="group bg-gradient-to-br from-green-500/15 to-emerald-500/15 border border-green-500/30 rounded-2xl p-8 hover:border-green-500/60 transition-all">
+                            <div className="group bg-gradient-to-br from-cyan-500/15 to-cyan-500/15 border border-cyan-500/30 rounded-2xl p-8 hover:border-cyan-500/60 transition-all">
                                 <div className="mb-4 text-5xl">📈</div>
-                                <h3 className="text-2xl font-bold bg-gradient-to-r from-green-300 to-emerald-300 bg-clip-text text-transparent mb-4">The Evolution of Outsourcing</h3>
+                                <h3 className="text-2xl font-bold bg-gradient-to-r from-teal-300 to-emerald-300 bg-clip-text text-transparent mb-4">The Evolution of Outsourcing</h3>
                                 <p className="text-gray-300 leading-relaxed mb-6">Modern outsourcing has evolved dramatically over the past two decades. In the early 2000s, outsourcing was primarily about cost arbitrage—hiring cheaper labor in offshore locations. While cost savings remain important, today's outsourcing represents a fundamentally different value proposition.</p>
                                 <p className="text-gray-400 text-sm">Today's outsourcing partners function as strategic technology consultants—not just code factories. They provide:</p>
                             </div>
                         </div>
 
                         {/* Extended content */}
-                        <div className="mt-8 bg-gradient-to-br from-lime-500/10 to-green-500/10 border border-lime-500/30 rounded-2xl p-8">
+                        <div className="mt-8 bg-gradient-to-br from-cyan-500/10 to-cyan-500/10 border border-cyan-500/30 rounded-2xl p-8">
                             <ul className="space-y-4">
                                 <li className="flex items-start gap-3">
-                                    <span className="text-lime-400 font-bold text-lg flex-shrink-0 mt-0.5">✓</span>
+                                    <span className="text-cyan-400 font-bold text-lg flex-shrink-0 mt-0.5">✓</span>
                                     <div>
-                                        <span className="text-lime-300 font-semibold">Architectural guidance</span>
+                                        <span className="text-cyan-300 font-semibold">Architectural guidance</span>
                                         <span className="text-gray-400"> - Design decisions, system design reviews, scalability planning</span>
                                     </div>
                                 </li>
                                 <li className="flex items-start gap-3">
-                                    <span className="text-lime-400 font-bold text-lg flex-shrink-0 mt-0.5">✓</span>
+                                    <span className="text-cyan-400 font-bold text-lg flex-shrink-0 mt-0.5">✓</span>
                                     <div>
-                                        <span className="text-lime-300 font-semibold">Technical leadership</span>
+                                        <span className="text-cyan-300 font-semibold">Technical leadership</span>
                                         <span className="text-gray-400"> - Senior engineers mentoring, code quality standards, best practices</span>
                                     </div>
                                 </li>
                                 <li className="flex items-start gap-3">
-                                    <span className="text-lime-400 font-bold text-lg flex-shrink-0 mt-0.5">✓</span>
+                                    <span className="text-cyan-400 font-bold text-lg flex-shrink-0 mt-0.5">✓</span>
                                     <div>
-                                        <span className="text-lime-300 font-semibold">Quality assurance expertise</span>
+                                        <span className="text-cyan-300 font-semibold">Quality assurance expertise</span>
                                         <span className="text-gray-400"> - Comprehensive testing strategies, automation frameworks, quality metrics</span>
                                     </div>
                                 </li>
                                 <li className="flex items-start gap-3">
-                                    <span className="text-lime-400 font-bold text-lg flex-shrink-0 mt-0.5">✓</span>
+                                    <span className="text-cyan-400 font-bold text-lg flex-shrink-0 mt-0.5">✓</span>
                                     <div>
-                                        <span className="text-lime-300 font-semibold">Security & compliance</span>
+                                        <span className="text-cyan-300 font-semibold">Security & compliance</span>
                                         <span className="text-gray-400"> - HIPAA, GDPR, SOC 2, PCI DSS implementation and maintenance</span>
                                     </div>
                                 </li>
                                 <li className="flex items-start gap-3">
-                                    <span className="text-lime-400 font-bold text-lg flex-shrink-0 mt-0.5">✓</span>
+                                    <span className="text-cyan-400 font-bold text-lg flex-shrink-0 mt-0.5">✓</span>
                                     <div>
-                                        <span className="text-lime-300 font-semibold">Infrastructure management</span>
+                                        <span className="text-cyan-300 font-semibold">Infrastructure management</span>
                                         <span className="text-gray-400"> - Cloud platform selection, DevOps implementation, monitoring and optimization</span>
                                     </div>
                                 </li>
@@ -809,10 +809,10 @@ export default function OutsourcingPage() {
                 {/* Industries We Support */}
                 <section className="py-20 px-4 border-t border-gray-800 relative">
                     <div className="absolute inset-0 -z-10">
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -mt-40 w-96 h-96 rounded-full bg-lime-500/10 blur-3xl"></div>
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -mt-40 w-96 h-96 rounded-full bg-cyan-500/10 blur-3xl"></div>
                     </div>
                     <div className="container mx-auto max-w-5xl">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Industries We Support</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent">Industries We Support</h2>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                             {[
                                 { icon: "🏢", label: "SaaS & Technology Platforms" },
@@ -822,7 +822,7 @@ export default function OutsourcingPage() {
                                 { icon: "🔧", label: "Enterprise IT & Digital Transformation" },
                                 { icon: "📊", label: "E-Commerce & Retail" }
                             ].map((industry, i) => (
-                                <div key={i} className="group bg-gradient-to-br from-lime-500/15 to-green-500/15 border border-lime-500/30 rounded-xl p-6 hover:border-lime-500/60 transition-all hover:scale-105">
+                                <div key={i} className="group bg-gradient-to-br from-cyan-500/15 to-cyan-500/15 border border-cyan-500/30 rounded-xl p-6 hover:border-cyan-500/60 transition-all hover:scale-105">
                                     <div className="text-4xl mb-3">{industry.icon}</div>
                                     <p className="text-white font-semibold">{industry.label}</p>
                                 </div>
@@ -837,11 +837,11 @@ export default function OutsourcingPage() {
                 {/* Technology Expertise Section */}
                 <section className="py-20 px-4 border-t border-gray-800 relative">
                     <div className="absolute inset-0 -z-10">
-                        <div className="absolute top-0 right-0 -mr-40 w-80 h-80 rounded-full bg-green-500/10 blur-3xl"></div>
-                        <div className="absolute bottom-0 left-0 -ml-40 w-80 h-80 rounded-full bg-emerald-500/10 blur-3xl"></div>
+                        <div className="absolute top-0 right-0 -mr-40 w-80 h-80 rounded-full bg-cyan-500/10 blur-3xl"></div>
+                        <div className="absolute bottom-0 left-0 -ml-40 w-80 h-80 rounded-full bg-cyan-500/10 blur-3xl"></div>
                     </div>
                     <div className="container mx-auto max-w-5xl">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Technology Expertise</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent">Technology Expertise</h2>
                         <p className="text-gray-300 mb-12 text-lg">Our outsourced teams work across modern technology stacks, including:</p>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                             {[
@@ -852,7 +852,7 @@ export default function OutsourcingPage() {
                                 { icon: "🔐", label: "Security & Compliance", detail: "Enterprise standards" },
                                 { icon: "🧠", label: "AI/ML Solutions", detail: "Modern AI integration" }
                             ].map((tech, i) => (
-                                <div key={i} className="group bg-gradient-to-br from-green-500/15 to-emerald-500/15 border border-green-500/30 rounded-xl p-6 hover:border-green-500/60 transition-all hover:scale-105">
+                                <div key={i} className="group bg-gradient-to-br from-cyan-500/15 to-cyan-500/15 border border-cyan-500/30 rounded-xl p-6 hover:border-cyan-500/60 transition-all hover:scale-105">
                                     <div className="text-4xl mb-3">{tech.icon}</div>
                                     <p className="text-white font-semibold mb-2">{tech.label}</p>
                                     <p className="text-gray-400 text-sm">{tech.detail}</p>
@@ -866,11 +866,11 @@ export default function OutsourcingPage() {
                 {/* How We Work Section */}
                 <section className="py-20 px-4 border-t border-gray-800 relative">
                     <div className="absolute inset-0 -z-10">
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -mt-40 w-96 h-96 rounded-full bg-orange-500/10 blur-3xl"></div>
-                        <div className="absolute bottom-0 right-0 -mr-40 w-80 h-80 rounded-full bg-amber-500/10 blur-3xl"></div>
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -mt-40 w-96 h-96 rounded-full bg-cyan-500/10 blur-3xl"></div>
+                        <div className="absolute bottom-0 right-0 -mr-40 w-80 h-80 rounded-full bg-cyan-500/10 blur-3xl"></div>
                     </div>
                     <div className="container mx-auto max-w-5xl">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">How We Work</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent">How We Work</h2>
                         <div className="space-y-6">
                             {[
                                 { num: "1", icon: "📋", title: "Requirement & Scope Alignment", desc: "Understanding your project needs and defining clear objectives" },
@@ -879,15 +879,15 @@ export default function OutsourcingPage() {
                                 { num: "4", icon: "🚀", title: "Delivery Execution with Reporting", desc: "Building your product with transparent progress updates" },
                                 { num: "5", icon: "✨", title: "Continuous Optimization & Support", desc: "Iterating and improving based on feedback and metrics" }
                             ].map((step, i) => (
-                                <div key={i} className="group bg-gradient-to-r from-lime-500/10 to-green-500/10 border border-lime-500/30 rounded-xl p-6 hover:border-lime-500/60 transition-all">
+                                <div key={i} className="group bg-gradient-to-r from-cyan-500/10 to-cyan-500/10 border border-cyan-500/30 rounded-xl p-6 hover:border-cyan-500/60 transition-all">
                                     <div className="flex items-start gap-4">
                                         <div className="flex-shrink-0">
-                                            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-lime-500/20 border border-lime-500/40">
+                                            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-cyan-500/20 border border-cyan-500/40">
                                                 <span className="text-xl">{step.icon}</span>
                                             </div>
                                         </div>
                                         <div className="flex-1">
-                                            <h3 className="text-lg font-semibold text-lime-300 mb-1">
+                                            <h3 className="text-lg font-semibold text-cyan-300 mb-1">
                                                 {step.num}. {step.title}
                                             </h3>
                                             <p className="text-gray-400">{step.desc}</p>
@@ -905,19 +905,19 @@ export default function OutsourcingPage() {
                 {/* Let's Build Together Section */}
                 <section className="py-20 px-4 border-t border-gray-800 relative">
                     <div className="absolute inset-0 -z-10">
-                        <div className="absolute top-0 right-0 -mr-40 w-80 h-80 rounded-full bg-lime-500/10 blur-3xl"></div>
-                        <div className="absolute bottom-0 left-0 -ml-40 w-80 h-80 rounded-full bg-green-500/10 blur-3xl"></div>
+                        <div className="absolute top-0 right-0 -mr-40 w-80 h-80 rounded-full bg-cyan-500/10 blur-3xl"></div>
+                        <div className="absolute bottom-0 left-0 -ml-40 w-80 h-80 rounded-full bg-cyan-500/10 blur-3xl"></div>
                     </div>
                     <div className="container mx-auto max-w-5xl">
-                        <div className="bg-gradient-to-br from-lime-500/15 to-green-500/15 border border-lime-500/30 rounded-2xl p-12 text-center">
+                        <div className="bg-gradient-to-br from-cyan-500/15 to-cyan-500/15 border border-cyan-500/30 rounded-2xl p-12 text-center">
                             <div className="text-6xl mb-6">🚀</div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-lime-300 via-green-300 to-lime-300 bg-clip-text text-transparent">Let's Build Together</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent">Let's Build Together</h2>
                             <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
                                 Whether you need to scale your team, accelerate delivery, or outsource complete projects, <span className="text-white font-semibold">TryQu is your trusted outsourcing partner.</span>
                             </p>
                             <button
                                 onClick={handleChatWithUs}
-                                className="group px-8 py-3 rounded-lg bg-gradient-to-r from-lime-400 to-lime-500 text-black font-semibold hover:shadow-lg hover:shadow-lime-400/50 transition-all duration-300 inline-flex items-center justify-center gap-2"
+                                className="group px-8 py-3 rounded-lg bg-gradient-to-r from-cyan-400 to-cyan-500 text-black font-semibold hover:shadow-lg hover:shadow-cyan-400/50 transition-all duration-300 inline-flex items-center justify-center gap-2"
                             >
                                 <MessageCircle className="w-5 h-5 group-hover:animate-pulse" />
                                 Start Your Engagement
@@ -929,16 +929,16 @@ export default function OutsourcingPage() {
                 {/* Comparison Table */}
                 <section className="py-20 px-4 border-t border-gray-800 relative">
                     <div className="absolute inset-0 -z-10">
-                        <div className="absolute top-1/2 right-0 -mr-60 w-96 h-96 rounded-full bg-green-500/5 blur-3xl"></div>
-                        <div className="absolute bottom-0 left-0 -ml-60 w-80 h-80 rounded-full bg-blue-500/5 blur-3xl"></div>
+                        <div className="absolute top-1/2 right-0 -mr-60 w-96 h-96 rounded-full bg-cyan-500/5 blur-3xl"></div>
+                        <div className="absolute bottom-0 left-0 -ml-60 w-80 h-80 rounded-full bg-cyan-500/5 blur-3xl"></div>
                     </div>
 
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-16">
                             <div className="inline-block mb-4">
-                                <span className="text-xs font-semibold text-lime-400 uppercase tracking-widest bg-lime-500/10 px-4 py-1.5 rounded-full border border-lime-500/20">Smart Comparison</span>
+                                <span className="text-xs font-semibold text-cyan-400 uppercase tracking-widest bg-cyan-500/10 px-4 py-1.5 rounded-full border border-cyan-500/20">Smart Comparison</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">In-House vs. Outsourced Development</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent">In-House vs. Outsourced Development</h2>
                             <p className="text-gray-400 text-lg">See exactly how outsourcing stacks up against traditional hiring</p>
                         </div>
 
@@ -948,17 +948,17 @@ export default function OutsourcingPage() {
                                     <tr className="border-b-2 border-gray-700 bg-gradient-to-r from-gray-900/80 to-gray-900/50">
                                         <th className="text-left py-4 px-6 font-bold text-white">Aspect</th>
                                         <th className="text-left py-4 px-6 font-bold text-gray-300">In-House</th>
-                                        <th className="text-left py-4 px-6 font-bold text-lime-300 flex items-center gap-2">
-                                            <Sparkles className="w-4 h-4" /> Outsourced <span className="text-xs bg-lime-500/20 px-2 py-0.5 rounded text-lime-400 ml-2">Better</span>
+                                        <th className="text-left py-4 px-6 font-bold text-cyan-300 flex items-center gap-2">
+                                            <Sparkles className="w-4 h-4" /> Outsourced <span className="text-xs bg-cyan-500/20 px-2 py-0.5 rounded text-cyan-400 ml-2">Better</span>
                                         </th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {comparisonData.map((row, i) => (
-                                        <tr key={i} className="border-b border-gray-800 hover:bg-gradient-to-r hover:from-lime-500/5 hover:to-transparent transition-colors group">
+                                        <tr key={i} className="border-b border-gray-800 hover:bg-gradient-to-r hover:from-cyan-500/5 hover:to-transparent transition-colors group">
                                             <td className="py-4 px-6 font-semibold text-white">{row.aspect}</td>
                                             <td className="py-4 px-6 text-gray-400 group-hover:text-gray-300 transition-colors">{row.inHouse}</td>
-                                            <td className="py-4 px-6 text-lime-400 font-medium group-hover:text-lime-300 transition-colors bg-gradient-to-r from-lime-500/5 to-transparent">{row.outsourcing}</td>
+                                            <td className="py-4 px-6 text-cyan-400 font-medium group-hover:text-cyan-300 transition-colors bg-gradient-to-r from-cyan-500/5 to-transparent">{row.outsourcing}</td>
                                         </tr>
                                     ))}
                                 </tbody>
@@ -970,15 +970,15 @@ export default function OutsourcingPage() {
                 {/* Technologies & Tools */}
                 <section className="py-20 px-4 border-t border-gray-800 relative">
                     <div className="absolute inset-0 -z-10">
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -mt-40 w-96 h-96 rounded-full bg-orange-500/5 blur-3xl"></div>
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -mt-40 w-96 h-96 rounded-full bg-cyan-500/5 blur-3xl"></div>
                     </div>
 
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-16">
                             <div className="inline-block mb-4">
-                                <span className="text-xs font-semibold text-lime-400 uppercase tracking-widest bg-lime-500/10 px-4 py-1.5 rounded-full border border-lime-500/20">Tech Stack</span>
+                                <span className="text-xs font-semibold text-cyan-400 uppercase tracking-widest bg-cyan-500/10 px-4 py-1.5 rounded-full border border-cyan-500/20">Tech Stack</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Technologies & Tools We Master</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent">Technologies & Tools We Master</h2>
                             <p className="text-gray-400 text-lg">Expert-level proficiency across modern development stacks</p>
                         </div>
 
@@ -995,15 +995,15 @@ export default function OutsourcingPage() {
                                     "Emerging Technologies": "🚀"
                                 }
                                 return (
-                                    <div key={i} className="bg-gradient-to-br from-gray-900/50 to-gray-950/50 border border-gray-800 rounded-xl p-8 hover:border-lime-500/50 transition-all group">
+                                    <div key={i} className="bg-gradient-to-br from-gray-900/50 to-gray-950/50 border border-gray-800 rounded-xl p-8 hover:border-cyan-500/50 transition-all group">
                                         <div className="flex items-center gap-3 mb-6">
                                             <span className="text-3xl">{categoryEmojis[category] || "💻"}</span>
-                                            <h3 className="text-lg font-bold text-lime-400 group-hover:text-lime-300 transition-colors">{category}</h3>
+                                            <h3 className="text-lg font-bold text-cyan-400 group-hover:text-cyan-300 transition-colors">{category}</h3>
                                         </div>
                                         <div className="flex flex-wrap gap-2">
                                             {techs.map((tech, j) => (
-                                                <span key={j} className="bg-gradient-to-r from-lime-500/10 to-green-500/10 border border-lime-500/30 rounded-lg px-3 py-1.5 text-sm text-gray-300 hover:border-lime-400 hover:bg-lime-500/20 transition-all group/tech">
-                                                    <span className="text-lime-400 group-hover/tech:text-lime-300 transition-colors">✦</span> {tech}
+                                                <span key={j} className="bg-gradient-to-r from-cyan-500/10 to-cyan-500/10 border border-cyan-500/30 rounded-lg px-3 py-1.5 text-sm text-gray-300 hover:border-cyan-400 hover:bg-cyan-500/20 transition-all group/tech">
+                                                    <span className="text-cyan-400 group-hover/tech:text-cyan-300 transition-colors">✦</span> {tech}
                                                 </span>
                                             ))}
                                         </div>
@@ -1017,19 +1017,19 @@ export default function OutsourcingPage() {
                 {/* Industries Served - Enhanced */}
                 <section className="py-20 px-4 border-t border-gray-800 relative">
                     <div className="absolute inset-0 -z-10">
-                        <div className="absolute top-1/2 right-0 -mr-60 w-96 h-96 rounded-full bg-lime-500/15 blur-3xl animate-pulse"></div>
-                        <div className="absolute top-0 left-0 -ml-40 w-80 h-80 rounded-full bg-green-500/10 blur-3xl"></div>
+                        <div className="absolute top-1/2 right-0 -mr-60 w-96 h-96 rounded-full bg-cyan-500/15 blur-3xl animate-pulse"></div>
+                        <div className="absolute top-0 left-0 -ml-40 w-80 h-80 rounded-full bg-cyan-500/10 blur-3xl"></div>
                     </div>
 
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-16">
-                            <div className="inline-block mb-4 bg-lime-500/10 px-4 py-2 rounded-full border border-lime-500/30">
-                                <span className="text-xs font-semibold text-lime-400 uppercase tracking-widest flex items-center gap-2">
+                            <div className="inline-block mb-4 bg-cyan-500/10 px-4 py-2 rounded-full border border-cyan-500/30">
+                                <span className="text-xs font-semibold text-cyan-400 uppercase tracking-widest flex items-center gap-2">
                                     <Globe className="w-4 h-4" />
                                     Industry Expertise
                                 </span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Industries We Serve</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent">Industries We Serve</h2>
                             <p className="text-gray-400 text-lg">Deep expertise across vertical markets, domain specializations, and emerging sectors</p>
                         </div>
 
@@ -1050,18 +1050,18 @@ export default function OutsourcingPage() {
                                     "Telecommunications": "📞"
                                 }
                                 const colors = [
-                                    "from-lime-600/30 to-green-600/30",
-                                    "from-lime-600/30 to-green-600/30",
-                                    "from-lime-600/30 to-green-600/30",
-                                    "from-lime-600/30 to-green-600/30",
-                                    "from-lime-600/30 to-green-600/30",
-                                    "from-lime-600/30 to-green-600/30",
-                                    "from-lime-600/30 to-green-600/30",
-                                    "from-lime-600/30 to-green-600/30",
-                                    "from-lime-600/30 to-green-600/30",
-                                    "from-lime-600/30 to-green-600/30",
-                                    "from-lime-600/30 to-green-600/30",
-                                    "from-lime-600/30 to-green-600/30"
+                                    "from-cyan-600/30 to-cyan-600/30",
+                                    "from-cyan-600/30 to-cyan-600/30",
+                                    "from-cyan-600/30 to-cyan-600/30",
+                                    "from-cyan-600/30 to-cyan-600/30",
+                                    "from-cyan-600/30 to-cyan-600/30",
+                                    "from-cyan-600/30 to-cyan-600/30",
+                                    "from-cyan-600/30 to-cyan-600/30",
+                                    "from-cyan-600/30 to-cyan-600/30",
+                                    "from-cyan-600/30 to-cyan-600/30",
+                                    "from-cyan-600/30 to-cyan-600/30",
+                                    "from-cyan-600/30 to-cyan-600/30",
+                                    "from-cyan-600/30 to-cyan-600/30"
                                 ]
                                 return (
                                     <div key={i} className={`group bg-gradient-to-br ${colors[i]} border border-gray-700 rounded-lg p-5 flex items-center gap-4 hover:border-white/40 hover:shadow-lg transition-all transform hover:scale-105 cursor-pointer`}>
@@ -1077,36 +1077,36 @@ export default function OutsourcingPage() {
                 {/* Client Logos - Enhanced */}
                 <section className="py-20 px-4 border-t border-gray-800 relative">
                     <div className="absolute inset-0 -z-10">
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -mt-40 w-96 h-96 rounded-full bg-lime-500/15 blur-3xl animate-pulse"></div>
-                        <div className="absolute bottom-0 right-0 -mr-40 w-80 h-80 rounded-full bg-green-500/10 blur-3xl"></div>
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -mt-40 w-96 h-96 rounded-full bg-cyan-500/15 blur-3xl animate-pulse"></div>
+                        <div className="absolute bottom-0 right-0 -mr-40 w-80 h-80 rounded-full bg-cyan-500/10 blur-3xl"></div>
                     </div>
 
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-16">
-                            <div className="inline-block mb-4 bg-lime-500/10 px-4 py-2 rounded-full border border-lime-500/30">
-                                <span className="text-xs font-semibold text-lime-400 uppercase tracking-widest flex items-center gap-2">
+                            <div className="inline-block mb-4 bg-cyan-500/10 px-4 py-2 rounded-full border border-cyan-500/30">
+                                <span className="text-xs font-semibold text-cyan-400 uppercase tracking-widest flex items-center gap-2">
                                     <Award className="w-4 h-4" />
                                     Success Stories
                                 </span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Trusted by Industry Leaders</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent">Trusted by Industry Leaders</h2>
                             <p className="text-gray-400 text-lg">100+ global companies and funded startups leverage our development expertise</p>
                         </div>
 
                         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
                             {[
-                                { name: "TechStart India", emoji: "🚀", color: "from-lime-600/20 to-green-600/20" },
-                                { name: "Innovate Digital", emoji: "💡", color: "from-lime-600/20 to-green-600/20" },
-                                { name: "CloudVision Labs", emoji: "☁️", color: "from-lime-600/20 to-green-600/20" },
-                                { name: "DevHub Studios", emoji: "🛠️", color: "from-lime-600/20 to-green-600/20" },
-                                { name: "ByteForce Solutions", emoji: "⚡", color: "from-lime-600/20 to-green-600/20" },
-                                { name: "WebCraft India", emoji: "🌐", color: "from-lime-600/20 to-green-600/20" },
-                                { name: "SmartTech Ventures", emoji: "🧠", color: "from-lime-600/20 to-green-600/20" },
-                                { name: "CodeNest Pro", emoji: "🐦", color: "from-lime-600/20 to-green-600/20" },
-                                { name: "Digital Dynamics", emoji: "🔄", color: "from-lime-600/20 to-green-600/20" },
-                                { name: "FutureScale Systems", emoji: "📈", color: "from-lime-600/20 to-green-600/20" }
+                                { name: "TechStart India", emoji: "🚀", color: "from-cyan-600/20 to-cyan-600/20" },
+                                { name: "Innovate Digital", emoji: "💡", color: "from-cyan-600/20 to-cyan-600/20" },
+                                { name: "CloudVision Labs", emoji: "☁️", color: "from-cyan-600/20 to-cyan-600/20" },
+                                { name: "DevHub Studios", emoji: "🛠️", color: "from-cyan-600/20 to-cyan-600/20" },
+                                { name: "ByteForce Solutions", emoji: "⚡", color: "from-cyan-600/20 to-cyan-600/20" },
+                                { name: "WebCraft India", emoji: "🌐", color: "from-cyan-600/20 to-cyan-600/20" },
+                                { name: "SmartTech Ventures", emoji: "🧠", color: "from-cyan-600/20 to-cyan-600/20" },
+                                { name: "CodeNest Pro", emoji: "🐦", color: "from-cyan-600/20 to-cyan-600/20" },
+                                { name: "Digital Dynamics", emoji: "🔄", color: "from-cyan-600/20 to-cyan-600/20" },
+                                { name: "FutureScale Systems", emoji: "📈", color: "from-cyan-600/20 to-cyan-600/20" }
                             ].map((company, i) => (
-                                <div key={i} className={`group bg-gradient-to-br ${company.color} border border-gray-700 rounded-xl p-6 flex flex-col items-center justify-center hover:border-white/40 hover:shadow-xl transition-all h-32 cursor-pointer transform hover:scale-110 hover:shadow-lime-500/20`}>
+                                <div key={i} className={`group bg-gradient-to-br ${company.color} border border-gray-700 rounded-xl p-6 flex flex-col items-center justify-center hover:border-white/40 hover:shadow-xl transition-all h-32 cursor-pointer transform hover:scale-110 hover:shadow-cyan-500/20`}>
                                     <div className="text-5xl mb-3 group-hover:scale-150 transition-transform">{company.emoji}</div>
                                     <p className="text-gray-200 text-xs font-bold text-center group-hover:text-white transition-colors">{company.name}</p>
                                 </div>
@@ -1118,25 +1118,25 @@ export default function OutsourcingPage() {
                 {/* Internal Linking Section - Enhanced */}
                 <section className="py-20 px-4 border-t border-gray-800 relative">
                     <div className="absolute inset-0 -z-10">
-                        <div className="absolute top-0 right-0 -mr-40 -mt-40 w-80 h-80 rounded-full bg-green-500/15 blur-3xl animate-pulse"></div>
-                        <div className="absolute bottom-0 left-0 -ml-40 w-80 h-80 rounded-full bg-lime-500/10 blur-3xl"></div>
+                        <div className="absolute top-0 right-0 -mr-40 -mt-40 w-80 h-80 rounded-full bg-cyan-500/15 blur-3xl animate-pulse"></div>
+                        <div className="absolute bottom-0 left-0 -ml-40 w-80 h-80 rounded-full bg-cyan-500/10 blur-3xl"></div>
                     </div>
 
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-16">
-                            <div className="inline-block mb-4 bg-lime-500/10 px-4 py-2 rounded-full border border-lime-500/30">
-                                <span className="text-xs font-semibold text-lime-400 uppercase tracking-widest flex items-center gap-2">
+                            <div className="inline-block mb-4 bg-cyan-500/10 px-4 py-2 rounded-full border border-cyan-500/30">
+                                <span className="text-xs font-semibold text-cyan-400 uppercase tracking-widest flex items-center gap-2">
                                     <TrendingUp className="w-4 h-4" />
                                     Explore More
                                 </span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Discover Complementary Services</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent">Discover Complementary Services</h2>
                             <p className="text-gray-400 text-lg">Expand your partnership with specialized expertise across multiple domains</p>
                         </div>
 
                         <div className="grid md:grid-cols-2 gap-6">
                             <Link href="/technologies">
-                                <div className="group bg-gradient-to-br from-lime-600/20 to-green-600/20 border border-lime-500/40 rounded-xl p-8 hover:border-lime-500/70 transition-all cursor-pointer transform hover:scale-105 hover:shadow-xl hover:shadow-lime-500/20">
+                                <div className="group bg-gradient-to-br from-cyan-600/20 to-cyan-600/20 border border-cyan-500/40 rounded-xl p-8 hover:border-cyan-500/70 transition-all cursor-pointer transform hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20">
                                     <div className="flex items-start justify-between mb-4">
                                         <div>
                                             <h3 className="text-xl font-bold text-white group-hover:text-lime-200 transition-colors flex items-center gap-2">
@@ -1144,14 +1144,14 @@ export default function OutsourcingPage() {
                                                 Technologies
                                             </h3>
                                         </div>
-                                        <ArrowRight className="w-6 h-6 text-lime-400 group-hover:translate-x-2 transition-transform" />
+                                        <ArrowRight className="w-6 h-6 text-cyan-400 group-hover:translate-x-2 transition-transform" />
                                     </div>
                                     <p className="text-gray-300 group-hover:text-gray-200 transition-colors">Explore our expertise in modern development technologies, frameworks, and emerging stacks.</p>
                                 </div>
                             </Link>
 
                             <Link href="/services">
-                                <div className="group bg-gradient-to-br from-lime-600/20 to-green-600/20 border border-lime-500/40 rounded-xl p-8 hover:border-lime-500/70 transition-all cursor-pointer transform hover:scale-105 hover:shadow-xl hover:shadow-lime-500/20">
+                                <div className="group bg-gradient-to-br from-cyan-600/20 to-cyan-600/20 border border-cyan-500/40 rounded-xl p-8 hover:border-cyan-500/70 transition-all cursor-pointer transform hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20">
                                     <div className="flex items-start justify-between mb-4">
                                         <div>
                                             <h3 className="text-xl font-bold text-white group-hover:text-lime-200 transition-colors flex items-center gap-2">
@@ -1159,14 +1159,14 @@ export default function OutsourcingPage() {
                                                 DevOps & Automation
                                             </h3>
                                         </div>
-                                        <ArrowRight className="w-6 h-6 text-lime-400 group-hover:translate-x-2 transition-transform" />
+                                        <ArrowRight className="w-6 h-6 text-cyan-400 group-hover:translate-x-2 transition-transform" />
                                     </div>
                                     <p className="text-gray-300 group-hover:text-gray-200 transition-colors">Learn about our DevOps, infrastructure, CI/CD pipelines, and automation services.</p>
                                 </div>
                             </Link>
 
                             <Link href="/services">
-                                <div className="group bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/40 rounded-xl p-8 hover:border-green-500/70 transition-all cursor-pointer transform hover:scale-105 hover:shadow-xl hover:shadow-green-500/20">
+                                <div className="group bg-gradient-to-br from-cyan-600/20 to-cyan-600/20 border border-cyan-500/40 rounded-xl p-8 hover:border-cyan-500/70 transition-all cursor-pointer transform hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20">
                                     <div className="flex items-start justify-between mb-4">
                                         <div>
                                             <h3 className="text-xl font-bold text-white group-hover:text-green-200 transition-colors flex items-center gap-2">
@@ -1174,14 +1174,14 @@ export default function OutsourcingPage() {
                                                 Cloud Services
                                             </h3>
                                         </div>
-                                        <ArrowRight className="w-6 h-6 text-green-400 group-hover:translate-x-2 transition-transform" />
+                                        <ArrowRight className="w-6 h-6 text-cyan-400 group-hover:translate-x-2 transition-transform" />
                                     </div>
                                     <p className="text-gray-300 group-hover:text-gray-200 transition-colors">AWS, Azure, GCP expertise, migration planning, and optimization strategies.</p>
                                 </div>
                             </Link>
 
                             <Link href="/services">
-                                <div className="group bg-gradient-to-br from-lime-600/20 to-green-600/20 border border-lime-500/40 rounded-xl p-8 hover:border-lime-500/70 transition-all cursor-pointer transform hover:scale-105 hover:shadow-xl hover:shadow-lime-500/20">
+                                <div className="group bg-gradient-to-br from-cyan-600/20 to-cyan-600/20 border border-cyan-500/40 rounded-xl p-8 hover:border-cyan-500/70 transition-all cursor-pointer transform hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20">
                                     <div className="flex items-start justify-between mb-4">
                                         <div>
                                             <h3 className="text-xl font-bold text-white group-hover:text-lime-200 transition-colors flex items-center gap-2">
@@ -1189,7 +1189,7 @@ export default function OutsourcingPage() {
                                                 Security & Compliance
                                             </h3>
                                         </div>
-                                        <ArrowRight className="w-6 h-6 text-lime-400 group-hover:translate-x-2 transition-transform" />
+                                        <ArrowRight className="w-6 h-6 text-cyan-400 group-hover:translate-x-2 transition-transform" />
                                     </div>
                                     <p className="text-gray-300 group-hover:text-gray-200 transition-colors">Security practices, compliance frameworks, audits, and GDPR/HIPAA implementation.</p>
                                 </div>
@@ -1201,51 +1201,51 @@ export default function OutsourcingPage() {
                 {/* FAQ Section - Enhanced */}
                 <section className="py-20 px-4 border-t border-gray-800 relative">
                     <div className="absolute inset-0 -z-10">
-                        <div className="absolute top-1/2 right-0 -mr-60 w-96 h-96 rounded-full bg-lime-500/15 blur-3xl animate-pulse"></div>
-                        <div className="absolute bottom-0 left-0 -ml-60 w-80 h-80 rounded-full bg-green-500/15 blur-3xl"></div>
+                        <div className="absolute top-1/2 right-0 -mr-60 w-96 h-96 rounded-full bg-cyan-500/15 blur-3xl animate-pulse"></div>
+                        <div className="absolute bottom-0 left-0 -ml-60 w-80 h-80 rounded-full bg-cyan-500/15 blur-3xl"></div>
                     </div>
 
                     <div className="container mx-auto max-w-4xl">
                         <div className="text-center mb-16">
-                            <div className="inline-block mb-4 bg-lime-500/10 px-4 py-2 rounded-full border border-lime-500/30">
-                                <span className="text-xs font-semibold text-lime-400 uppercase tracking-widest flex items-center gap-2">
+                            <div className="inline-block mb-4 bg-cyan-500/10 px-4 py-2 rounded-full border border-cyan-500/30">
+                                <span className="text-xs font-semibold text-cyan-400 uppercase tracking-widest flex items-center gap-2">
                                     <MessageCircle className="w-4 h-4" />
                                     Common Questions
                                 </span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Frequently Asked Questions</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent">Frequently Asked Questions</h2>
                             <p className="text-gray-400 text-lg">Get clear answers to common concerns, requirements, and processes</p>
                         </div>
 
                         <div className="space-y-4">
                             {faqs.map((faq, i) => {
                                 const expandGradients = [
-                                    "from-lime-600/20 to-green-600/20",
-                                    "from-lime-600/20 to-green-600/20",
-                                    "from-lime-600/20 to-green-600/20",
-                                    "from-lime-600/20 to-green-600/20",
-                                    "from-lime-600/20 to-green-600/20",
-                                    "from-lime-600/20 to-green-600/20"
+                                    "from-cyan-600/20 to-cyan-600/20",
+                                    "from-cyan-600/20 to-cyan-600/20",
+                                    "from-cyan-600/20 to-cyan-600/20",
+                                    "from-cyan-600/20 to-cyan-600/20",
+                                    "from-cyan-600/20 to-cyan-600/20",
+                                    "from-cyan-600/20 to-cyan-600/20"
                                 ]
                                 return (
-                                    <div key={i} className={`group bg-gradient-to-br ${expandGradients[i % expandGradients.length]} border border-gray-700 rounded-xl overflow-hidden hover:border-lime-500/60 transition-all hover:shadow-lg`}>
+                                    <div key={i} className={`group bg-gradient-to-br ${expandGradients[i % expandGradients.length]} border border-gray-700 rounded-xl overflow-hidden hover:border-cyan-500/60 transition-all hover:shadow-lg`}>
                                         <button
                                             onClick={() => setExpandedFaq(expandedFaq === i ? null : i)}
-                                            className="w-full p-6 flex items-center justify-between hover:bg-lime-500/5 transition-colors group"
+                                            className="w-full p-6 flex items-center justify-between hover:bg-cyan-500/5 transition-colors group"
                                         >
                                             <h3 className="text-lg font-semibold text-left text-white group-hover:text-lime-200 transition-colors flex items-start gap-3">
-                                                <span className="text-lime-400 flex-shrink-0 mt-1">❓</span>
+                                                <span className="text-cyan-400 flex-shrink-0 mt-1">❓</span>
                                                 {faq.question}
                                             </h3>
                                             {expandedFaq === i ? (
-                                                <ChevronUp className="w-5 h-5 text-lime-400 flex-shrink-0 ml-4 group-hover:scale-110 transition-transform" />
+                                                <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0 ml-4 group-hover:scale-110 transition-transform" />
                                             ) : (
-                                                <ChevronDown className="w-5 h-5 text-gray-500 flex-shrink-0 ml-4 group-hover:text-lime-400 group-hover:scale-110 transition-all" />
+                                                <ChevronDown className="w-5 h-5 text-gray-500 flex-shrink-0 ml-4 group-hover:text-cyan-400 group-hover:scale-110 transition-all" />
                                             )}
                                         </button>
 
                                         {expandedFaq === i && (
-                                            <div className="px-6 pb-6 border-t border-lime-500/30 pt-4 bg-gradient-to-b from-lime-500/5 to-transparent">
+                                            <div className="px-6 pb-6 border-t border-cyan-500/30 pt-4 bg-gradient-to-b from-cyan-500/5 to-transparent">
                                                 <div className="text-gray-300 leading-relaxed whitespace-pre-wrap text-sm space-y-3">
                                                     {faq.answer}
                                                 </div>
