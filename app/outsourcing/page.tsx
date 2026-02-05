@@ -822,7 +822,7 @@ export default function OutsourcingPage() {
                                 { icon: "🔧", label: "Enterprise IT & Digital Transformation" },
                                 { icon: "📊", label: "E-Commerce & Retail" }
                             ].map((industry, i) => (
-                                <div key={i} className="group bg-gradient-to-br from-blue-500/15 to-cyan-500/15 border border-blue-500/30 rounded-xl p-6 hover:border-blue-500/60 transition-all hover:scale-105">
+                                <div key={i} className="group bg-gradient-to-br from-lime-500/15 to-green-500/15 border border-lime-500/30 rounded-xl p-6 hover:border-lime-500/60 transition-all hover:scale-105">
                                     <div className="text-4xl mb-3">{industry.icon}</div>
                                     <p className="text-white font-semibold">{industry.label}</p>
                                 </div>
@@ -936,9 +936,9 @@ export default function OutsourcingPage() {
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-16">
                             <div className="inline-block mb-4">
-                                <span className="text-xs font-semibold text-green-400 uppercase tracking-widest bg-green-500/10 px-4 py-1.5 rounded-full border border-green-500/20">Smart Comparison</span>
+                                <span className="text-xs font-semibold text-lime-400 uppercase tracking-widest bg-lime-500/10 px-4 py-1.5 rounded-full border border-lime-500/20">Smart Comparison</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-green-200 to-white bg-clip-text text-transparent">In-House vs. Outsourced Development</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">In-House vs. Outsourced Development</h2>
                             <p className="text-gray-400 text-lg">See exactly how outsourcing stacks up against traditional hiring</p>
                         </div>
 
@@ -948,17 +948,17 @@ export default function OutsourcingPage() {
                                     <tr className="border-b-2 border-gray-700 bg-gradient-to-r from-gray-900/80 to-gray-900/50">
                                         <th className="text-left py-4 px-6 font-bold text-white">Aspect</th>
                                         <th className="text-left py-4 px-6 font-bold text-gray-300">In-House</th>
-                                        <th className="text-left py-4 px-6 font-bold text-green-300 flex items-center gap-2">
-                                            <Sparkles className="w-4 h-4" /> Outsourced <span className="text-xs bg-green-500/20 px-2 py-0.5 rounded text-green-400 ml-2">Better</span>
+                                        <th className="text-left py-4 px-6 font-bold text-lime-300 flex items-center gap-2">
+                                            <Sparkles className="w-4 h-4" /> Outsourced <span className="text-xs bg-lime-500/20 px-2 py-0.5 rounded text-lime-400 ml-2">Better</span>
                                         </th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {comparisonData.map((row, i) => (
-                                        <tr key={i} className="border-b border-gray-800 hover:bg-gradient-to-r hover:from-green-500/5 hover:to-transparent transition-colors group">
+                                        <tr key={i} className="border-b border-gray-800 hover:bg-gradient-to-r hover:from-lime-500/5 hover:to-transparent transition-colors group">
                                             <td className="py-4 px-6 font-semibold text-white">{row.aspect}</td>
                                             <td className="py-4 px-6 text-gray-400 group-hover:text-gray-300 transition-colors">{row.inHouse}</td>
-                                            <td className="py-4 px-6 text-green-400 font-medium group-hover:text-green-300 transition-colors bg-gradient-to-r from-green-500/5 to-transparent">{row.outsourcing}</td>
+                                            <td className="py-4 px-6 text-lime-400 font-medium group-hover:text-lime-300 transition-colors bg-gradient-to-r from-lime-500/5 to-transparent">{row.outsourcing}</td>
                                         </tr>
                                     ))}
                                 </tbody>
@@ -976,9 +976,9 @@ export default function OutsourcingPage() {
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-16">
                             <div className="inline-block mb-4">
-                                <span className="text-xs font-semibold text-orange-400 uppercase tracking-widest bg-orange-500/10 px-4 py-1.5 rounded-full border border-orange-500/20">Tech Stack</span>
+                                <span className="text-xs font-semibold text-lime-400 uppercase tracking-widest bg-lime-500/10 px-4 py-1.5 rounded-full border border-lime-500/20">Tech Stack</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-orange-200 to-white bg-clip-text text-transparent">Technologies & Tools We Master</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Technologies & Tools We Master</h2>
                             <p className="text-gray-400 text-lg">Expert-level proficiency across modern development stacks</p>
                         </div>
 
@@ -995,15 +995,15 @@ export default function OutsourcingPage() {
                                     "Emerging Technologies": "🚀"
                                 }
                                 return (
-                                    <div key={i} className="bg-gradient-to-br from-gray-900/50 to-gray-950/50 border border-gray-800 rounded-xl p-8 hover:border-purple-500/50 transition-all group">
+                                    <div key={i} className="bg-gradient-to-br from-gray-900/50 to-gray-950/50 border border-gray-800 rounded-xl p-8 hover:border-lime-500/50 transition-all group">
                                         <div className="flex items-center gap-3 mb-6">
                                             <span className="text-3xl">{categoryEmojis[category] || "💻"}</span>
-                                            <h3 className="text-lg font-bold text-purple-400 group-hover:text-purple-300 transition-colors">{category}</h3>
+                                            <h3 className="text-lg font-bold text-lime-400 group-hover:text-lime-300 transition-colors">{category}</h3>
                                         </div>
                                         <div className="flex flex-wrap gap-2">
                                             {techs.map((tech, j) => (
-                                                <span key={j} className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/30 rounded-lg px-3 py-1.5 text-sm text-gray-300 hover:border-purple-400 hover:bg-purple-500/20 transition-all group/tech">
-                                                    <span className="text-purple-400 group-hover/tech:text-purple-300 transition-colors">✦</span> {tech}
+                                                <span key={j} className="bg-gradient-to-r from-lime-500/10 to-green-500/10 border border-lime-500/30 rounded-lg px-3 py-1.5 text-sm text-gray-300 hover:border-lime-400 hover:bg-lime-500/20 transition-all group/tech">
+                                                    <span className="text-lime-400 group-hover/tech:text-lime-300 transition-colors">✦</span> {tech}
                                                 </span>
                                             ))}
                                         </div>
@@ -1017,19 +1017,19 @@ export default function OutsourcingPage() {
                 {/* Industries Served - Enhanced */}
                 <section className="py-20 px-4 border-t border-gray-800 relative">
                     <div className="absolute inset-0 -z-10">
-                        <div className="absolute top-1/2 right-0 -mr-60 w-96 h-96 rounded-full bg-pink-500/15 blur-3xl animate-pulse"></div>
-                        <div className="absolute top-0 left-0 -ml-40 w-80 h-80 rounded-full bg-rose-500/10 blur-3xl"></div>
+                        <div className="absolute top-1/2 right-0 -mr-60 w-96 h-96 rounded-full bg-lime-500/15 blur-3xl animate-pulse"></div>
+                        <div className="absolute top-0 left-0 -ml-40 w-80 h-80 rounded-full bg-green-500/10 blur-3xl"></div>
                     </div>
 
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-16">
-                            <div className="inline-block mb-4 bg-pink-500/10 px-4 py-2 rounded-full border border-pink-500/30">
-                                <span className="text-xs font-semibold text-pink-400 uppercase tracking-widest flex items-center gap-2">
+                            <div className="inline-block mb-4 bg-lime-500/10 px-4 py-2 rounded-full border border-lime-500/30">
+                                <span className="text-xs font-semibold text-lime-400 uppercase tracking-widest flex items-center gap-2">
                                     <Globe className="w-4 h-4" />
                                     Industry Expertise
                                 </span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-pink-200 to-white bg-clip-text text-transparent">Industries We Serve</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Industries We Serve</h2>
                             <p className="text-gray-400 text-lg">Deep expertise across vertical markets, domain specializations, and emerging sectors</p>
                         </div>
 
@@ -1050,18 +1050,18 @@ export default function OutsourcingPage() {
                                     "Telecommunications": "📞"
                                 }
                                 const colors = [
-                                    "from-purple-600/30 to-pink-600/30",
-                                    "from-blue-600/30 to-cyan-600/30",
-                                    "from-green-600/30 to-emerald-600/30",
-                                    "from-orange-600/30 to-yellow-600/30",
-                                    "from-rose-600/30 to-pink-600/30",
-                                    "from-indigo-600/30 to-purple-600/30",
-                                    "from-teal-600/30 to-cyan-600/30",
-                                    "from-amber-600/30 to-orange-600/30",
-                                    "from-violet-600/30 to-purple-600/30",
-                                    "from-fuchsia-600/30 to-pink-600/30",
-                                    "from-sky-600/30 to-blue-600/30",
-                                    "from-emerald-600/30 to-green-600/30"
+                                    "from-lime-600/30 to-green-600/30",
+                                    "from-lime-600/30 to-green-600/30",
+                                    "from-lime-600/30 to-green-600/30",
+                                    "from-lime-600/30 to-green-600/30",
+                                    "from-lime-600/30 to-green-600/30",
+                                    "from-lime-600/30 to-green-600/30",
+                                    "from-lime-600/30 to-green-600/30",
+                                    "from-lime-600/30 to-green-600/30",
+                                    "from-lime-600/30 to-green-600/30",
+                                    "from-lime-600/30 to-green-600/30",
+                                    "from-lime-600/30 to-green-600/30",
+                                    "from-lime-600/30 to-green-600/30"
                                 ]
                                 return (
                                     <div key={i} className={`group bg-gradient-to-br ${colors[i]} border border-gray-700 rounded-lg p-5 flex items-center gap-4 hover:border-white/40 hover:shadow-lg transition-all transform hover:scale-105 cursor-pointer`}>
@@ -1077,36 +1077,36 @@ export default function OutsourcingPage() {
                 {/* Client Logos - Enhanced */}
                 <section className="py-20 px-4 border-t border-gray-800 relative">
                     <div className="absolute inset-0 -z-10">
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -mt-40 w-96 h-96 rounded-full bg-cyan-500/15 blur-3xl animate-pulse"></div>
-                        <div className="absolute bottom-0 right-0 -mr-40 w-80 h-80 rounded-full bg-teal-500/10 blur-3xl"></div>
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -mt-40 w-96 h-96 rounded-full bg-lime-500/15 blur-3xl animate-pulse"></div>
+                        <div className="absolute bottom-0 right-0 -mr-40 w-80 h-80 rounded-full bg-green-500/10 blur-3xl"></div>
                     </div>
 
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-16">
-                            <div className="inline-block mb-4 bg-cyan-500/10 px-4 py-2 rounded-full border border-cyan-500/30">
-                                <span className="text-xs font-semibold text-cyan-400 uppercase tracking-widest flex items-center gap-2">
+                            <div className="inline-block mb-4 bg-lime-500/10 px-4 py-2 rounded-full border border-lime-500/30">
+                                <span className="text-xs font-semibold text-lime-400 uppercase tracking-widest flex items-center gap-2">
                                     <Award className="w-4 h-4" />
                                     Success Stories
                                 </span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-cyan-200 to-white bg-clip-text text-transparent">Trusted by Industry Leaders</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Trusted by Industry Leaders</h2>
                             <p className="text-gray-400 text-lg">100+ global companies and funded startups leverage our development expertise</p>
                         </div>
 
                         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
                             {[
-                                { name: "TechStart India", emoji: "🚀", color: "from-purple-600/20 to-pink-600/20" },
-                                { name: "Innovate Digital", emoji: "💡", color: "from-blue-600/20 to-cyan-600/20" },
-                                { name: "CloudVision Labs", emoji: "☁️", color: "from-cyan-600/20 to-teal-600/20" },
-                                { name: "DevHub Studios", emoji: "🛠️", color: "from-orange-600/20 to-yellow-600/20" },
-                                { name: "ByteForce Solutions", emoji: "⚡", color: "from-yellow-600/20 to-orange-600/20" },
-                                { name: "WebCraft India", emoji: "🌐", color: "from-green-600/20 to-emerald-600/20" },
-                                { name: "SmartTech Ventures", emoji: "🧠", color: "from-indigo-600/20 to-purple-600/20" },
-                                { name: "CodeNest Pro", emoji: "🐦", color: "from-rose-600/20 to-pink-600/20" },
-                                { name: "Digital Dynamics", emoji: "🔄", color: "from-teal-600/20 to-cyan-600/20" },
-                                { name: "FutureScale Systems", emoji: "📈", color: "from-green-600/20 to-lime-600/20" }
+                                { name: "TechStart India", emoji: "🚀", color: "from-lime-600/20 to-green-600/20" },
+                                { name: "Innovate Digital", emoji: "💡", color: "from-lime-600/20 to-green-600/20" },
+                                { name: "CloudVision Labs", emoji: "☁️", color: "from-lime-600/20 to-green-600/20" },
+                                { name: "DevHub Studios", emoji: "🛠️", color: "from-lime-600/20 to-green-600/20" },
+                                { name: "ByteForce Solutions", emoji: "⚡", color: "from-lime-600/20 to-green-600/20" },
+                                { name: "WebCraft India", emoji: "🌐", color: "from-lime-600/20 to-green-600/20" },
+                                { name: "SmartTech Ventures", emoji: "🧠", color: "from-lime-600/20 to-green-600/20" },
+                                { name: "CodeNest Pro", emoji: "🐦", color: "from-lime-600/20 to-green-600/20" },
+                                { name: "Digital Dynamics", emoji: "🔄", color: "from-lime-600/20 to-green-600/20" },
+                                { name: "FutureScale Systems", emoji: "📈", color: "from-lime-600/20 to-green-600/20" }
                             ].map((company, i) => (
-                                <div key={i} className={`group bg-gradient-to-br ${company.color} border border-gray-700 rounded-xl p-6 flex flex-col items-center justify-center hover:border-white/40 hover:shadow-xl transition-all h-32 cursor-pointer transform hover:scale-110 hover:shadow-cyan-500/20`}>
+                                <div key={i} className={`group bg-gradient-to-br ${company.color} border border-gray-700 rounded-xl p-6 flex flex-col items-center justify-center hover:border-white/40 hover:shadow-xl transition-all h-32 cursor-pointer transform hover:scale-110 hover:shadow-lime-500/20`}>
                                     <div className="text-5xl mb-3 group-hover:scale-150 transition-transform">{company.emoji}</div>
                                     <p className="text-gray-200 text-xs font-bold text-center group-hover:text-white transition-colors">{company.name}</p>
                                 </div>
@@ -1124,42 +1124,42 @@ export default function OutsourcingPage() {
 
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-16">
-                            <div className="inline-block mb-4 bg-green-500/10 px-4 py-2 rounded-full border border-green-500/30">
-                                <span className="text-xs font-semibold text-green-400 uppercase tracking-widest flex items-center gap-2">
+                            <div className="inline-block mb-4 bg-lime-500/10 px-4 py-2 rounded-full border border-lime-500/30">
+                                <span className="text-xs font-semibold text-lime-400 uppercase tracking-widest flex items-center gap-2">
                                     <TrendingUp className="w-4 h-4" />
                                     Explore More
                                 </span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-green-200 to-white bg-clip-text text-transparent">Discover Complementary Services</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Discover Complementary Services</h2>
                             <p className="text-gray-400 text-lg">Expand your partnership with specialized expertise across multiple domains</p>
                         </div>
 
                         <div className="grid md:grid-cols-2 gap-6">
                             <Link href="/technologies">
-                                <div className="group bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/40 rounded-xl p-8 hover:border-purple-500/70 transition-all cursor-pointer transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
+                                <div className="group bg-gradient-to-br from-lime-600/20 to-green-600/20 border border-lime-500/40 rounded-xl p-8 hover:border-lime-500/70 transition-all cursor-pointer transform hover:scale-105 hover:shadow-xl hover:shadow-lime-500/20">
                                     <div className="flex items-start justify-between mb-4">
                                         <div>
-                                            <h3 className="text-xl font-bold text-white group-hover:text-purple-200 transition-colors flex items-center gap-2">
+                                            <h3 className="text-xl font-bold text-white group-hover:text-lime-200 transition-colors flex items-center gap-2">
                                                 <span className="text-2xl">🎨</span>
                                                 Technologies
                                             </h3>
                                         </div>
-                                        <ArrowRight className="w-6 h-6 text-purple-400 group-hover:translate-x-2 transition-transform" />
+                                        <ArrowRight className="w-6 h-6 text-lime-400 group-hover:translate-x-2 transition-transform" />
                                     </div>
                                     <p className="text-gray-300 group-hover:text-gray-200 transition-colors">Explore our expertise in modern development technologies, frameworks, and emerging stacks.</p>
                                 </div>
                             </Link>
 
                             <Link href="/services">
-                                <div className="group bg-gradient-to-br from-blue-600/20 to-cyan-600/20 border border-blue-500/40 rounded-xl p-8 hover:border-blue-500/70 transition-all cursor-pointer transform hover:scale-105 hover:shadow-xl hover:shadow-blue-500/20">
+                                <div className="group bg-gradient-to-br from-lime-600/20 to-green-600/20 border border-lime-500/40 rounded-xl p-8 hover:border-lime-500/70 transition-all cursor-pointer transform hover:scale-105 hover:shadow-xl hover:shadow-lime-500/20">
                                     <div className="flex items-start justify-between mb-4">
                                         <div>
-                                            <h3 className="text-xl font-bold text-white group-hover:text-blue-200 transition-colors flex items-center gap-2">
+                                            <h3 className="text-xl font-bold text-white group-hover:text-lime-200 transition-colors flex items-center gap-2">
                                                 <span className="text-2xl">⚙️</span>
                                                 DevOps & Automation
                                             </h3>
                                         </div>
-                                        <ArrowRight className="w-6 h-6 text-blue-400 group-hover:translate-x-2 transition-transform" />
+                                        <ArrowRight className="w-6 h-6 text-lime-400 group-hover:translate-x-2 transition-transform" />
                                     </div>
                                     <p className="text-gray-300 group-hover:text-gray-200 transition-colors">Learn about our DevOps, infrastructure, CI/CD pipelines, and automation services.</p>
                                 </div>
@@ -1181,15 +1181,15 @@ export default function OutsourcingPage() {
                             </Link>
 
                             <Link href="/services">
-                                <div className="group bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/40 rounded-xl p-8 hover:border-orange-500/70 transition-all cursor-pointer transform hover:scale-105 hover:shadow-xl hover:shadow-orange-500/20">
+                                <div className="group bg-gradient-to-br from-lime-600/20 to-green-600/20 border border-lime-500/40 rounded-xl p-8 hover:border-lime-500/70 transition-all cursor-pointer transform hover:scale-105 hover:shadow-xl hover:shadow-lime-500/20">
                                     <div className="flex items-start justify-between mb-4">
                                         <div>
-                                            <h3 className="text-xl font-bold text-white group-hover:text-orange-200 transition-colors flex items-center gap-2">
+                                            <h3 className="text-xl font-bold text-white group-hover:text-lime-200 transition-colors flex items-center gap-2">
                                                 <span className="text-2xl">🔒</span>
                                                 Security & Compliance
                                             </h3>
                                         </div>
-                                        <ArrowRight className="w-6 h-6 text-orange-400 group-hover:translate-x-2 transition-transform" />
+                                        <ArrowRight className="w-6 h-6 text-lime-400 group-hover:translate-x-2 transition-transform" />
                                     </div>
                                     <p className="text-gray-300 group-hover:text-gray-200 transition-colors">Security practices, compliance frameworks, audits, and GDPR/HIPAA implementation.</p>
                                 </div>
@@ -1201,51 +1201,51 @@ export default function OutsourcingPage() {
                 {/* FAQ Section - Enhanced */}
                 <section className="py-20 px-4 border-t border-gray-800 relative">
                     <div className="absolute inset-0 -z-10">
-                        <div className="absolute top-1/2 right-0 -mr-60 w-96 h-96 rounded-full bg-indigo-500/15 blur-3xl animate-pulse"></div>
-                        <div className="absolute bottom-0 left-0 -ml-60 w-80 h-80 rounded-full bg-purple-500/15 blur-3xl"></div>
+                        <div className="absolute top-1/2 right-0 -mr-60 w-96 h-96 rounded-full bg-lime-500/15 blur-3xl animate-pulse"></div>
+                        <div className="absolute bottom-0 left-0 -ml-60 w-80 h-80 rounded-full bg-green-500/15 blur-3xl"></div>
                     </div>
 
                     <div className="container mx-auto max-w-4xl">
                         <div className="text-center mb-16">
-                            <div className="inline-block mb-4 bg-indigo-500/10 px-4 py-2 rounded-full border border-indigo-500/30">
-                                <span className="text-xs font-semibold text-indigo-400 uppercase tracking-widest flex items-center gap-2">
+                            <div className="inline-block mb-4 bg-lime-500/10 px-4 py-2 rounded-full border border-lime-500/30">
+                                <span className="text-xs font-semibold text-lime-400 uppercase tracking-widest flex items-center gap-2">
                                     <MessageCircle className="w-4 h-4" />
                                     Common Questions
                                 </span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-indigo-200 to-white bg-clip-text text-transparent">Frequently Asked Questions</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Frequently Asked Questions</h2>
                             <p className="text-gray-400 text-lg">Get clear answers to common concerns, requirements, and processes</p>
                         </div>
 
                         <div className="space-y-4">
                             {faqs.map((faq, i) => {
                                 const expandGradients = [
-                                    "from-purple-600/20 to-pink-600/20",
-                                    "from-blue-600/20 to-cyan-600/20",
-                                    "from-indigo-600/20 to-purple-600/20",
-                                    "from-rose-600/20 to-pink-600/20",
-                                    "from-violet-600/20 to-purple-600/20",
-                                    "from-fuchsia-600/20 to-pink-600/20"
+                                    "from-lime-600/20 to-green-600/20",
+                                    "from-lime-600/20 to-green-600/20",
+                                    "from-lime-600/20 to-green-600/20",
+                                    "from-lime-600/20 to-green-600/20",
+                                    "from-lime-600/20 to-green-600/20",
+                                    "from-lime-600/20 to-green-600/20"
                                 ]
                                 return (
-                                    <div key={i} className={`group bg-gradient-to-br ${expandGradients[i % expandGradients.length]} border border-gray-700 rounded-xl overflow-hidden hover:border-indigo-500/60 transition-all hover:shadow-lg`}>
+                                    <div key={i} className={`group bg-gradient-to-br ${expandGradients[i % expandGradients.length]} border border-gray-700 rounded-xl overflow-hidden hover:border-lime-500/60 transition-all hover:shadow-lg`}>
                                         <button
                                             onClick={() => setExpandedFaq(expandedFaq === i ? null : i)}
-                                            className="w-full p-6 flex items-center justify-between hover:bg-indigo-500/5 transition-colors group"
+                                            className="w-full p-6 flex items-center justify-between hover:bg-lime-500/5 transition-colors group"
                                         >
-                                            <h3 className="text-lg font-semibold text-left text-white group-hover:text-indigo-200 transition-colors flex items-start gap-3">
-                                                <span className="text-indigo-400 flex-shrink-0 mt-1">❓</span>
+                                            <h3 className="text-lg font-semibold text-left text-white group-hover:text-lime-200 transition-colors flex items-start gap-3">
+                                                <span className="text-lime-400 flex-shrink-0 mt-1">❓</span>
                                                 {faq.question}
                                             </h3>
                                             {expandedFaq === i ? (
-                                                <ChevronUp className="w-5 h-5 text-indigo-400 flex-shrink-0 ml-4 group-hover:scale-110 transition-transform" />
+                                                <ChevronUp className="w-5 h-5 text-lime-400 flex-shrink-0 ml-4 group-hover:scale-110 transition-transform" />
                                             ) : (
-                                                <ChevronDown className="w-5 h-5 text-gray-500 flex-shrink-0 ml-4 group-hover:text-indigo-400 group-hover:scale-110 transition-all" />
+                                                <ChevronDown className="w-5 h-5 text-gray-500 flex-shrink-0 ml-4 group-hover:text-lime-400 group-hover:scale-110 transition-all" />
                                             )}
                                         </button>
 
                                         {expandedFaq === i && (
-                                            <div className="px-6 pb-6 border-t border-indigo-500/30 pt-4 bg-gradient-to-b from-indigo-500/5 to-transparent">
+                                            <div className="px-6 pb-6 border-t border-lime-500/30 pt-4 bg-gradient-to-b from-lime-500/5 to-transparent">
                                                 <div className="text-gray-300 leading-relaxed whitespace-pre-wrap text-sm space-y-3">
                                                     {faq.answer}
                                                 </div>
