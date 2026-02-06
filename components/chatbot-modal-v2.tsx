@@ -370,7 +370,7 @@ export function ChatbotModalV2({
         <div className="fixed inset-0 z-50 flex items-center justify-center p-3 md:items-end md:justify-end md:p-6">
             <div className="fixed inset-0 bg-black/30 backdrop-blur-sm" onClick={onClose} />
 
-            <div className="relative bg-gradient-to-b from-slate-900 to-slate-800 border border-slate-600/40 rounded-2xl shadow-2xl w-full max-w-[95vw] sm:max-w-sm md:max-w-5xl h-[92vh] md:h-[800px] flex flex-col overflow-hidden">
+            <div className="relative bg-gradient-to-b from-slate-900 to-slate-800 border border-slate-600/40 rounded-2xl shadow-2xl w-full max-w-[95vw] sm:max-w-md lg:max-w-5xl h-[92vh] sm:h-[600px] lg:h-[800px] flex flex-col overflow-hidden">
                 {/* Header - TryQu Tech Brand Colors */}
                 <div className="bg-gradient-to-r from-lime-400 via-lime-300 to-lime-400 rounded-t-2xl shadow-lg border-b border-lime-300/50 relative overflow-hidden">
                     {/* Background Pattern */}
@@ -381,16 +381,16 @@ export function ChatbotModalV2({
 
                     <div className="relative z-10 px-4 md:px-6 py-4 md:py-5">
                         {/* Single Row - Title, Icons, and Controls - Stacks on mobile */}
-                        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-3">
+                        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-3 md:gap-4">
                             {/* Left: Title Section with Logout for Admin */}
-                            <div className="flex items-center gap-4">
+                            <div className="flex items-center gap-3 flex-shrink-0">
                                 {isAdmin ? (
-                                    <div className="flex items-center gap-4">
+                                    <div className="flex items-center gap-3 flex-wrap">
                                         <div className="flex items-center gap-3">
-                                            <div className="p-2.5 rounded-xl bg-lime-600/20 backdrop-blur-sm border border-lime-600/40">
+                                            <div className="p-2.5 rounded-xl bg-lime-600/20 backdrop-blur-sm border border-lime-600/40 flex-shrink-0">
                                                 <CheckCircle className="h-5 w-5 text-lime-700" />
                                             </div>
-                                            <div>
+                                            <div className="min-w-0">
                                                 <h2 className="text-lg font-bold text-lime-900 leading-tight">Admin Dashboard</h2>
                                                 <p className="text-xs text-lime-700 font-medium">Logged in successfully</p>
                                             </div>
@@ -399,18 +399,18 @@ export function ChatbotModalV2({
                                         <Button
                                             onClick={handleAdminLogout}
                                             size="sm"
-                                            className="bg-rose-500/90 backdrop-blur-sm text-white hover:bg-rose-600 text-xs font-semibold shadow-lg transition-all duration-200 rounded-lg px-3 py-2 whitespace-nowrap"
+                                            className="bg-rose-500/90 backdrop-blur-sm text-white hover:bg-rose-600 text-xs font-semibold shadow-lg transition-all duration-200 rounded-lg px-3 py-2 whitespace-nowrap flex-shrink-0"
                                         >
-                                            <LogOut className="h-3.5 w-3.5 mr-1.5" />
-                                            Logout
+                                            <LogOut className="h-3.5 w-3.5 mr-1.5 inline-block" />
+                                            <span className="hidden sm:inline">Logout</span>
                                         </Button>
                                     </div>
                                 ) : (
                                     <div className="flex items-center gap-3">
-                                        <div className="p-2.5 rounded-xl bg-lime-700/20 backdrop-blur-sm border border-lime-700/30">
+                                        <div className="p-2.5 rounded-xl bg-lime-700/20 backdrop-blur-sm border border-lime-700/30 flex-shrink-0">
                                             <User className="h-5 w-5 text-lime-800" />
                                         </div>
-                                        <div>
+                                        <div className="min-w-0">
                                             <h2 className="text-lg font-bold text-lime-900 leading-tight">Chat Support</h2>
                                             <p className="text-xs text-lime-800 font-medium">We're here to help</p>
                                         </div>
@@ -420,34 +420,32 @@ export function ChatbotModalV2({
 
                             {/* Middle: Contact Icons (User Only) */}
                             {!isAdmin && (
-                                <div className="flex flex-col w-full md:w-auto justify-start gap-2 md:gap-1.5">
-                                    <div className="flex flex-wrap items-center gap-2">
-                                        <a
-                                            href={`https://wa.me/${whatsappConfig?.phone}?text=Hi%20TryQu%20Tech%2C%20I%20would%20like%20to%20get%20more%20information.`}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            title="Contact via WhatsApp"
-                                            className="flex items-center gap-1 md:gap-1.5 px-2 md:px-3 py-1 md:py-2 rounded-lg bg-lime-600/20 hover:bg-lime-600/30 border border-lime-600/40 hover:border-lime-600/60 transition-all duration-200 group text-[10px] md:text-xs whitespace-nowrap"
-                                        >
-                                            <svg className="h-3.5 md:h-4 w-3.5 md:w-4 text-lime-700 group-hover:text-lime-800 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.982 1.313c-1.557.83-2.982 2.119-4.058 3.724-1.058 1.589-1.648 3.423-1.628 5.318.037 3.924 3.232 7.12 7.158 7.12h.009c1.44 0 2.84-.352 4.116-1.021l5.35 1.401-.001-5.404c.755-1.159 1.171-2.515 1.171-3.907 0-5.34-4.359-9.68-9.73-9.68m8.81 18.108l-.854 2.846c-1.948.881-4.084 1.368-6.312 1.368-6.656 0-12.08-5.424-12.08-12.08 0-2.227.484-4.357 1.357-6.299L2.255.015h2.846c1.948-.881 4.084-1.368 6.312-1.368 6.656 0 12.08 5.424 12.08 12.08 0 2.227-.484 4.357-1.357 6.299l1.127 6.09z" />
-                                            </svg>
-                                            <span className="hidden sm:inline font-medium text-lime-800 group-hover:text-lime-900">WhatsApp</span>
-                                        </a>
-                                        <a
-                                            href="mailto:info@tryqu.com"
-                                            title="Contact via Email"
-                                            className="flex items-center gap-1 md:gap-1.5 px-2 md:px-3 py-1 md:py-2 rounded-lg bg-lime-600/20 hover:bg-lime-600/30 border border-lime-600/40 hover:border-lime-600/60 transition-all duration-200 group text-[10px] md:text-xs whitespace-nowrap"
-                                        >
-                                            <Mail className="h-3.5 md:h-4 w-3.5 md:w-4 text-lime-700 group-hover:text-lime-800 flex-shrink-0" />
-                                            <span className="hidden sm:inline font-medium text-lime-800 group-hover:text-lime-900">Email</span>
-                                        </a>
-                                    </div>
+                                <div className="flex justify-start gap-2 w-full md:w-auto flex-wrap flex-shrink-0">
+                                    <a
+                                        href={`https://wa.me/${whatsappConfig?.phone}?text=Hi%20TryQu%20Tech%2C%20I%20would%20like%20to%20get%20more%20information.`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title="Contact via WhatsApp"
+                                        className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-lime-600/20 hover:bg-lime-600/30 border border-lime-600/40 hover:border-lime-600/60 transition-all duration-200 group text-xs whitespace-nowrap flex-shrink-0"
+                                    >
+                                        <svg className="h-4 w-4 text-lime-700 group-hover:text-lime-800 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.982 1.313c-1.557.83-2.982 2.119-4.058 3.724-1.058 1.589-1.648 3.423-1.628 5.318.037 3.924 3.232 7.12 7.158 7.12h.009c1.44 0 2.84-.352 4.116-1.021l5.35 1.401-.001-5.404c.755-1.159 1.171-2.515 1.171-3.907 0-5.34-4.359-9.68-9.73-9.68m8.81 18.108l-.854 2.846c-1.948.881-4.084 1.368-6.312 1.368-6.656 0-12.08-5.424-12.08-12.08 0-2.227.484-4.357 1.357-6.299L2.255.015h2.846c1.948-.881 4.084-1.368 6.312-1.368 6.656 0 12.08 5.424 12.08 12.08 0 2.227-.484 4.357-1.357 6.299l1.127 6.09z" />
+                                        </svg>
+                                        <span className="font-medium text-lime-800 group-hover:text-lime-900">WhatsApp</span>
+                                    </a>
+                                    <a
+                                        href="mailto:info@tryqu.com"
+                                        title="Contact via Email"
+                                        className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-lime-600/20 hover:bg-lime-600/30 border border-lime-600/40 hover:border-lime-600/60 transition-all duration-200 group text-xs whitespace-nowrap flex-shrink-0"
+                                    >
+                                        <Mail className="h-4 w-4 text-lime-700 group-hover:text-lime-800 flex-shrink-0" />
+                                        <span className="font-medium text-lime-800 group-hover:text-lime-900">Email</span>
+                                    </a>
                                 </div>
                             )}
 
                             {/* Right: Control Buttons */}
-                            <div className="flex items-center gap-2 md:gap-2.5 w-full md:w-auto justify-end md:justify-start">
+                            <div className="flex items-center gap-2 md:gap-2.5 w-full md:w-auto justify-end flex-shrink-0">
                                 {/* Select Messages Button */}
                                 {((isAdmin && selectedConversation) || (!isAdmin && messages.length > 0)) && (
                                     <button
@@ -583,7 +581,7 @@ export function ChatbotModalV2({
                 <div className="flex-1 flex overflow-hidden">
                     {/* Admin Conversations List */}
                     {isAdmin && (
-                        <div className="w-80 border-r border-slate-700 overflow-y-auto bg-gradient-to-b from-slate-800 to-slate-900">
+                        <div className="hidden lg:flex lg:w-72 xl:w-80 border-r border-slate-700 overflow-y-auto bg-gradient-to-b from-slate-800 to-slate-900 flex-col">
                             <div className="p-5 border-b border-slate-700 sticky top-0 bg-gradient-to-r from-slate-800 to-slate-900 z-10 backdrop-blur">
                                 <h3 className="font-bold text-white text-sm flex items-center gap-2">
                                     <span className="inline-block w-2 h-2 rounded-full bg-lime-400 animate-pulse"></span>
