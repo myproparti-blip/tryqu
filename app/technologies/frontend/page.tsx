@@ -16,7 +16,7 @@ export default function FrontendTechnologiesPage() {
                 technologies={[
                     { name: "React", path: "/technologies/react" },
                     { name: "Angular", path: "/technologies/angular" },
-                    { name: "Vue", path: "/technologies/vue" },
+                    { name: "Vue.js", path: "/technologies/vue" },
                     { name: "Next.js", path: "/technologies/nextjs" },
                     { name: "Nuxt.js", path: "/technologies/nuxtjs" },
                     { name: "TypeScript", path: "/technologies/typescript" },
