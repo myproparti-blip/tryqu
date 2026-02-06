@@ -10,54 +10,54 @@ export interface WhatsAppConfig {
 }
 
 export const LOCATION_WHATSAPP_MAP: Record<string, WhatsAppConfig> = {
-  US: {
-    country: "United States",
-    phone: "15512608302",
-    countryCode: "US",
-    displayPhone: "+1 (551) 260-8302",
-  },
-  CA: {
-    country: "Canada",
-    phone: "14313063070",
-    countryCode: "CA",
-    displayPhone: "+1 (431) 306-3070",
-  },
-  GB: {
-    country: "United Kingdom",
-    phone: "447999960900",
-    countryCode: "GB",
-    displayPhone: "+44 7999 960900",
-  },
-  DE: {
-    country: "Germany",
-    phone: "49157582282855",
-    countryCode: "DE",
-    displayPhone: "+49 1575 8228-2855",
-  },
-  IN: {
-    country: "India",
-    phone: "918238177000",
-    countryCode: "IN",
-    displayPhone: "+91 82381-77000",
-  },
-  AU: {
-    country: "Australia",
-    phone: "61XXXXXXXXX",
-    countryCode: "AU",
-    displayPhone: "+61 X XXXX XXXX",
-  },
-  MX: {
-    country: "Mexico",
-    phone: "52XXXXXXXXX",
-    countryCode: "MX",
-    displayPhone: "+52 XXXX-XXXX",
-  },
-  default: {
-    country: "India",
-    phone: "918238177000",
-    countryCode: "IN",
-    displayPhone: "+91 82381-77000",
-  },
+   US: {
+     country: "United States",
+     phone: "15551260302",
+     countryCode: "US",
+     displayPhone: "+1 (555) 126-0302",
+   },
+   CA: {
+     country: "Canada",
+     phone: "14313063070",
+     countryCode: "CA",
+     displayPhone: "+1 (431) 306-3070",
+   },
+   GB: {
+     country: "United Kingdom",
+     phone: "447999960900",
+     countryCode: "GB",
+     displayPhone: "+44 7999 960900",
+   },
+   DE: {
+     country: "Germany",
+     phone: "491575828285",
+     countryCode: "DE",
+     displayPhone: "+49 1575 8282-855",
+   },
+   IN: {
+     country: "India",
+     phone: "919327361477",
+     countryCode: "IN",
+     displayPhone: "+91 9327-361-477",
+   },
+   AU: {
+     country: "Australia",
+     phone: "61XXXXXXXXX",
+     countryCode: "AU",
+     displayPhone: "+61 X XXXX XXXX",
+   },
+   MX: {
+     country: "Mexico",
+     phone: "52XXXXXXXXX",
+     countryCode: "MX",
+     displayPhone: "+52 XXXX-XXXX",
+   },
+   default: {
+     country: "India",
+     phone: "919327361477",
+     countryCode: "IN",
+     displayPhone: "+91 9327-361-477",
+   },
 }
 
 // Utility function to get cookie value
