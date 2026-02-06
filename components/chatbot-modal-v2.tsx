@@ -367,10 +367,10 @@ export function ChatbotModalV2({
     if (!isOpen) return null
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-0 sm:p-4 md:p-6">
+        <div className="fixed inset-0 z-50 flex items-center justify-end p-0 sm:p-0 md:p-4">
             <div className="fixed inset-0 bg-black/30 backdrop-blur-sm" onClick={onClose} />
 
-            <div className="relative bg-gradient-to-b from-slate-900 to-slate-800 border border-slate-600/40 rounded-none sm:rounded-xl md:rounded-2xl shadow-2xl w-screen sm:w-[calc(100vw-32px)] md:w-[85vw] lg:w-[950px] xl:w-[1100px] h-screen sm:h-[90vh] md:h-[82vh] lg:h-[75vh] xl:h-[80vh] flex flex-col overflow-hidden">
+            <div className="relative bg-gradient-to-b from-slate-900 to-slate-800 border-l border-slate-600/40 rounded-none sm:rounded-l-xl md:rounded-l-2xl shadow-2xl w-screen sm:w-[calc(100vw-32px)] md:w-[85vw] lg:w-[950px] xl:w-[1100px] h-screen sm:h-[90vh] md:h-[82vh] lg:h-[75vh] xl:h-[80vh] flex flex-col overflow-hidden">
                 {/* Header - TryQu Tech Brand Colors */}
                 <div className="bg-gradient-to-r from-lime-400 via-lime-300 to-lime-400 rounded-t-xl sm:rounded-t-2xl shadow-lg border-b border-lime-300/50 relative overflow-hidden flex-shrink-0">
                     {/* Background Pattern */}
