@@ -36,9 +36,9 @@ export const LOCATION_WHATSAPP_MAP: Record<string, WhatsAppConfig> = {
   },
   IN: {
     country: "India",
-    phone: "919327361477",
+    phone: "918238177000",
     countryCode: "IN",
-    displayPhone: "+91 9327-361477",
+    displayPhone: "+91 82381-77000",
   },
   AU: {
     country: "Australia",
@@ -54,9 +54,9 @@ export const LOCATION_WHATSAPP_MAP: Record<string, WhatsAppConfig> = {
   },
   default: {
     country: "India",
-    phone: "919327361477",
+    phone: "918238177000",
     countryCode: "IN",
-    displayPhone: "+91 9327-361477",
+    displayPhone: "+91 82381-77000",
   },
 }
 
