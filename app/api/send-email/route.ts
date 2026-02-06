@@ -15,12 +15,23 @@ export async function POST(request: NextRequest) {
 
         const resend = new Resend(apiKey)
 
-        const { name, email, company, service, message, preferredDate, preferredTime, preferredDay } = await request.json()
+        const body = await request.json()
+        const { name, email, company, service, message, preferredDate, preferredTime, preferredDay } = body
 
         // Validate required fields
-        if (!name || !email || !service || !message || !preferredDate || !preferredTime || !preferredDay) {
+        if (!name || !email || !service || !message) {
+            console.error('[Email API] Missing required fields:', { name, email, service, message })
             return NextResponse.json(
-                { error: 'Missing required fields: name, email, service, message, preferredDate, preferredTime, and preferredDay are required' },
+                { error: 'Missing required fields: name, email, service, and message are required' },
+                { status: 400 }
+            )
+        }
+
+        // Validate email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        if (!emailRegex.test(email)) {
+            return NextResponse.json(
+                { error: 'Invalid email format' },
                 { status: 400 }
             )
         }
@@ -29,22 +40,60 @@ export async function POST(request: NextRequest) {
         const emailSubject = `New Consultation Request from ${name}`
 
         // Send email to admin
-         const adminEmailResult = await resend.emails.send({
-             from: 'Consultation <onboarding@resend.dev>',
-             to: 'info@tryqu.com',
-             subject: emailSubject,
+        // Use Resend's testing domain for development, verified domain for production
+        const fromEmail = process.env.NODE_ENV === 'production'
+            ? 'TryQu <noreply@tryqu.com>'
+            : 'TryQu <onboarding@resend.dev>';
+
+        // In development, use registered Resend email for testing
+        // In production, use actual business email with verified domain
+        const toEmail = process.env.NODE_ENV === 'production'
+            ? 'info@tryqu.com'
+            : 'maste1432ra@gmail.com';  // Your registered Resend account email
+
+        const adminEmailResult = await resend.emails.send({
+            from: fromEmail,
+            to: toEmail,
+            subject: emailSubject,
             html: `
-                  <h2>New Consultation Request</h2>
-                  <p><strong>Name:</strong> ${name}</p>
-                  <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
-                  <p><strong>Company:</strong> ${company || 'Not provided'}</p>
-                  <p><strong>Service:</strong> ${service}</p>
-                  <p><strong>Preferred Consultation:</strong> ${preferredDay}, ${preferredDate} at ${preferredTime}</p>
-                  <h3>Message:</h3>
-                  <p>${message.replace(/\n/g, '<br>')}</p>
-                  <hr>
-                  <p><small>Submitted at: ${new Date().toLocaleString()}</small></p>
-              `,
+                <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+                    <h2 style="color: #1a1a1a; border-bottom: 2px solid #00d4ff; padding-bottom: 10px;">New Consultation Request</h2>
+                    <table style="width: 100%; margin: 20px 0; border-collapse: collapse;">
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 10px; font-weight: bold; width: 150px; color: #00d4ff;">Name:</td>
+                            <td style="padding: 10px;">${name}</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 10px; font-weight: bold; color: #00d4ff;">Email:</td>
+                            <td style="padding: 10px;"><a href="mailto:${email}" style="color: #00d4ff; text-decoration: none;">${email}</a></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 10px; font-weight: bold; color: #00d4ff;">Company:</td>
+                            <td style="padding: 10px;">${company || 'Not provided'}</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 10px; font-weight: bold; color: #00d4ff;">Service:</td>
+                            <td style="padding: 10px;">${service}</td>
+                        </tr>
+                        ${preferredDay && preferredDate && preferredTime ? `
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 10px; font-weight: bold; color: #00d4ff;">Preferred Consultation:</td>
+                            <td style="padding: 10px;">${preferredDay}, ${preferredDate} at ${preferredTime}</td>
+                        </tr>
+                        ` : ''}
+                    </table>
+                    <div style="margin: 20px 0;">
+                        <h3 style="color: #00d4ff;">Message:</h3>
+                        <p style="background-color: #f5f5f5; padding: 15px; border-left: 3px solid #00d4ff; line-height: 1.6;">
+                            ${message.replace(/\n/g, '<br />')}
+                        </p>
+                    </div>
+                    <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;">
+                    <p style="color: #999; font-size: 12px; text-align: center;">
+                        Submitted at: ${new Date().toLocaleString()}
+                    </p>
+                </div>
+            `,
         })
 
         if (adminEmailResult.error) {
@@ -66,13 +115,20 @@ export async function POST(request: NextRequest) {
             preferredDay,
             preferredDate,
             preferredTime,
+            fromEmail,
+            environment: process.env.NODE_ENV,
             timestamp: new Date().toISOString(),
         })
+
+        // Success message varies based on environment
+        const successMessage = process.env.NODE_ENV === 'production'
+            ? 'Consultation request received. Check your email for confirmation from info@tryqu.com.'
+            : 'Consultation request received. (Development mode: email sent to maste1432ra@gmail.com for testing)';
 
         return NextResponse.json(
             {
                 success: true,
-                message: 'Consultation request received. Check your email for confirmation from info@tryqu.com.',
+                message: successMessage,
                 data: { name, email, company, service, preferredDay, preferredDate, preferredTime },
             },
             { status: 200 }

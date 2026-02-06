@@ -356,10 +356,10 @@ export default function OutsourcingPage() {
                 <section className="py-20 px-4 border-t border-gray-800">
                     <div className="container mx-auto max-w-4xl">
                         <div className="mb-12">
-                            <h2 className="text-4xl font-bold mb-6">Why Enterprises Choose Outsourced Development</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Why Enterprises Choose Outsourced Development</h2>
 
                             <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-8 mb-8">
-                                <h3 className="text-2xl font-bold mb-4 text-cyan-400">Enterprise-Grade Delivery with Proven Accountability</h3>
+                                <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-white to-lime-300 bg-clip-text text-transparent">⭐ Enterprise-Grade Delivery with Proven Accountability</h3>
                                 <p className="text-lg text-gray-300 leading-relaxed">
                                     Enterprise outsourcing means partnering with specialized engineering teams to accelerate your product roadmap while your internal teams focus on strategic initiatives. Benefit from proven expertise, SLA-backed accountability, and delivery ownership. Scale your capacity on demand with predictable costs and minimal operational overhead.
                                 </p>
@@ -367,7 +367,7 @@ export default function OutsourcingPage() {
 
                             <div className="space-y-8 mb-8">
                                 <div className="bg-gradient-to-r from-cyan-500/5 to-cyan-500/5 border border-cyan-500/20 rounded-xl p-8">
-                                    <h3 className="text-xl font-bold mb-4 text-cyan-300">The Evolution of Outsourcing</h3>
+                                    <h3 className="text-xl font-bold mb-4 text-cyan-400">📈 The Evolution of Outsourcing</h3>
                                     <p className="text-gray-300 leading-relaxed mb-4">
                                         Modern outsourcing has evolved dramatically over the past two decades. In the early 2000s, outsourcing was primarily about cost arbitrage—hiring cheaper labor in offshore locations like India, Philippines, or Eastern Europe. While cost savings remain important, today's outsourcing represents a fundamentally different value proposition.
                                     </p>
@@ -376,16 +376,16 @@ export default function OutsourcingPage() {
                                     </p>
                                     <ul className="space-y-2 text-gray-300 ml-4">
                                         <li><span className="text-cyan-400">✓ Architectural guidance</span> - Design decisions, system design reviews, scalability planning</li>
-                                         <li><span className="text-cyan-400">✓ Technical leadership</span> - Senior engineers mentoring, code quality standards, best practices</li>
-                                         <li><span className="text-cyan-400">✓ Quality assurance expertise</span> - Comprehensive testing strategies, automation frameworks, quality metrics</li>
-                                         <li><span className="text-cyan-400">✓ Security & compliance</span> - HIPAA, GDPR, SOC 2, PCI DSS implementation and maintenance</li>
-                                         <li><span className="text-cyan-400">✓ Infrastructure management</span> - Cloud platform selection, DevOps implementation, monitoring and optimization</li>
-                                         <li><span className="text-cyan-400">✓ Defined accountability</span> - Service Level Agreements, measurable metrics, transparent reporting</li>
+                                        <li><span className="text-cyan-400">✓ Technical leadership</span> - Senior engineers mentoring, code quality standards, best practices</li>
+                                        <li><span className="text-cyan-400">✓ Quality assurance expertise</span> - Comprehensive testing strategies, automation frameworks, quality metrics</li>
+                                        <li><span className="text-cyan-400">✓ Security & compliance</span> - HIPAA, GDPR, SOC 2, PCI DSS implementation and maintenance</li>
+                                        <li><span className="text-cyan-400">✓ Infrastructure management</span> - Cloud platform selection, DevOps implementation, monitoring and optimization</li>
+                                        <li><span className="text-cyan-400">✓ Defined accountability</span> - Service Level Agreements, measurable metrics, transparent reporting</li>
                                     </ul>
                                 </div>
 
                                 <div className="bg-gradient-to-r from-cyan-500/5 to-cyan-500/5 border border-cyan-500/20 rounded-xl p-8">
-                                    <h3 className="text-xl font-bold mb-4 text-cyan-300">Why Companies Choose Strategic Outsourcing</h3>
+                                    <h3 className="text-xl font-bold mb-4 text-cyan-400">💡 Why Companies Choose Strategic Outsourcing</h3>
                                     <p className="text-gray-300 leading-relaxed mb-4">
                                         Organizations globally—from ambitious startups to Fortune 500 enterprises—use outsourcing as a strategic lever to:
                                     </p>
@@ -398,7 +398,7 @@ export default function OutsourcingPage() {
                                 </div>
 
                                 <div className="bg-gradient-to-r from-cyan-500/5 to-cyan-500/5 border border-cyan-500/20 rounded-xl p-8">
-                                    <h3 className="text-xl font-bold mb-4 text-teal-300">How Outsourcing Differs from Traditional Models</h3>
+                                    <h3 className="text-xl font-bold mb-4 text-cyan-400">How Outsourcing Differs from Traditional Models</h3>
                                     <div className="space-y-4 text-gray-300">
                                         <div>
                                             <p className="font-semibold text-white mb-2">Traditional Hiring (In-House Team)</p>
@@ -579,7 +579,7 @@ export default function OutsourcingPage() {
                                         <Users className="w-6 h-6 text-cyan-400 flex-shrink-0" />
                                     </div>
                                     <div className="flex-1">
-                                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-200 transition-colors">👥 Scalable Team Models</h3>
+                                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-200 transition-colors">👥 Scalable Team Models</h3>
                                         <ul className="space-y-2 text-sm text-gray-300 group-hover:text-gray-200 transition-colors">
                                             <li className="flex items-center gap-2"><span className="text-cyan-400">✦</span> Flexible team composition</li>
                                             <li className="flex items-center gap-2"><span className="text-cyan-400">✦</span> Dedicated engineering managers</li>
@@ -590,7 +590,7 @@ export default function OutsourcingPage() {
                                 </div>
                             </div>
 
-                            <div className="group bg-gradient-to-br from-cyan-500/15 to-red-500/15 border border-cyan-500/30 rounded-xl p-8 hover:border-cyan-500/60 transition-all transform hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20">
+                            <div className="group bg-gradient-to-br from-cyan-500/15 to-cyan-500/15 border border-cyan-500/30 rounded-xl p-8 hover:border-cyan-500/60 transition-all transform hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20">
                                 <div className="flex items-start gap-4 mb-4">
                                     <div className="p-2 bg-cyan-500/20 rounded-lg group-hover:bg-cyan-500/40 transition-colors">
                                         <Award className="w-6 h-6 text-cyan-400 flex-shrink-0" />
@@ -745,19 +745,19 @@ export default function OutsourcingPage() {
                     </div>
                     <div className="container mx-auto max-w-5xl">
                         <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Why Enterprises Choose Outsourced Development</h2>
-                        
+
                         <div className="grid md:grid-cols-2 gap-8">
                             {/* Card 1 */}
                             <div className="group bg-gradient-to-br from-cyan-500/15 to-cyan-500/15 border border-cyan-500/30 rounded-2xl p-8 hover:border-cyan-500/60 transition-all">
                                 <div className="mb-4 text-5xl">⭐</div>
-                                <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-300 to-teal-300 bg-clip-text text-transparent mb-4">Enterprise-Grade Delivery with Proven Accountability</h3>
+                                <h3 className="text-2xl font-bold bg-gradient-to-r from-white to-lime-300 bg-clip-text text-transparent mb-4">Enterprise-Grade Delivery with Proven Accountability</h3>
                                 <p className="text-gray-300 leading-relaxed">Enterprise outsourcing means partnering with specialized engineering teams to accelerate your product roadmap while your internal teams focus on strategic initiatives. Benefit from proven expertise, SLA-backed accountability, and delivery ownership. Scale your capacity on demand with predictable costs and minimal operational overhead.</p>
                             </div>
 
                             {/* Card 2 */}
                             <div className="group bg-gradient-to-br from-cyan-500/15 to-cyan-500/15 border border-cyan-500/30 rounded-2xl p-8 hover:border-cyan-500/60 transition-all">
                                 <div className="mb-4 text-5xl">📈</div>
-                                <h3 className="text-2xl font-bold bg-gradient-to-r from-teal-300 to-emerald-300 bg-clip-text text-transparent mb-4">The Evolution of Outsourcing</h3>
+                                <h3 className="text-2xl font-bold bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent mb-4">The Evolution of Outsourcing</h3>
                                 <p className="text-gray-300 leading-relaxed mb-6">Modern outsourcing has evolved dramatically over the past two decades. In the early 2000s, outsourcing was primarily about cost arbitrage—hiring cheaper labor in offshore locations. While cost savings remain important, today's outsourcing represents a fundamentally different value proposition.</p>
                                 <p className="text-gray-400 text-sm">Today's outsourcing partners function as strategic technology consultants—not just code factories. They provide:</p>
                             </div>
@@ -887,7 +887,7 @@ export default function OutsourcingPage() {
                                             </div>
                                         </div>
                                         <div className="flex-1">
-                                            <h3 className="text-lg font-semibold text-cyan-300 mb-1">
+                                            <h3 className="text-lg font-semibold text-cyan-400 mb-1">
                                                 {step.num}. {step.title}
                                             </h3>
                                             <p className="text-gray-400">{step.desc}</p>
@@ -911,7 +911,7 @@ export default function OutsourcingPage() {
                     <div className="container mx-auto max-w-5xl">
                         <div className="bg-gradient-to-br from-cyan-500/15 to-cyan-500/15 border border-cyan-500/30 rounded-2xl p-12 text-center">
                             <div className="text-6xl mb-6">🚀</div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent">Let's Build Together</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-lime-300 to-white bg-clip-text text-transparent">Let's Build Together</h2>
                             <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
                                 Whether you need to scale your team, accelerate delivery, or outsource complete projects, <span className="text-white font-semibold">TryQu is your trusted outsourcing partner.</span>
                             </p>
@@ -1139,7 +1139,7 @@ export default function OutsourcingPage() {
                                 <div className="group bg-gradient-to-br from-cyan-600/20 to-cyan-600/20 border border-cyan-500/40 rounded-xl p-8 hover:border-cyan-500/70 transition-all cursor-pointer transform hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20">
                                     <div className="flex items-start justify-between mb-4">
                                         <div>
-                                            <h3 className="text-xl font-bold text-white group-hover:text-lime-200 transition-colors flex items-center gap-2">
+                                            <h3 className="text-xl font-bold text-white group-hover:text-cyan-200 transition-colors flex items-center gap-2">
                                                 <span className="text-2xl">🎨</span>
                                                 Technologies
                                             </h3>
@@ -1154,7 +1154,7 @@ export default function OutsourcingPage() {
                                 <div className="group bg-gradient-to-br from-cyan-600/20 to-cyan-600/20 border border-cyan-500/40 rounded-xl p-8 hover:border-cyan-500/70 transition-all cursor-pointer transform hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20">
                                     <div className="flex items-start justify-between mb-4">
                                         <div>
-                                            <h3 className="text-xl font-bold text-white group-hover:text-lime-200 transition-colors flex items-center gap-2">
+                                            <h3 className="text-xl font-bold text-white group-hover:text-cyan-200 transition-colors flex items-center gap-2">
                                                 <span className="text-2xl">⚙️</span>
                                                 DevOps & Automation
                                             </h3>
@@ -1169,7 +1169,7 @@ export default function OutsourcingPage() {
                                 <div className="group bg-gradient-to-br from-cyan-600/20 to-cyan-600/20 border border-cyan-500/40 rounded-xl p-8 hover:border-cyan-500/70 transition-all cursor-pointer transform hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20">
                                     <div className="flex items-start justify-between mb-4">
                                         <div>
-                                            <h3 className="text-xl font-bold text-white group-hover:text-green-200 transition-colors flex items-center gap-2">
+                                            <h3 className="text-xl font-bold text-white group-hover:text-cyan-200 transition-colors flex items-center gap-2">
                                                 <span className="text-2xl">☁️</span>
                                                 Cloud Services
                                             </h3>
@@ -1184,7 +1184,7 @@ export default function OutsourcingPage() {
                                 <div className="group bg-gradient-to-br from-cyan-600/20 to-cyan-600/20 border border-cyan-500/40 rounded-xl p-8 hover:border-cyan-500/70 transition-all cursor-pointer transform hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20">
                                     <div className="flex items-start justify-between mb-4">
                                         <div>
-                                            <h3 className="text-xl font-bold text-white group-hover:text-lime-200 transition-colors flex items-center gap-2">
+                                            <h3 className="text-xl font-bold text-white group-hover:text-cyan-200 transition-colors flex items-center gap-2">
                                                 <span className="text-2xl">🔒</span>
                                                 Security & Compliance
                                             </h3>
