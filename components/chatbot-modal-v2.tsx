@@ -367,21 +367,21 @@ export function ChatbotModalV2({
     if (!isOpen) return null
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 md:items-end md:justify-end md:p-6">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4">
             <div className="fixed inset-0 bg-black/30 backdrop-blur-sm" onClick={onClose} />
 
-            <div className="relative bg-gradient-to-b from-slate-900 to-slate-800 border border-slate-600/40 rounded-2xl shadow-2xl w-full max-w-[95vw] sm:max-w-md lg:max-w-5xl h-[92vh] sm:h-[600px] lg:h-[800px] flex flex-col overflow-hidden">
+            <div className="relative bg-gradient-to-b from-slate-900 to-slate-800 border border-slate-600/40 rounded-xl sm:rounded-2xl shadow-2xl w-[100vw] sm:w-[calc(100vw-32px)] md:w-[90vw] lg:w-[800px] xl:w-[900px] h-[100vh] sm:h-[90vh] md:h-[85vh] lg:h-[750px] xl:h-[850px] flex flex-col overflow-hidden">
                 {/* Header - TryQu Tech Brand Colors */}
-                <div className="bg-gradient-to-r from-lime-400 via-lime-300 to-lime-400 rounded-t-2xl shadow-lg border-b border-lime-300/50 relative overflow-hidden">
+                <div className="bg-gradient-to-r from-lime-400 via-lime-300 to-lime-400 rounded-t-xl sm:rounded-t-2xl shadow-lg border-b border-lime-300/50 relative overflow-hidden flex-shrink-0">
                     {/* Background Pattern */}
                     <div className="absolute inset-0 opacity-10">
                         <div className="absolute inset-0" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%)" }}></div>
                         <div className="absolute inset-0" style={{ backgroundImage: "radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 0%, transparent 50%)" }}></div>
                     </div>
 
-                    <div className="relative z-10 px-4 md:px-6 py-4 md:py-5">
+                    <div className="relative z-10 px-3 sm:px-4 md:px-6 py-3 sm:py-4 md:py-5">
                         {/* Single Row - Title, Icons, and Controls - Stacks on mobile */}
-                        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-3 md:gap-4">
+                        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-3 md:gap-4 flex-wrap">
                             {/* Left: Title Section with Logout for Admin */}
                             <div className="flex items-center gap-3 flex-shrink-0">
                                 {isAdmin ? (
@@ -578,10 +578,10 @@ export function ChatbotModalV2({
                 )}
 
                 {/* Main Content Area */}
-                <div className="flex-1 flex overflow-hidden">
+                <div className="flex-1 flex overflow-hidden min-h-0">
                     {/* Admin Conversations List */}
                     {isAdmin && (
-                        <div className="hidden lg:flex lg:w-72 xl:w-80 border-r border-slate-700 overflow-y-auto bg-gradient-to-b from-slate-800 to-slate-900 flex-col">
+                        <div className="hidden md:flex md:w-64 lg:w-72 xl:w-80 border-r border-slate-700 overflow-y-auto bg-gradient-to-b from-slate-800 to-slate-900 flex-col flex-shrink-0">
                             <div className="p-5 border-b border-slate-700 sticky top-0 bg-gradient-to-r from-slate-800 to-slate-900 z-10 backdrop-blur">
                                 <h3 className="font-bold text-white text-sm flex items-center gap-2">
                                     <span className="inline-block w-2 h-2 rounded-full bg-lime-400 animate-pulse"></span>
@@ -644,9 +644,9 @@ export function ChatbotModalV2({
                     )}
 
                     {/* Chat Area */}
-                    <div className="flex-1 flex flex-col overflow-hidden">
+                    <div className="flex-1 flex flex-col overflow-hidden min-h-0">
                         {isAdmin && !selectedConversation ? (
-                            <div className="flex-1 flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-800">
+                            <div className="flex-1 flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-800 min-h-0">
                                 <div className="text-center">
                                     <User className="h-16 w-16 mx-auto mb-4 text-slate-600 opacity-40" />
                                     <p className="text-slate-400 text-sm font-medium">Select a conversation to view messages</p>
@@ -657,7 +657,7 @@ export function ChatbotModalV2({
                                 {/* Messages */}
                                 <div
                                     ref={messagesContainerRef}
-                                    className="flex-1 overflow-y-auto p-5 space-y-3 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900"
+                                    className="flex-1 overflow-y-auto p-3 sm:p-4 md:p-5 space-y-3 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 min-h-0"
                                 >
                                     {messages.length === 0 ? (
                                         <div className="h-full flex flex-col items-center justify-center p-4">
@@ -843,21 +843,21 @@ export function ChatbotModalV2({
 
                                 {/* Quick Service Chips (User Only) */}
                                 {!isAdmin && (
-                                    <div className="border-t border-slate-600/40 px-3 md:px-5 py-3 md:py-4 bg-gradient-to-b from-slate-750/50 to-slate-750/30 backdrop-blur overflow-y-auto max-h-[100px]">
-                                        <div className="flex flex-wrap gap-1.5 md:gap-2">
-                                            <button
-                                                onClick={() => {
-                                                    const serviceMsg = "Services"
-                                                    setInputValue(serviceMsg)
-                                                    setTimeout(() => {
-                                                        const form = document.querySelector('form')
-                                                        if (form) form.dispatchEvent(new Event('submit', { bubbles: true }))
-                                                    }, 100)
-                                                }}
-                                                className="px-2 md:px-3 py-1 md:py-1.5 rounded-full text-[10px] md:text-xs font-medium bg-lime-500/20 text-lime-200 border border-lime-500/40 hover:bg-lime-500/35 hover:border-lime-500/70 transition-all duration-200 whitespace-nowrap"
-                                            >
-                                                🎯 Services
-                                            </button>
+                                    <div className="border-t border-slate-600/40 px-3 sm:px-4 md:px-5 py-2 sm:py-3 md:py-4 bg-gradient-to-b from-slate-750/50 to-slate-750/30 backdrop-blur overflow-y-auto max-h-[80px] sm:max-h-[100px] flex-shrink-0">
+                                        <div className="flex flex-wrap gap-1 sm:gap-1.5 md:gap-2">
+                                             <button
+                                                 onClick={() => {
+                                                     const serviceMsg = "Services"
+                                                     setInputValue(serviceMsg)
+                                                     setTimeout(() => {
+                                                         const form = document.querySelector('form')
+                                                         if (form) form.dispatchEvent(new Event('submit', { bubbles: true }))
+                                                     }, 100)
+                                                 }}
+                                                 className="px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium bg-lime-500/20 text-lime-200 border border-lime-500/40 hover:bg-lime-500/35 hover:border-lime-500/70 transition-all duration-200 whitespace-nowrap flex-shrink-0"
+                                             >
+                                                 🎯 Services
+                                             </button>
                                             <button
                                                 onClick={() => {
                                                     const aboutMsg = "About"
@@ -867,7 +867,7 @@ export function ChatbotModalV2({
                                                         if (form) form.dispatchEvent(new Event('submit', { bubbles: true }))
                                                     }, 100)
                                                 }}
-                                                className="px-2 md:px-3 py-1 md:py-1.5 rounded-full text-[10px] md:text-xs font-medium bg-lime-500/20 text-lime-200 border border-lime-500/40 hover:bg-lime-500/35 hover:border-lime-500/70 transition-all duration-200 whitespace-nowrap"
+                                                className="px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium bg-lime-500/20 text-lime-200 border border-lime-500/40 hover:bg-lime-500/35 hover:border-lime-500/70 transition-all duration-200 whitespace-nowrap flex-shrink-0"
                                             >
                                                 ℹ️ About
                                             </button>
@@ -880,7 +880,7 @@ export function ChatbotModalV2({
                                                         if (form) form.dispatchEvent(new Event('submit', { bubbles: true }))
                                                     }, 100)
                                                 }}
-                                                className="px-2 md:px-3 py-1 md:py-1.5 rounded-full text-[10px] md:text-xs font-medium bg-lime-500/20 text-lime-200 border border-lime-500/40 hover:bg-lime-500/35 hover:border-lime-500/70 transition-all duration-200 whitespace-nowrap"
+                                                className="px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium bg-lime-500/20 text-lime-200 border border-lime-500/40 hover:bg-lime-500/35 hover:border-lime-500/70 transition-all duration-200 whitespace-nowrap flex-shrink-0"
                                             >
                                                 ❓ FAQ
                                             </button>
@@ -893,7 +893,7 @@ export function ChatbotModalV2({
                                                         if (form) form.dispatchEvent(new Event('submit', { bubbles: true }))
                                                     }, 100)
                                                 }}
-                                                className="px-2 md:px-3 py-1 md:py-1.5 rounded-full text-[10px] md:text-xs font-medium bg-lime-500/20 text-lime-200 border border-lime-500/40 hover:bg-lime-500/35 hover:border-lime-500/70 transition-all duration-200 whitespace-nowrap"
+                                                className="px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium bg-lime-500/20 text-lime-200 border border-lime-500/40 hover:bg-lime-500/35 hover:border-lime-500/70 transition-all duration-200 whitespace-nowrap flex-shrink-0"
                                             >
                                                 💰 Pricing
                                             </button>
@@ -906,7 +906,7 @@ export function ChatbotModalV2({
                                                         if (form) form.dispatchEvent(new Event('submit', { bubbles: true }))
                                                     }, 100)
                                                 }}
-                                                className="px-2 md:px-3 py-1 md:py-1.5 rounded-full text-[10px] md:text-xs font-medium bg-lime-500/20 text-lime-200 border border-lime-500/40 hover:bg-lime-500/35 hover:border-lime-500/70 transition-all duration-200 whitespace-nowrap"
+                                                className="px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium bg-lime-500/20 text-lime-200 border border-lime-500/40 hover:bg-lime-500/35 hover:border-lime-500/70 transition-all duration-200 whitespace-nowrap flex-shrink-0"
                                             >
                                                 📞 Contact
                                             </button>
@@ -917,7 +917,7 @@ export function ChatbotModalV2({
                                 {/* Input */}
                                 <form
                                     onSubmit={handleSendMessage}
-                                    className="border-t border-slate-600/40 p-3 md:p-5 bg-gradient-to-t from-slate-800 to-slate-750/80 backdrop-blur flex gap-2 md:gap-3"
+                                    className="border-t border-slate-600/40 p-2 sm:p-3 md:p-4 bg-gradient-to-t from-slate-800 to-slate-750/80 backdrop-blur flex gap-2 flex-shrink-0"
                                 >
                                     <input
                                         type="text"
@@ -925,14 +925,14 @@ export function ChatbotModalV2({
                                         onChange={(e) => setInputValue(e.target.value)}
                                         placeholder={isAdmin ? "Type response..." : "Ask us anything..."}
                                         disabled={isLoading}
-                                        className="flex-1 px-3 md:px-4 py-2 md:py-3 rounded-lg bg-slate-700/40 border border-slate-600/60 text-white text-sm placeholder-slate-400 focus:outline-none focus:border-lime-500 focus:ring-1 focus:ring-lime-500/50 disabled:opacity-50 transition-all"
+                                        className="flex-1 px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg bg-slate-700/40 border border-slate-600/60 text-white text-sm placeholder-slate-400 focus:outline-none focus:border-lime-500 focus:ring-1 focus:ring-lime-500/50 disabled:opacity-50 transition-all min-w-0"
                                     />
                                     <Button
                                         type="submit"
                                         disabled={isLoading || !inputValue.trim()}
-                                        className="bg-gradient-to-r from-lime-500 to-lime-600 text-white hover:from-lime-600 hover:to-lime-700 disabled:from-slate-600 disabled:to-slate-700 px-3 md:px-5 py-2 md:py-3 rounded-lg font-medium shadow-lg transition-all disabled:shadow-none flex-shrink-0"
+                                        className="bg-gradient-to-r from-lime-500 to-lime-600 text-white hover:from-lime-600 hover:to-lime-700 disabled:from-slate-600 disabled:to-slate-700 px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg font-medium shadow-lg transition-all disabled:shadow-none flex-shrink-0"
                                     >
-                                        <Send className="h-4 md:h-5 w-4 md:w-5" />
+                                        <Send className="h-4 w-4" />
                                     </Button>
                                 </form>
                             </>
