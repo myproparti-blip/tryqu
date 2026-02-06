@@ -40,16 +40,12 @@ export async function POST(request: NextRequest) {
         const emailSubject = `New Consultation Request from ${name}`
 
         // Send email to admin
-        // Use Resend's testing domain for development, verified domain for production
-        const fromEmail = process.env.NODE_ENV === 'production'
-            ? 'TryQu <noreply@tryqu.com>'
-            : 'TryQu <onboarding@resend.dev>';
+        // Always use Resend's testing domain for now (works without verified domain)
+        // Switch to 'noreply@tryqu.com' once domain is verified in Resend
+        const fromEmail = 'TryQu <onboarding@resend.dev>';
 
-        // In development, use registered Resend email for testing
-        // In production, use actual business email with verified domain
-        const toEmail = process.env.NODE_ENV === 'production'
-            ? 'info@tryqu.com'
-            : 'maste1432ra@gmail.com';  // Your registered Resend account email
+        // Send to your email address
+        const toEmail = 'maste1432ra@gmail.com';
 
         const adminEmailResult = await resend.emails.send({
             from: fromEmail,
@@ -120,10 +116,8 @@ export async function POST(request: NextRequest) {
             timestamp: new Date().toISOString(),
         })
 
-        // Success message varies based on environment
-        const successMessage = process.env.NODE_ENV === 'production'
-            ? 'Consultation request received. Check your email for confirmation from info@tryqu.com.'
-            : 'Consultation request received. (Development mode: email sent to maste1432ra@gmail.com for testing)';
+        // Success message
+        const successMessage = 'Consultation request received. We will contact you shortly at ' + email;
 
         return NextResponse.json(
             {
