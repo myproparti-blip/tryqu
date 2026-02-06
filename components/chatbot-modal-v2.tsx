@@ -367,10 +367,10 @@ export function ChatbotModalV2({
     if (!isOpen) return null
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-0 sm:p-4 md:p-6">
             <div className="fixed inset-0 bg-black/30 backdrop-blur-sm" onClick={onClose} />
 
-            <div className="relative bg-gradient-to-b from-slate-900 to-slate-800 border border-slate-600/40 rounded-xl sm:rounded-2xl shadow-2xl w-[100vw] sm:w-[calc(100vw-32px)] md:w-[90vw] lg:w-[800px] xl:w-[900px] h-[100vh] sm:h-[90vh] md:h-[85vh] lg:h-[750px] xl:h-[850px] flex flex-col overflow-hidden">
+            <div className="relative bg-gradient-to-b from-slate-900 to-slate-800 border border-slate-600/40 rounded-none sm:rounded-xl md:rounded-2xl shadow-2xl w-screen sm:w-[calc(100vw-32px)] md:w-[85vw] lg:w-[950px] xl:w-[1100px] h-screen sm:h-[90vh] md:h-[82vh] lg:h-[75vh] xl:h-[80vh] flex flex-col overflow-hidden">
                 {/* Header - TryQu Tech Brand Colors */}
                 <div className="bg-gradient-to-r from-lime-400 via-lime-300 to-lime-400 rounded-t-xl sm:rounded-t-2xl shadow-lg border-b border-lime-300/50 relative overflow-hidden flex-shrink-0">
                     {/* Background Pattern */}
@@ -387,11 +387,11 @@ export function ChatbotModalV2({
                                 {isAdmin ? (
                                     <div className="flex items-center gap-3 flex-wrap">
                                         <div className="flex items-center gap-3">
-                                            <div className="p-2.5 rounded-xl bg-lime-600/20 backdrop-blur-sm border border-lime-600/40 flex-shrink-0">
-                                                <CheckCircle className="h-5 w-5 text-lime-700" />
+                                            <div className="p-2 sm:p-2.5 rounded-xl bg-lime-600/20 backdrop-blur-sm border border-lime-600/40 flex-shrink-0">
+                                                <CheckCircle className="h-4 sm:h-5 w-4 sm:w-5 text-lime-700" />
                                             </div>
                                             <div className="min-w-0">
-                                                <h2 className="text-lg font-bold text-lime-900 leading-tight">Admin Dashboard</h2>
+                                                <h2 className="text-sm sm:text-lg font-bold text-lime-900 leading-tight">Admin Dashboard</h2>
                                                 <p className="text-xs text-lime-700 font-medium">Logged in successfully</p>
                                             </div>
                                         </div>
@@ -407,11 +407,11 @@ export function ChatbotModalV2({
                                     </div>
                                 ) : (
                                     <div className="flex items-center gap-3">
-                                        <div className="p-2.5 rounded-xl bg-lime-700/20 backdrop-blur-sm border border-lime-700/30 flex-shrink-0">
-                                            <User className="h-5 w-5 text-lime-800" />
+                                        <div className="p-2 sm:p-2.5 rounded-xl bg-lime-700/20 backdrop-blur-sm border border-lime-700/30 flex-shrink-0">
+                                            <User className="h-4 sm:h-5 w-4 sm:w-5 text-lime-800" />
                                         </div>
                                         <div className="min-w-0">
-                                            <h2 className="text-lg font-bold text-lime-900 leading-tight">Chat Support</h2>
+                                            <h2 className="text-sm sm:text-lg font-bold text-lime-900 leading-tight">Chat Support</h2>
                                             <p className="text-xs text-lime-800 font-medium">We're here to help</p>
                                         </div>
                                     </div>
@@ -811,8 +811,8 @@ export function ChatbotModalV2({
                                                     />
                                                 )}
                                                 <div
-                                                    className={`max-w-xs px-4 py-3 rounded-2xl text-sm break-words shadow-lg ${message.sender === "bot"
-                                                        ? "bg-gradient-to-br from-slate-700 to-slate-800 text-slate-200 border border-slate-600/50 text-center w-3/4"
+                                                    className={`max-w-sm sm:max-w-md px-3 sm:px-4 py-2 sm:py-3 rounded-xl sm:rounded-2xl text-xs sm:text-sm break-words shadow-lg ${message.sender === "bot"
+                                                        ? "bg-gradient-to-br from-slate-700 to-slate-800 text-slate-200 border border-slate-600/50 text-center w-2/3 sm:w-3/4"
                                                         : message.sender === "admin"
                                                             ? "bg-gradient-to-br from-lime-600/80 to-emerald-600/80 text-white border border-lime-500/30 font-medium"
                                                             : "bg-gradient-to-br from-lime-500 to-emerald-600 text-white font-medium"
@@ -829,7 +829,7 @@ export function ChatbotModalV2({
                                                         <p className="text-xs font-semibold text-slate-400 mb-2">🤖 Bot</p>
                                                     )}
                                                     <p className="leading-relaxed">{message.content}</p>
-                                                    <p className="text-xs opacity-70 mt-2">
+                                                    <p className="text-xs opacity-70 mt-1 sm:mt-2">
                                                         {new Date(message.timestamp).toLocaleTimeString([], {
                                                             hour: "2-digit",
                                                             minute: "2-digit",
