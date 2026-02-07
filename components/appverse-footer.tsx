@@ -16,7 +16,7 @@ interface FooterContent {
 
 const defaultContent: FooterContent = {
   tagline: "Experience Try Qu solutions like never before. We build scalable, secure systems for modern businesses.",
-  copyright: "© 2026 — TryQu Tech International",
+  copyright: "© 2020 — TryQu Tech International",
 }
 
 export function AppverseFooter() {
