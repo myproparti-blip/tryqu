@@ -2,6 +2,7 @@
 
 import { Activity, AlertCircle, Zap, Shield, TrendingUp, CheckCircle2 } from "lucide-react"
 import { Chip } from "@/components/ui/chip"
+import { ConsultationCtaCard } from "@/components/consultation-cta-card"
 
 export default function ReliabilityDetail() {
   return (
@@ -215,7 +216,8 @@ export default function ReliabilityDetail() {
         </div>
       </section>
 
-
+      {/* CTA Card Section */}
+      <ConsultationCtaCard />
     </div>
   )
 }
