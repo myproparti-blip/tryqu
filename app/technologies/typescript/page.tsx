@@ -9,7 +9,7 @@ import { Code2 } from 'lucide-react';
 export default function TypeScriptTechPage() {
     const techData = {
         name: 'TypeScript',
-        emoji: '📘',
+        emoji: '💙',
         icon: <Code2 className="w-6 h-6" />,
         shortDescription:
             'Master TypeScript development with our expert nearshore team. We deliver type-safe, scalable enterprise applications.',
