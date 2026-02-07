@@ -9,7 +9,7 @@ import { Code2 } from 'lucide-react';
 export default function GraphQLTechPage() {
     const techData = {
         name: 'GraphQL',
-        emoji: '▲',
+        emoji: '📊',
         icon: <Code2 className="w-6 h-6" />,
         shortDescription:
             'Build flexible APIs with GraphQL. Our GraphQL experts deliver powerful, type-safe data layer solutions with nearshore expertise.',

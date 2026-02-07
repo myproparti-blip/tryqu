@@ -9,7 +9,7 @@ import { Zap } from 'lucide-react';
 export default function FastAPITechPage() {
     const techData = {
         name: 'FastAPI',
-        emoji: '🚀',
+        emoji: '⚙️',
         icon: <Zap className="w-6 h-6" />,
         shortDescription: 'Modern, high-performance Python framework for building APIs. Expert FastAPI development for scalable microservices.',
         heroTitle: 'Build High-Performance APIs with FastAPI',

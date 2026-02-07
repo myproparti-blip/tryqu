@@ -9,7 +9,7 @@ import { Code2 } from 'lucide-react';
 export default function DjangoTechPage() {
     const techData = {
         name: 'Django',
-        emoji: '🐍',
+        emoji: '🎸',
         icon: <Code2 className="w-6 h-6" />,
         shortDescription: 'Full-featured Python web framework for rapid development. Expert Django development for scalable web applications.',
         heroTitle: 'Build Robust Web Applications with Django',

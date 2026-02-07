@@ -9,7 +9,7 @@ import { Code2 } from 'lucide-react';
 export default function NextJSTechPage() {
     const techData = {
         name: 'Next.js',
-        emoji: '⚡',
+        emoji: '▲',
         icon: <Code2 className="w-6 h-6" />,
         shortDescription:
             'Build full-stack React applications with Next.js. Our Next.js developers deliver production-grade web applications with nearshore expertise.',

@@ -9,7 +9,7 @@ import { Code2 } from 'lucide-react';
 export default function NodeJsTechPage() {
     const techData = {
         name: 'Node.js',
-        emoji: '🟢',
+        emoji: '✓',
         icon: <Code2 className="w-6 h-6" />,
         shortDescription:
             'Scale your backend with Node.js. Our nearshore team delivers high-performance, event-driven server applications.',
