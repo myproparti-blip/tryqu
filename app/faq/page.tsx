@@ -49,7 +49,7 @@ export default function FAQPage() {
     },
     {
       q: "How do we get started with TryQu Tech?",
-      a: "Start with a free consultation where we assess your needs, current infrastructure, and goals. We'll provide a tailored proposal with timelines and investment. Contact our team at tryqu@gmail.com.",
+      a: "Start with a free consultation where we assess your needs, current infrastructure, and goals. We'll provide a tailored proposal with timelines and investment. Contact our team at info@tryqu.com.",
     },
   ];
 
