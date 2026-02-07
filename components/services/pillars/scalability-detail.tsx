@@ -4,7 +4,7 @@ import { TrendingUp, Database, Zap, Globe, BarChart3, CheckCircle2 } from "lucid
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { Chip } from "@/components/ui/chip"
-import { ConsultationCtaCard } from "@/components/consultation-cta-card"
+import { CTAExpertSection } from "@/components/cta-expert-section"
 
 export default function ScalabilityDetail() {
   const router = useRouter()
@@ -217,8 +217,8 @@ export default function ScalabilityDetail() {
         </div>
       </section>
 
-      {/* CTA Card Section */}
-      <ConsultationCtaCard />
+      {/* CTA Expert Section */}
+      <CTAExpertSection />
       </div>
       )
       }

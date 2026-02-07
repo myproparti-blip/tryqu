@@ -2,7 +2,7 @@
 
 import { Plug, Network, Workflow, GitBranch, Shield, BarChart3 } from "lucide-react"
 import { Chip } from "@/components/ui/chip"
-import { ConsultationCtaCard } from "@/components/consultation-cta-card"
+import { CTAExpertSection } from "@/components/cta-expert-section"
 
 export default function IntegrationDetail() {
   return (
@@ -241,8 +241,8 @@ export default function IntegrationDetail() {
         </div>
       </section>
 
-      {/* CTA Card Section */}
-      <ConsultationCtaCard />
+      {/* CTA Expert Section */}
+      <CTAExpertSection />
       </div>
       )
       }

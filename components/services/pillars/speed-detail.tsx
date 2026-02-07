@@ -3,7 +3,7 @@
 import { Zap, Gauge, Rocket, Code2, Layers, Activity } from "lucide-react"
 import { useRouter } from "next/navigation"
 import { Chip } from "@/components/ui/chip"
-import { ConsultationCtaCard } from "@/components/consultation-cta-card"
+import { CTAExpertSection } from "@/components/cta-expert-section"
 
 export default function SpeedDetail() {
   const router = useRouter()
@@ -208,8 +208,8 @@ export default function SpeedDetail() {
         </div>
       </section>
 
-      {/* CTA Card Section */}
-      <ConsultationCtaCard />
+      {/* CTA Expert Section */}
+      <CTAExpertSection />
       </div>
       )
       }
