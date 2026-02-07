@@ -9,7 +9,7 @@ import { Code2 } from 'lucide-react';
 export default function NestJSTechPage() {
     const techData = {
         name: 'NestJS',
-        emoji: '🐱',
+        emoji: '🪺',
         icon: <Code2 className="w-6 h-6" />,
         shortDescription:
             'Build enterprise backend applications with NestJS. Our NestJS experts deliver scalable, maintainable server solutions with nearshore expertise.',

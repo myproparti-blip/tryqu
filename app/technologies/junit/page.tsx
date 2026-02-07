@@ -9,7 +9,7 @@ import { CheckSquare } from 'lucide-react';
 export default function JUnitTechPage() {
     const techData = {
         name: 'JUnit',
-        emoji: '☕',
+        emoji: '🧪',
         icon: <CheckSquare className="w-6 h-6" />,
         shortDescription:
             'Java unit testing framework. Our JUnit experts deliver comprehensive Java testing solutions with nearshore expertise.',

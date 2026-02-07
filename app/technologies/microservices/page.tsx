@@ -9,7 +9,7 @@ import { Boxes } from 'lucide-react';
 export default function MicroservicesTechPage() {
     const techData = {
         name: 'Microservices',
-        emoji: '🏗️',
+        emoji: '🔗',
         icon: <Boxes className="w-6 h-6" />,
         shortDescription:
             'Build scalable architectures with microservices. Our experts deliver loosely-coupled, independently deployable systems with nearshore expertise.',

@@ -9,7 +9,7 @@ import { Code2 } from 'lucide-react';
 export default function CypressTechPage() {
     const techData = {
         name: 'Cypress',
-        emoji: '🧪',
+        emoji: '🌳',
         icon: <Code2 className="w-6 h-6" />,
         shortDescription: 'End-to-end testing framework for modern web applications. Expert Cypress testing for comprehensive QA.',
         heroTitle: 'Test Web Applications with Cypress',

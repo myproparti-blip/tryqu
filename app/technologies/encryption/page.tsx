@@ -9,7 +9,7 @@ import { Lock } from 'lucide-react';
 export default function EncryptionTechPage() {
     const techData = {
         name: 'Encryption',
-        emoji: '🔒',
+        emoji: '🔐',
         icon: <Lock className="w-6 h-6" />,
         shortDescription:
             'Data protection through cryptography. Our encryption experts deliver secure data protection solutions with nearshore expertise.',

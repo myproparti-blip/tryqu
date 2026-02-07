@@ -9,7 +9,7 @@ import { Zap } from 'lucide-react';
 export default function JestTechPage() {
     const techData = {
         name: 'Jest',
-        emoji: '🧪',
+        emoji: '🃏',
         icon: <Zap className="w-6 h-6" />,
         shortDescription: 'Comprehensive JavaScript testing framework with zero configuration. Expert Jest implementation for quality code.',
         heroTitle: 'Test JavaScript Code with Jest',

@@ -9,7 +9,7 @@ import { CheckSquare } from 'lucide-react';
 export default function SeleniumTechPage() {
     const techData = {
         name: 'Selenium',
-        emoji: '🔍',
+        emoji: '🤖',
         icon: <CheckSquare className="w-6 h-6" />,
         shortDescription:
             'Automate browser testing with Selenium. Our Selenium QA experts deliver comprehensive end-to-end testing solutions with nearshore expertise.',

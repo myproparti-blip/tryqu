@@ -9,7 +9,7 @@ import { Code2 } from 'lucide-react';
 export default function ExpressJSTechPage() {
     const techData = {
         name: 'Express.js',
-        emoji: '🟢',
+        emoji: '🚂',
         icon: <Code2 className="w-6 h-6" />,
         shortDescription:
             'Build lightweight APIs with Express.js. Our Express experts deliver flexible, fast web server solutions with nearshore expertise.',

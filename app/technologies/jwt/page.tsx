@@ -9,7 +9,7 @@ import { Lock } from 'lucide-react';
 export default function JWTTechPage() {
     const techData = {
         name: 'JWT',
-        emoji: '🔐',
+        emoji: '🎟️',
         icon: <Lock className="w-6 h-6" />,
         shortDescription:
             'JSON Web Tokens for stateless authentication. Our JWT experts deliver secure token solutions with nearshore expertise.',
